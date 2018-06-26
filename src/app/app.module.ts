@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {GlobalImportsModule} from "./shared/config/global-imports.module";
 import {PagesModule} from "./pages/pages.module";
+import { MenuComponent } from './source/menu/menu.component';
 
 
 @NgModule({
