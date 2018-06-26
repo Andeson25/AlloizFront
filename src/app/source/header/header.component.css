@@ -1,14 +1,14 @@
 .headerItems{
   height: 10vh;
+  padding: 0 2.5%;
 }
 .logo{
-  width: 10%;
-  height: 44px;
   text-align: right;
 }
 .logo h2{
-  line-height: normal;
+  margin: 0;
   color: #4F4F4F;
+  line-height: 25px;
   cursor: pointer;
   font-size: 25px;
   font-family: Roboto Condensed sans-serif;
@@ -27,7 +27,7 @@ img:hover{
 }
 
 .burger{
-  width: 45%;
+  margin-left: 10%;
   height: auto;
   cursor: pointer;
 }
