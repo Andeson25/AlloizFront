@@ -1,0 +1,50 @@
+.headerItems{
+  height: 10vh;
+}
+.logo{
+  width: 10%;
+  height: 44px;
+  text-align: right;
+}
+.logo h2{
+  line-height: normal;
+  color: #4F4F4F;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: Roboto Condensed sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+img{
+  cursor: pointer;
+}
+img:hover{
+  filter:invert(100%);
+  transition: .2s;
+}
+.headerListMenu{
+  width: 15%;
+}
+
+.burger{
+  width: 45%;
+  height: auto;
+  cursor: pointer;
+}
+
+.vector{
+  width: 15px;
+  height: 3px;
+  background: #4E5D7A;
+}
+
+.vector2{
+  width: 30px;
+  height: 3px;
+  background: #4E5D7A;
+  margin-top: 8px;
+}
+
+.vector3{
+  margin-top: 8px;
+}
