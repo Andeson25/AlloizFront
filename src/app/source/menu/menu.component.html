@@ -1,4 +1,4 @@
-<div class="menu  d-flex align-items-center">
+<div class="menu  d-flex align-items-center"  *ngIf="show">
   <div class="blur"></div>
   <div class="navigation d-flex justify-content-center flex-column align-items-center">
     <div [routerLink]="['']" [routerLinkActive]="['active']">
@@ -35,4 +35,5 @@
     <h2>RU</h2>
   </div>
   </div>
+  <img src="../../../assets/svg/cancel.svg" alt="close" class="cancel" (click)="closeMenu()">
 </div>

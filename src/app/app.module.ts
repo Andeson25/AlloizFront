@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 import {GlobalImportsModule} from "./shared/config/global-imports.module";
 import {PagesModule} from "./pages/pages.module";
@@ -14,6 +14,7 @@ import {PagesModule} from "./pages/pages.module";
     PagesModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
