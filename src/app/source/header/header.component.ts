@@ -4,8 +4,7 @@ import {MenuService} from '../menu-service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
-  providers: [MenuService]
+  styleUrls: ['./header.component.css']
 })
 @Injectable()
 export class HeaderComponent implements OnInit {

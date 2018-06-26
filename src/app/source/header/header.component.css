@@ -42,9 +42,7 @@ img:hover{
   width: 30px;
   height: 3px;
   background: #4E5D7A;
-  margin-top: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
-.vector3{
-  margin-top: 8px;
-}

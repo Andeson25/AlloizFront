@@ -7,7 +7,6 @@
   box-sizing: border-box;
   position: absolute;
   overflow: hidden;
-  transition: all .5s linear;
 }
 
 .blur {
@@ -17,7 +16,7 @@
   left: -1%;
   width: 102%;
   height: 102vh;
-  background: linear-gradient(165.43deg, rgba(152, 173, 56, 0.9) 13.66%, rgba(144, 170, 23, 0.9) 95.56%);
+  background: linear-gradient(165.43deg, rgba(152, 173, 56, 0.9) 13.66%, rgba(144, 170, 23, 0.8) 95.56%);
   backdrop-filter: blur(3px);
 }
 .cancel{
@@ -166,6 +165,7 @@ h2 {
 .hidden{
   display: none!important;
 }
+
 @keyframes show {
   0%{
     opacity: 0;
