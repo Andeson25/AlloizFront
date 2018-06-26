@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MenuService} from '../../source/menu-service';
+import {isNullOrUndefined} from 'util';
 
 @Component({
   selector: 'app-pages',
@@ -8,14 +9,22 @@ import {MenuService} from '../../source/menu-service';
 })
 export class PagesComponent implements OnInit {
   show: boolean = false;
-
+  @ViewChild('menuDiv') menuDiv: HTMLDivElement;
   constructor(private menu: MenuService) {
+
     this.menu.show$.subscribe(next => {
       this.show = next;
+      if (next) {
+        document.getElementById('menuDiv').style.opacity = '1';
+      }
+      if (!next) {
+        document.getElementById('menuDiv').style.opacity = '0';
+      }
     });
   }
 
   ngOnInit() {
+
   }
 
 }

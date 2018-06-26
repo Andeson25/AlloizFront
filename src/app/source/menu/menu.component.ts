@@ -10,12 +10,18 @@ import {isNullOrUndefined} from 'util';
 })
 export class MenuComponent implements OnInit {
   show: boolean = false;
-  @ViewChild('menu') menuDiv: ElementRef;
+
 
 
   constructor(private menu: MenuService) {
-
-
+    this.menu.show$.subscribe(next => {
+      if (next)
+        this.show = next;
+      if (!next)
+        setTimeout(() => {
+          this.show = next;
+        }, 300);
+    });
   }
 
   closeMenu() {
@@ -23,21 +29,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.menu.show$.subscribe(next => {
-      // if (!this.show)
-        this.show = next;
-      // else if (!isNullOrUndefined(this.menuDiv)) {
-      //   if (this.show) {
-      //     this.menuDiv.nativeElement.style.classList.removeClass('hide');
-      //     this.menuDiv.nativeElement.style.classList.addClass('show');
-      //   }
-      //   if (!this.show) {
-      //     this.menuDiv.nativeElement.style.classList.removeClass('show');
-      //     this.menuDiv.nativeElement.style.classList.add('hide');
-      //     this.show = false;
-      //   }
-      // }
-    });
+
   }
 
 }
