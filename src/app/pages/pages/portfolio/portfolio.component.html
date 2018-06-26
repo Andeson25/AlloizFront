@@ -1,23 +1,38 @@
 <div class="main">
   <div class="sideDiv justify-content-center position-relative">
     <div class="position-absolute top"></div>
-    <h4 class="justify-content-between">WWW.Allioz</h4>
     <h4>WWW.Allioz</h4>
     <h4>WWW.Allioz</h4>
     <h4>WWW.Allioz</h4>
   </div>
   <div class="slider">
-    <h2>Portfolio</h2>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative" data-ride="carousel">
+    <h2 class="heading-text">Portfolio</h2>
+    <div id="carouselExampleFade" class="carousel slide h-100 carousel-fade position-relative" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+        <div class="carousel-item active ">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/4fe10fbf93bd5a6212d0c67552d5fa6c.jpeg'+')'}">
+            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nostrum obcaecati odio odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
+
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/2da4a40d5f0e3d13d74623139d53e99e.jpeg'+')'}">
+            <h3 class="text">Lorem ipsumasdsad dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nos das trum obcaecati odi dasdas o odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/4fe10fbf93bd5a6212d0c67552d5fa6c.jpeg'+')'}">
+            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nostrum obcaecati odio odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
         </div>
       </div>
       <div class="control position-absolute d-flex ">
@@ -29,7 +44,6 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-
       </div>
 
     </div>

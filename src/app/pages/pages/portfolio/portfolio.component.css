@@ -4,7 +4,7 @@
 }
 .sideDiv{
   background: #98AD38;
-  margin-left: 150px;
+  margin-left: 10%;
   width: 20vw;
   height: 100%;
   display: flex;
@@ -19,15 +19,18 @@
 
 }
 h4{
+  cursor: pointer;
+  font-family: RobotRegularCustom;
   color: white;
+  font-size: 25px;
+  line-height: 30px;
   font-weight: bold;
   padding-bottom: 10px;
 
 }
 .slider{
-  width: 50vw;
-  height: 50vh;
-  margin-left: 150px;
+  width: 50%;
+  margin: 0 auto;
   align-self: center;
 }
 .slider h2{
@@ -35,8 +38,19 @@ h4{
   margin-right: 0;
 }
 .carousel{
-  background: aqua;
   height: 50vh;
+  background: transparent;
+}
+
+.carousel-inner {
+  height: 50vh;
+}
+
+.heading-text {
+  text-align: end;
+  margin-bottom: 30px;
+  color: #8A6284;
+  font-family: RobotoBoldCustom;
 }
 .carousel-control-prev{
   background: #98AD38;
@@ -57,4 +71,33 @@ h4{
   width: 134px;
 }
 
+.carousel-item {
+  height: 50vh;
 
+}
+
+.carousel-item div {
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item div:before {
+  height: 50vh;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  content: '';
+  background-color: black;
+  opacity: .6;
+}
+
+.carousel-item div h3.text {
+  z-index: 1;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: RobotRegularCustom;
+  padding: 0 10px 70px;
+  margin: 0;
+}

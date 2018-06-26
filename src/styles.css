@@ -9,3 +9,24 @@ body,html{
 .blur{
   filter:blur(3px);
 }
+
+@font-face {
+  font-family: RobotoBoldCustom;
+  src: url("../src/assets/font/RobotoCondensed-Bold.ttf") format('embedded-opentype'),
+  url("../src/assets/font/RobotoCondensed-Bold.ttf") format('woff'),
+  url("../src/assets/font/RobotoCondensed-Bold.ttf") format('truetype'),
+  url("../src/assets/font/RobotoCondensed-Bold.ttf") format('svg'),
+  url("../src/assets/font/RobotoCondensed-Bold.ttf") format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: RobotRegularCustom;
+  src: url("../src/assets/font/Roboto-Black.ttf") format('embedded-opentype'),
+  url("../src/assets/font/Roboto-Black.ttf")  format('woff'),
+  url("../src/assets/font/Roboto-Black.ttf") format('truetype'),
+  url("../src/assets/font/Roboto-Black.ttf")  format('svg'),
+  url("../src/assets/font/Roboto-Black.ttf")  format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
