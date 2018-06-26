@@ -4,13 +4,17 @@ import { HomeComponent } from './pages/home/home.component';
 import {GlobalImportsModule} from '../shared/config/global-imports.module';
 import {MenuComponent} from '../source/menu/menu.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import {HeaderComponent} from '../source/header/header.component';
 
 @NgModule({
   imports: [
     GlobalImportsModule
   ],
-  declarations: [PagesComponent, HomeComponent,
+  declarations: [
+    PagesComponent,
+    HomeComponent,
     MenuComponent,
-    PortfolioComponent]
+    PortfolioComponent,
+    HeaderComponent]
 })
 export class PagesModule { }

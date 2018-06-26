@@ -1,0 +1,152 @@
+.menu {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding-left: 10%;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+}
+
+.blur {
+  z-index: 0;
+  position: absolute;
+  top: -1vh;
+  left: -1%;
+  width: 102%;
+  height: 102vh;
+  background: rgba(144, 170, 23, 0.95);
+}
+.text{
+  padding: 0 5%;
+  width: 80%;
+  border: 1px solid #c5cd5b;
+  height: 80%;
+  border-left: 0;
+ color:#b3c254;
+  position: relative;
+  z-index: 1;
+
+}
+h1{
+  font-size: 200px;
+
+}
+.select-lang{
+  position: relative;
+  z-index: 1;
+  border: 1px solid #c5cd5b;
+  border-right: 0;
+  height: 80%;
+  width: 15%;
+  margin-left: 5%;
+  justify-self: flex-end!important;
+
+}
+.select-lang h2:nth-child(2){
+  margin: 15px 0;
+}
+.select-lang h2{
+  cursor: pointer;
+}
+.select-lang h2:hover{
+  color: #8A6284;
+}
+.select-lang h2{
+  color:#b3c254;
+}
+
+.navigation {
+  width: auto;
+  position: relative;
+  height: 100%;
+  background: url("../../../assets/png/2da4a40d5f0e3d13d74623139d53e99e.jpeg");
+  filter: brightness(120%);
+  background-size: cover;
+
+  background-position: center center;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.navigation > div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100% !important;
+  padding: 0 50px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.navigation img {
+  position: absolute;
+  left: 18px;
+  height: 15px;
+  display: none;
+  width: auto;
+}
+
+.navigation > div:hover img {
+  display: block;
+
+}
+
+.navigation > div:hover h2 {
+  color: #8A6284;
+
+}
+
+.active img {
+  display: block!important;
+
+}
+
+.active h2 {
+  color: #8A6284!important;
+}
+
+h2 {
+  cursor: pointer;
+  position: relative;
+  color: white;
+  margin: 0;
+}
+.navigation div{
+  margin: 10px 0!important;
+}
+.navigation div:first-child {
+  margin-top: 0;
+
+}
+.navigation div:last-child{
+  margin-bottom: 0;
+}
+
+.navigation:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(144, 170, 23, 1);
+  opacity: .8;
+  content: '';
+  z-index: 1;
+}
+
+.navigation:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .6;
+  content: '';
+  z-index: 0;
+}
+
+

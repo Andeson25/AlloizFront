@@ -1,3 +1,38 @@
-<p>
-  menu works!
-</p>
+<div class="menu  d-flex align-items-center">
+  <div class="blur"></div>
+  <div class="navigation d-flex justify-content-center flex-column align-items-center">
+    <div [routerLink]="['']" [routerLinkActive]="['active']">
+      <img src="../../../assets/svg/Ellipse%202.svg" alt="">
+      <h2>MAIN</h2>
+    </div>
+    <div [routerLink]="['about']" [routerLinkActive]="['active']">
+      <img src="../../../assets/svg/Ellipse%202.svg" alt="">
+      <h2>ABOUT</h2>
+    </div>
+    <div [routerLink]="['services']" [routerLinkActive]="['active']">
+      <img src="../../../assets/svg/Ellipse%202.svg" alt="">
+      <h2>SERVICES</h2>
+    </div>
+    <div [routerLink]="['portfolio']" [routerLinkActive]="['active']">
+      <img src="../../../assets/svg/Ellipse%202.svg" alt="">
+      <h2>PORTFOLIO</h2>
+    </div>
+    <div [routerLink]="['contacts']" [routerLinkActive]="['active']">
+      <img src="../../../assets/svg/Ellipse%202.svg" alt="">
+      <h2>CONTACTS</h2>
+    </div>
+    <div class="links">
+
+    </div>
+  </div>
+  <div class="d-flex h-100 align-items-center w-100">
+  <div class="text d-flex align-items-center justify-content-center">
+    <h1>ALLOIZ</h1>
+  </div>
+  <div class="select-lang flex-column  d-flex align-items-center justify-content-center" >
+    <h2>EU</h2>
+    <h2>UA</h2>
+    <h2>RU</h2>
+  </div>
+  </div>
+</div>
