@@ -1,0 +1,53 @@
+.main{
+  display: flex;
+  height: 90vh;
+}
+.sideDiv{
+  background: #98AD38;
+  margin-left: 150px;
+  width: 20vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h4{
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+
+}
+.slider{
+  width: 50vw;
+  height: 50vh;
+  margin-left: 150px;
+  align-self: center;
+}
+.slider h2{
+  text-transform: uppercase;
+  margin-right: 0;
+}
+.carousel{
+  background: aqua;
+  height: 50vh;
+}
+.carousel-control-prev{
+  background: #98AD38;
+  height: 67px;
+  width: 67px;
+  opacity: 1;
+}
+.carousel-control-next{
+  background: #98AD38;
+  height: 67px;
+  width: 67px;
+  opacity: 1;
+}
+.control{
+  bottom: 67px;
+  position: absolute;
+  right: 0;
+  width: 134px;
+}
+
+
