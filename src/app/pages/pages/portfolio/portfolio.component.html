@@ -1,12 +1,28 @@
 <div class="main">
   <div class="sideDiv justify-content-center position-relative">
     <div class="position-absolute top"></div>
-    <h4>WWW.Allioz</h4>
-    <h4>WWW.Allioz</h4>
-    <h4>WWW.Allioz</h4>
+    <h4
+      #element
+      *ngFor="let one of items;let i = index"
+        (click)="move(i)"
+    [ngClass]="{
+    'first-empty-space':startIndex==-2&&i==0,
+    'empty-space':startIndex==-1&&i==0,
+      'current': i==currentIndex,
+      'siders':i==startIndex+1||i==endIndex-1&&i!=length-1&&currentIndex!=length-2,
+      'enders':i==startIndex||i==endIndex,
+      'mt-0':i==startIndex&&currentIndex!=1&&currentIndex!=0,
+      'mb-0':i==endIndex,
+      'd-none':i>endIndex||i<startIndex,
+      'bot-empty-space':i==length-1&&currentIndex==length-2,
+      'bot-last-empty-space':i==length-1&&currentIndex==length-1
+    }"
+
+    >{{one}}</h4>
   </div>
+  <div class="arrow"></div>
   <div class="slider">
-    <h2 class="heading-text">Portfolio</h2>
+    <h2 class="heading-text position-relative">Portfolio <div class="text-border"></div></h2>
     <div id="carouselExampleFade" class="carousel slide h-100 carousel-fade position-relative" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active ">
