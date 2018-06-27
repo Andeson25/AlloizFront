@@ -1,0 +1,204 @@
+.main{
+  display: flex;
+  height: 90vh;
+  padding-left: 10%;
+
+}
+.sideDiv{
+  overflow: visible;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  background: #98AD38;
+
+  width: 20vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top{
+  width: 100%;
+  top: -10vh;
+  height: 10vh;
+  background-color: #98AD38;
+
+}
+.arrow{
+  height: 30px;
+  width: 30px;
+  transform: rotate(45deg);
+  border-right: 3px solid #BDBDBD;
+  border-top: 3px solid #BDBDBD;
+  margin: auto 3%;
+  border-radius: 4px;
+}
+h4:hover{
+  opacity: 1;
+  color: #8A6284;
+}
+h4{
+  transition: all .2s linear;
+  cursor: pointer;
+  font-family: RobotRegularCustom;
+  color: white;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+
+}
+h4{
+  position: relative;
+  margin: 30px 0;
+}
+
+.bot-empty-space{
+  margin-bottom: 84px!important;
+}
+.bot-last-empty-space{
+  margin-bottom: 178px!important;
+}
+@keyframes move-bottom {
+   0%{
+
+   }
+   100%{
+     top: 12px;
+   }
+
+ }
+@keyframes move-top {
+  0%{
+    transform: scale(.8);
+    bottom: -88px;
+  }
+  100%{
+    bottom: 22px;
+    transform: scale(1.2);
+  }
+
+}
+
+.first-empty-space{
+  margin-top: 184px!important;
+}
+.empty-space{
+  margin-top: 94px!important;
+}
+
+.slider{
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  width: 70%;
+  padding-bottom: 20vh;
+  padding-right: 5%;
+  margin: auto 0 0 0;
+  align-self: center;
+}
+.slider h2{
+  font-size: 35px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-right: 0;
+}
+.carousel{
+  height: 50vh;
+  background: grey;
+  z-index: 2;
+  position: relative;
+}
+
+.carousel-inner {
+  height: 50vh;
+}
+
+.heading-text {
+  margin-bottom: 0;
+  text-align: end;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: #8A6284;
+  font-family: RobotoBoldCustom;
+}
+.text-border{
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  border-top: .75px solid #E5E5E5;
+  border-left: .75px solid #E5E5E5;
+  border-bottom: .75px solid #E5E5E5;
+  right: -40%;
+  width: 100%;
+  height: 70vh;
+}
+
+.carousel-control-prev{
+  cursor: pointer;
+  background: #98AD38;
+  height: 67px;
+  width: 67px;
+  opacity: 1;
+}
+.carousel-control-next:hover , .carousel-control-prev:hover{
+  background-color: #6f812b;
+}
+.carousel-inner{
+
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+}
+.carousel-control-next{
+  cursor: pointer;
+  background: #98AD38;
+  height: 67px;
+  width: 67px;
+  opacity: 1;
+}
+.control{
+  bottom: 67px;
+  position: absolute;
+  right: 0;
+  width: 134px;
+}
+
+.carousel-item {
+  height: 50vh;
+
+}
+
+.carousel-item div {
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item div:before {
+  height: 50vh;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  content: '';
+  background-color: black;
+  opacity: .6;
+}
+
+.carousel-item div h3.text {
+  z-index: 1;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: RobotRegularCustom;
+  padding: 0 10px 70px;
+  margin: 0;
+}
+.current{
+  transform: scale(1.2);
+  color: white!important;
+}
+.siders{
+  color: white;
+  opacity: .8;
+}
+.enders{
+  transform: scale(.8);
+  color: white;
+  opacity: .6;
+}
