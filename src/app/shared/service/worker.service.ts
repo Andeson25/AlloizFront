@@ -13,11 +13,11 @@ export class WorkerService {
   }
 
   findAll(): Observable<Worker[]> {
-    this._httpClient.get<Worker[]>(this.controller + '/find-all').catch(err => Observable.throw(err))
+    return this._httpClient.get<Worker[]>(this.controller + '/find-all').catch(err => Observable.throw(err))
   }
 
   findAllAvailable(): Observable<Worker[]> {
-    this._httpClient.get<Worker[]>(this.controller + '/find-all-available').catch(err => Observable.throw(err))
+    return this._httpClient.get<Worker[]>(this.controller + '/find-all-available').catch(err => Observable.throw(err))
   }
 
   findOne(id: number): Observable<Worker> {

@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
+import {Portfolio} from "../models/portfolio";
 
 @Injectable()
 export class PortfolioService {

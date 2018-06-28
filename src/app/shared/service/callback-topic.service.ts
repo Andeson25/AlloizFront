@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
+import {CallbackTopic} from "../models/callback-topic";
 
 @Injectable()
 export class CallbackTopicService {
