@@ -6,7 +6,7 @@ export class Worker {
   name: string;
   surname: string;
   image: string;
-  incumbencies: Incumbency [];
+  incumbencies: Incumbency [] = [];
   available: boolean;
 
 }
