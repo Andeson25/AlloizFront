@@ -16,6 +16,22 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {
   }
 
+    mouseWheelUpFunc() {
+    if(this.currentIndex > 0){
+      this.currentIndex -= 1;
+    }else{
+      this.currentIndex = this.items.length-1;
+    }
+  }
+   mouseWheelDownFunc(){
+    if(this.items.length> this.currentIndex){
+      this.currentIndex += 1;
+    };
+    if(this.items.length === this.currentIndex){
+      this.currentIndex = 0;
+    }
+  }
+
   move(i: number) {
     this.currentIndex=i;
     this.startIndex = i - 2;
