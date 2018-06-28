@@ -39,13 +39,44 @@
   background: #98AD38;
   z-index: 100;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
-
+.leftBlock .leftBlockContent{
+  position: absolute;
+  height: 90%;
+  top: 5%;
+  right: 50px;
+  width: 100px;
+}
+.leftBlock p {
+  font-size: 72px;
+  line-height: 84px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+.leftBlock .line{
+  width: 0.1vw;
+  height: 85%;
+  margin: auto;
+  background-color: white;
+}
 .rightBlock{
   width: 6%;
   background: #8A6284;
 }
-
+.rightBlock .dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 3vh auto ;
+}
+.rightBlock .dotActive{
+  width: 13px;
+  height: 13px;
+}
 .middle{
   width: 100%;
   height: 100%;
