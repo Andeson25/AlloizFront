@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule, Routes} from "@angular/router";
@@ -24,6 +24,7 @@ const _routes: Routes = [
     ReactiveFormsModule,
     RouterModule
   ],
-  declarations: []
+  declarations: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GlobalImportsModule { }

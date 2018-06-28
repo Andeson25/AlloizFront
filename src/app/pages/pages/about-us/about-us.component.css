@@ -2,12 +2,9 @@
   width:100%;
 }
 .main{
-  display:inline-column;
   padding-left:5%;
   padding-right:5%;
-  background-image: url(../../../../assets/svg2/ALLOIZ.svg);
-  background-position: 50% 55%;
-  background-repeat: no-repeat;
+
 
 }
 
@@ -37,6 +34,9 @@
 }
 .firstArticle{
   /*justify-content: center;*/
+  background-image: url(../../../../assets/svg2/ALLOIZ.svg);
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
 }
 .textTitle {
   margin-left:13%;

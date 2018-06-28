@@ -1,0 +1,72 @@
+<div class="main">
+  <div class="sideDiv justify-content-center position-relative">
+    <div class="position-absolute top"></div>
+    <h4
+      #element
+      *ngFor="let one of items;let i = index"
+        (click)="move(i)"
+    [ngClass]="{
+    'first-empty-space':startIndex==-2&&i==0,
+    'empty-space':startIndex==-1&&i==0,
+      'current': i==currentIndex,
+      'siders':i==startIndex+1||i==endIndex-1&&i!=length-1&&currentIndex!=length-2,
+      'enders':i==startIndex||i==endIndex,
+      'mt-0':i==startIndex&&currentIndex!=1&&currentIndex!=0,
+      'mb-0':i==endIndex,
+      'd-none':i>endIndex||i<startIndex,
+      'bot-empty-space':i==length-1&&currentIndex==length-2,
+      'bot-last-empty-space':i==length-1&&currentIndex==length-1
+    }"
+
+    >{{one}}</h4>
+  </div>
+  <div class="arrow"></div>
+  <div class="slider">
+    <h2 class="heading-text position-relative">Portfolio <div class="text-border"></div></h2>
+    <div id="carouselExampleFade" class="carousel slide h-100 carousel-fade position-relative" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/4fe10fbf93bd5a6212d0c67552d5fa6c.jpeg'+')'}">
+            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nostrum obcaecati odio odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
+
+        </div>
+        <div class="carousel-item">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/2da4a40d5f0e3d13d74623139d53e99e.jpeg'+')'}">
+            <h3 class="text">Lorem ipsumasdsad dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nos das trum obcaecati odi dasdas o odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="h-100 w-100 position-relative d-flex align-items-end"
+               [ngStyle]="{'background-image':'url('+'../../../../assets/png/4fe10fbf93bd5a6212d0c67552d5fa6c.jpeg'+')'}">
+            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti deserunt
+              eaque earum eius est eveniet magni minima, natus nisi nostrum obcaecati odio odit porro repellat rerum
+              ullam vero voluptates.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="control position-absolute d-flex ">
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

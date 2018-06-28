@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 import {GlobalImportsModule} from "./shared/config/global-imports.module";
 import {PagesModule} from "./pages/pages.module";
-import { MenuComponent } from './source/menu/menu.component';
+import {MenuService} from './source/menu-service';
+
 
 
 @NgModule({
@@ -13,7 +14,10 @@ import { MenuComponent } from './source/menu/menu.component';
     GlobalImportsModule,
     PagesModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    MenuService
+  ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
