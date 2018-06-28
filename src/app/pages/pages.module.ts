@@ -5,6 +5,8 @@ import {GlobalImportsModule} from '../shared/config/global-imports.module';
 import {MenuComponent} from '../source/menu/menu.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import {HeaderComponent} from '../source/header/header.component';
+import {ContactsComponent} from './pages/contacts/contacts.component';
+import {DirectiveModule} from '../shared/directive/directive.module';
 
 @NgModule({
   imports: [
