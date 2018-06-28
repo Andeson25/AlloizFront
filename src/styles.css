@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body,html{
   padding: 0;
-  background-color: #E5E5E5;
+  background-color: white!important;
   margin: 0;
 }
 *{
   outline: none!important;
 }
 .blur{
-  filter:blur(3px);
+  filter:blur(5px);
 }
 
 @font-face {
