@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Worker} from '../../../../../../shared/models/worker';
 import {Incumbency} from '../../../../../../shared/models/incumbency';
+import {Portfolio} from "../../../../../../shared/models/portfolio";
+import {PortfolioDescription} from "../../../../../../shared/models/portfolio-description";
 
 @Component({
   selector: 'app-portfolio',
@@ -10,8 +12,8 @@ import {Incumbency} from '../../../../../../shared/models/incumbency';
 })
 export class PortfolioComponent implements OnInit {
   portfolioForm: FormGroup;
-  worker: Worker = new Worker();
-  incumbencies: Incumbency[] = [];
+  portfolio: Portfolio = new Portfolio();
+
 
   img:string='';
 
@@ -19,6 +21,9 @@ export class PortfolioComponent implements OnInit {
   date= new Date().toISOString();
 
   constructor() {
+    this.portfolio.descriptions= new Array(3);
+    this.portfolio.descriptions=[new PortfolioDescription(),new PortfolioDescription(),new PortfolioDescription()];
+
   }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -32,24 +37,30 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {
     this.portfolioForm = new FormGroup({
         name: new FormControl('', Validators.required),
-        surname: new FormControl('', Validators.required)
+        link: new FormControl('', Validators.required)
       }
     );
     this.portfolioForm.valueChanges.subscribe(next => {
-      this.worker = next;
-      this.worker.incumbencies = this.incumbencies;
+      this.portfolio = next;
     });
   }
   addWorker(form:HTMLFontElement){
-    console.log(this.worker)
+    console.log(this.portfolio)
+  }
+  addLang(i,text){
+  console.log(this.portfolio)
+    if(i==0){
+      this.portfolio.descriptions[i].language='en'
+      this.portfolio.descriptions[i].description=text;
+    }
+    if(i==1){
+      this.portfolio.descriptions[i].language='ru'
+      this.portfolio.descriptions[i].description=text;
+    }
+    if(i==2){
+      this.portfolio.descriptions[i].language='uk'
+      this.portfolio.descriptions[i].description=text;
+    }
   }
 
-  addIncumbency() {
-    this.incumbencies.push(new Incumbency());
-    this.incumbencies[this.incumbencies.length - 1].name = '';
-  }
-
-  deleteIncumbency(i: number) {
-    this.incumbencies.splice(i,1);
-  }
 }
