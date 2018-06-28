@@ -1,0 +1,73 @@
+.main{
+  padding-left:5%;
+  padding-right:5%;
+  height: 90vh;
+
+
+}
+.ServicesTitle{
+  width: 100%;
+  padding-top: 3%;
+
+  font-family: RobotoBoldCustom;
+  font-size: 30px;
+
+  color: #8A6284;
+}
+.line{
+  width: 100%;
+
+
+  border: 0.5px solid #E0E0E0;
+  transform: rotate(180deg);
+}
+.content{
+margin-top: 6%;
+}
+.underContent{
+  display: inline-flex;
+  width: 30%;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.number{
+  font-family: Roboto Condensed;
+  font-size: 15px;
+
+  color: #98AD38;
+  transform: rotate(-90deg);
+}
+.text{
+
+  font-family: RobotRegularCustom;
+  font-size: 15px;
+  margin-left: 8%;
+
+}
+button{
+  /*font-family: RobotRegularCustom;*/
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  color: #4E5D7A;
+  background: white;
+  border: 1px solid #4E5D7A;
+  width: 11%;
+}
+
+button:hover{
+  border: 0.5px solid #E0E0E0;
+  box-sizing: border-box;
+}
+
+button:focus{
+  color:#98AD38 ;
+}
+.center{
+  padding-top: 7%;
+}
+
