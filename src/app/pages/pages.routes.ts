@@ -1,9 +1,7 @@
 import {PagesComponent} from "./pages/pages.component";
 import {Routes} from "@angular/router";
 import {HomeComponent} from "./pages/home/home.component";
-import {AboutUsComponent} from './pages/about-us/about-us.component';
 import {PortfolioComponent} from "./pages/portfolio/portfolio.component";
-import {ServicesComponent} from './pages/services/services.component';
 
 export const pagesRoutes: Routes = [
   {
@@ -20,6 +18,9 @@ export const pagesRoutes: Routes = [
       },
       {
         path:'services', component: ServicesComponent
+      },
+      {
+        path: 'contacts', component: ContactsComponent
       }
 
 
