@@ -1,0 +1,115 @@
+.mainContacts{
+  padding-left:5%;
+  padding-right:5%;
+  height: 90vh;
+  background: white;
+}
+h2{
+  text-transform: uppercase;
+  font-family:  RobotRegularCustom;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 35px;
+  color: #8A6284;
+  padding-top: 2%;
+}
+
+.lineContacts{
+  width: 100%;
+  border: 0.5px solid #E0E0E0;
+  transform: rotate(180deg);
+}
+.quote p {
+  font-family: RobotRegularCustom;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 16px;
+  color: #4F4F4F;
+  margin-top: 20%;
+  width: 82%;
+}
+form{
+  width: 100%;
+}
+.quote{
+  width: 30%;
+  margin: auto;
+  margin-bottom: 3%;
+}
+.quote img{
+  height: 5%;
+  margin-top: 15%;
+}
+.fiveLeft input {
+  width: 270px;
+  height: 15%;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  /*font-weight: bold;*/
+  line-height: 35px;
+  font-size: 19px;
+  padding-left: 4%;
+}
+textarea {
+  width: 370px;
+  font-family: RobotoBoldCustom;
+  resize: none;
+  border: 1px solid #E0E0E0;
+  padding-left: 4%;
+  height: 100%;
+
+}
+input::placeholder{
+  color:#98AD38 ;
+}
+textarea::placeholder{
+  color:#98AD38 ;
+}
+input:focus::placeholder{
+  color: grey;
+  opacity: .8;
+}
+
+textarea:focus::placeholder{
+  color: grey;
+  opacity: .8;
+}
+.fiveLeft{
+  padding-right: 20px;
+}
+.oneRight{
+  padding-left: 20px;
+}
+.inputs{
+
+  width: auto;
+}
+button{
+  margin-top: 20px;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  color: #4E5D7A;
+  background: white;
+  border: 1px solid #4E5D7A;
+  width: 9%;
+  font-weight: normal;
+  margin-top: 4%;
+}
+
+button:hover{
+  border: 0.5px solid #E0E0E0;
+  box-sizing: border-box;
+}
+
+button:focus{
+  color:#98AD38 ;
+}
+
