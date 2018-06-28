@@ -38,5 +38,9 @@ export class CallbackService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(callback: Callback): Observable<Callback> {
+    return this._httpClient.post<Callback>(this.controller + '/update', JSON.stringify(callback)).catch(err => Observable.throw(err))
+  }
+
 
 }

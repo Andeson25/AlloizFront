@@ -37,5 +37,9 @@ export class TechnologiesSerivce {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(tech: Technology): Observable<Technology> {
+    return this._httpClient.post<Technology>(this.controller + '/update', JSON.stringify(tech)).catch(err => Observable.throw(err))
+  }
+
 
 }
