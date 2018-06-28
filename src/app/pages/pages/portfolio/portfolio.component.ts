@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {isNumber} from 'util';
 
 @Component({
   selector: 'app-portfolio',
@@ -17,24 +18,31 @@ export class PortfolioComponent implements OnInit {
   }
 
     mouseWheelUpFunc() {
-    if(this.currentIndex > 0){
-      this.currentIndex -= 1;
-    }else{
-      this.currentIndex = this.items.length-1;
-    }
+      this.move('up')
   }
    mouseWheelDownFunc(){
-    if(this.items.length> this.currentIndex){
-      this.currentIndex += 1;
-    };
-    if(this.items.length === this.currentIndex){
-      this.currentIndex = 0;
-    }
+     this.move('down')
   }
 
-  move(i: number) {
+  move(i: any) {
+    if (isNumber(i)) {
     this.currentIndex=i;
     this.startIndex = i - 2;
     this.endIndex = i + 2;
+  }
+    if (i == 'up') {
+      if (this.currentIndex+1!=this.items.length) {
+        this.currentIndex += 1;
+        this.startIndex = this.currentIndex -2 ;
+        this.endIndex = this.currentIndex+2;
+      }
+    }
+    if (i == 'down') {
+      if (this.currentIndex-1>=0) {
+        this.currentIndex -= 1;
+        this.startIndex = this.currentIndex -2 ;
+        this.endIndex = this.currentIndex+2;
+      }
+    }
   }
 }

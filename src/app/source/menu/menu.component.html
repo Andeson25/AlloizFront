@@ -1,23 +1,29 @@
 <div class="menu  d-flex align-items-center" *ngIf="show" >
   <div class="blur"></div>
-  <div class="navigation d-flex justify-content-center flex-column align-items-center" >
-    <div [routerLink]="['']" (click)="closeMenu()" [routerLinkActive]="['active']">
+  <div class="navigation d-flex justify-content-center flex-column align-items-center"
+  >
+    <div [routerLink]="['/']" (click)="closeMenu()" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
       <h2>MAIN</h2>
     </div>
-    <div [routerLink]="['about']" (click)="closeMenu()" [routerLinkActive]="['active']">
+    <div [routerLink]="['/about']" (click)="closeMenu()" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
       <h2>ABOUT</h2>
     </div>
-    <div [routerLink]="['services']" (click)="closeMenu()" [routerLinkActive]="['active']">
+    <div [routerLink]="['/services']" (click)="closeMenu()" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
       <h2>SERVICES</h2>
     </div>
-    <div [routerLink]="['portfolio']" (click)="closeMenu()" [routerLinkActive]="['active']">
+    <div [routerLink]="['/portfolio']" (click)="closeMenu()" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
       <h2>PORTFOLIO</h2>
     </div>
-    <div [routerLink]="['contacts']" (click)="closeMenu()" [routerLinkActive]="['active']">
+    <div [routerLink]="['/contacts']" (click)="closeMenu()" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
       <h2>CONTACTS</h2>
     </div>
