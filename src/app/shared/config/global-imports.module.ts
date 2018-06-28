@@ -5,6 +5,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {routes} from "../../main.routes";
+import {PipeModule} from '../pipe/pipe.module';
 
 
 const _routes: Routes = [
@@ -22,7 +23,8 @@ const _routes: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    PipeModule
   ],
   declarations: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
