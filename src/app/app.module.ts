@@ -1,9 +1,10 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {GlobalImportsModule} from "./shared/config/global-imports.module";
 import {PagesModule} from "./pages/pages.module";
 import {MenuService} from './source/menu-service';
-
+import {CabinetModule} from './pages/cabinet/cabinet.module';
+import {PipeModule} from './shared/pipe/pipe.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MenuService} from './source/menu-service';
   ],
   imports: [
     GlobalImportsModule,
-    PagesModule
+    PagesModule,
+    CabinetModule
   ],
   providers: [
     MenuService
@@ -20,4 +22,5 @@ import {MenuService} from './source/menu-service';
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}
