@@ -39,8 +39,10 @@ export class WorkerService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
-  update(worker: Worker): Observable<Worker> {
-    return this._httpClient.post<Worker>(this.controller + '/update', JSON.stringify(worker)).catch(err => Observable.throw(err))
+  update(worker: Worker,form:HTMLFormElement): Observable<Worker> {
+    let f=new FormData(form);
+    f.append("worker",JSON.stringify(worker))
+    return this._httpClient.post<Worker>(this.controller + '/update', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 
 

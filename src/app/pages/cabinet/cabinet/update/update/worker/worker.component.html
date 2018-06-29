@@ -1,0 +1,9 @@
+<div class="row flex-wrap p-4">
+  <div class="col-3" *ngFor="let one of workers">
+    <img routerLink="{{one.id}}" src="{{one.image|imagePipe}}" alt="{{one.name}}">
+    <h2 routerLink="{{one.id}}">{{one.name+' '+one.surname}}</h2>
+  </div>
+
+
+
+</div>

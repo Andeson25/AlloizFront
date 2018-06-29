@@ -1,0 +1,30 @@
+<div class=" d-flex flex-column align-items-center ">
+  <div class="d-flex flex-column align-items-center">
+    <h2>Name</h2>
+    <input type="text" [(ngModel)]="worker.name"  placeholder="name">
+    <input type="text"  [(ngModel)]="worker.surname"  placeholder="surname">
+    <input class="mt-3" type="checkbox" [(ngModel)]="worker.available"  >
+    Available
+
+
+    <br>
+  </div>
+
+  <h2>Incumbency</h2>
+  <div class=" bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
+    <input type="text"  placeholder="incumbency name" [(ngModel)]="worker.incumbencies[i].name"
+             >
+    <button (click)="deleteIncumbency(i)">delete</button>
+  </div>
+
+  <button (click)="addIncumbency()">add incumbency</button>
+  <form action="" #form>
+  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  </form>
+  <br>
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
+  <label for="file">AddImage</label>
+  <button   (click)="update(form)">update worker</button>
+</div>
