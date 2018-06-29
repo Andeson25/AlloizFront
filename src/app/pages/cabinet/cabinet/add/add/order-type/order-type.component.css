@@ -1,13 +1,3 @@
-.twoBlocks{
-  width: 50%;
-  padding-top: 30px;
-}
-.right-block{
-  width: 30%;
-}
-.left-block{
-  width: 30%;
-}
 h2{
   text-transform: uppercase;
   font-family:  RobotRegularCustom;
@@ -23,10 +13,6 @@ form{
   background: #98AD38;
 }
 
-img{
-  height: 5%;
-  margin-top: 15%;
-}
 input {
   height: 15%;
   border: 1px solid #E0E0E0;
@@ -37,23 +23,8 @@ input {
   font-size: 19px;
   padding-left: 4%;
 }
-textarea {
-  font-family: RobotoBoldCustom;
-  resize: none;
-  border: 1px solid #E0E0E0;
-  padding-left: 4%;
-  height: 50%;
-  margin: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-style: normal;
-  line-height: 35px;
-  font-size: 19px;
-}
+
 input::placeholder{
-  color:#98AD38 ;
-}
-textarea::placeholder{
   color:#98AD38 ;
 }
 input:focus::placeholder{
@@ -61,12 +32,8 @@ input:focus::placeholder{
   opacity: .8;
 }
 
-textarea:focus::placeholder{
-  color: grey;
-  opacity: .8;
-}
 
-button, label{
+button{
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -80,22 +47,11 @@ button, label{
   padding: 5px;
   margin-bottom: 10px;
 }
-button:hover, label:hover{
+button:hover{
   border: 0.5px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
+button:focus{
   color:#98AD38 ;
 }
-.image{
-  background-color: grey;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 500px;
-  max-height: 500px;
-}
-img{
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
+

@@ -3,12 +3,13 @@ import { AddComponent } from './add/add.component';
 import {GlobalImportsModule} from '../../../../shared/config/global-imports.module';
 import { WorkerComponent } from './add/worker/worker.component';
 import {TechnologyComponent} from './add/technology/technology.component';
+import { OrderTypeComponent } from './add/order-type/order-type.component';
 
 
 @NgModule({
   imports: [
     GlobalImportsModule
   ],
-  declarations: [AddComponent, WorkerComponent, TechnologyComponent]
+  declarations: [AddComponent, WorkerComponent, TechnologyComponent, OrderTypeComponent]
 })
 export class AddModule { }
