@@ -23,7 +23,7 @@ export class TechnologyComponent implements OnInit {
 
   constructor(private _techonolgyService:TechnologiesSerivce) {
     this.technologyDescription=new Array(3);
-    this.technologyDescription=[new TechnologyDescription(),new TechnologyDescription(),new TechnologyDescription()]
+    this.technologyDescription=[new TechnologyDescription(),new TechnologyDescription(),new TechnologyDescription()];
     this.technology.descriptions=this.technologyDescription;
   }
   readUrl(event: any) {
@@ -48,17 +48,17 @@ export class TechnologyComponent implements OnInit {
   addDesc(text:string,index:number){
     switch (index){
       case 0:{
-        this.technology.descriptions[index].language='en';
+        this.technology.descriptions[index].language='EN';
         this.technology.descriptions[index].description=text;
         break;
       }
       case 1:{
-        this.technology.descriptions[index].language='ru';
+        this.technology.descriptions[index].language='RU';
         this.technology.descriptions[index].description=text;
         break;
       }
       case 2:{
-        this.technology.descriptions[index].language='uk';
+        this.technology.descriptions[index].language='RU';
         this.technology.descriptions[index].description=text;
         break;
       }
@@ -66,6 +66,7 @@ export class TechnologyComponent implements OnInit {
   }
 
   addTech(form:HTMLFormElement){
+    console.log(this.technology);
       this._techonolgyService.save(this.technology,form).subscribe(next=>{
           console.log(next);
       },error=>{

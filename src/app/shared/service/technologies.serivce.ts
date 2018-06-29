@@ -31,10 +31,10 @@ export class TechnologiesSerivce {
 
   }
 
-  save(tech: Technology,form:HTMLFormElement): Observable<Technology> {
+  save(technologyJson: Technology,form:HTMLFormElement): Observable<Technology> {
     let f = new FormData(form);
-    f.append('technologyJson',JSON.stringify(tech));
-    return this._httpClient.post<Technology>(url+this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
+    f.append('technologyJson',JSON.stringify(technologyJson));
+    return this._httpClient.post<Technology>(url+this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'form-data/multipart')}).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<any> {
