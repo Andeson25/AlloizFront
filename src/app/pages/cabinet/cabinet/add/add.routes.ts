@@ -2,7 +2,11 @@ import {Routes} from '@angular/router';
 import {CabinetComponent} from '../../cabinet.component';
 import {PortfolioComponent} from './add/portfolio/portfolio.component';
 import {TechnologyComponent} from './add/technology/technology.component';
+
 import {OrderTypeComponent} from './add/order-type/order-type.component';
+
+import {WorkerComponent} from "./add/worker/worker.component";
+
 
 export const addRoutes :Routes =[
   {
@@ -15,6 +19,9 @@ export const addRoutes :Routes =[
       },
       {
         path:'order-type', component: OrderTypeComponent
+      },
+      {
+        path:'worker', component: WorkerComponent
       }
     ]
   }

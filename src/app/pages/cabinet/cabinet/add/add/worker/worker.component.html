@@ -1,3 +1,24 @@
-<p>
-  worker works!
-</p>
+<form [formGroup]="workerForm" action="" (submit)="addWorker(form)" #form
+      class="d-flex flex-column align-items-center">
+  <h2>Name</h2>
+  <input type="text" formControlName="name" placeholder="name">
+  <input type="text" formControlName="surname" placeholder="surname">
+  <br>
+
+  <h2>Incumbency</h2>
+  <div *ngFor="let incumbency of worker.incumbencies; let i = index">
+    <input type="text"  placeholder="incumbency name"
+           (change)="newIncombency(inc.value, i)" #inc>
+    <button   (click)="deleteIncumbency(i)">delete</button>
+  </div>
+
+  <button (click)="addIncumbency()">add incumbency</button>
+  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  <br>
+
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
+  <label for="file">AddImage</label>
+  <input value="Add worker" [disabled]="form.invalid" class="button" type="submit">
+</form>
