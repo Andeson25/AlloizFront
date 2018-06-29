@@ -67,6 +67,7 @@ export class WorkerComponent implements OnInit {
     this.worker.incumbencies.push(new Incumbency());
   }
   deleteIncumbency(index){
+    event.preventDefault();
     this.worker.incumbencies.splice(index, 1);
   }
   }

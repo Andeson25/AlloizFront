@@ -18,7 +18,7 @@ h2{
   color: #8A6284;
 }
 
-form{
+div:first-child{
   width: 100%;
   background: #98AD38;
 }
@@ -27,7 +27,7 @@ img{
   height: 5%;
   margin-top: 15%;
 }
-input {
+input:not([type='checkbox']) {
   height: 15%;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
