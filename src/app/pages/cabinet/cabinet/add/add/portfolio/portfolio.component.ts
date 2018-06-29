@@ -1,29 +1,27 @@
 import {Component, OnInit} from '@angular/core';
-import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Worker} from '../../../../../../shared/models/worker';
-import {Incumbency} from '../../../../../../shared/models/incumbency';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Portfolio} from "../../../../../../shared/models/portfolio";
 import {PortfolioDescription} from "../../../../../../shared/models/portfolio-description";
+import {PortfolioService} from '../../../../../../shared/service/portfolio.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  styleUrls: ['./portfolio.component.css'],
+  providers:[PortfolioService]
 })
 export class PortfolioComponent implements OnInit {
   portfolioForm: FormGroup;
   portfolio: Portfolio = new Portfolio();
-
+  portfolioDescription: PortfolioDescription[] = [];
 
   img:string='';
 
 
-  date= new Date().toISOString();
-
-  constructor() {
-    this.portfolio.descriptions= new Array(3);
-    this.portfolio.descriptions=[new PortfolioDescription(),new PortfolioDescription(),new PortfolioDescription()];
-
+  constructor( private _portfolioService:PortfolioService) {
+    this.portfolioDescription=new Array(3);
+    this.portfolioDescription=[new PortfolioDescription(),new PortfolioDescription(),new PortfolioDescription()]
+    this.portfolio.descriptions=this.portfolioDescription;
   }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -36,31 +34,43 @@ export class PortfolioComponent implements OnInit {
   }
   ngOnInit() {
     this.portfolioForm = new FormGroup({
-        name: new FormControl('', Validators.required),
-        link: new FormControl('', Validators.required)
+        name: new FormControl('', [Validators.required]),
+        link: new FormControl('', [Validators.required])
       }
     );
     this.portfolioForm.valueChanges.subscribe(next => {
-      this.portfolio = next;
+      this.portfolio= next;
+      this.portfolio.descriptions= this.portfolioDescription;
     });
   }
-  addWorker(form:HTMLFontElement){
-    console.log(this.portfolio)
+
+  addDescr(text:string,index:number){
+    switch (index){
+      case 0:{
+        this.portfolio.descriptions[index].language='en';
+        this.portfolio.descriptions[index].description=text;
+        break;
+      }
+      case 1:{
+        this.portfolio.descriptions[index].language='ru';
+        this.portfolio.descriptions[index].description=text;
+        break;
+      }
+      case 2:{
+        this.portfolio.descriptions[index].language='uk';
+        this.portfolio.descriptions[index].description=text;
+        break;
+      }
+    }
   }
-  addLang(i,text){
-  console.log(this.portfolio)
-    if(i==0){
-      this.portfolio.descriptions[i].language='en'
-      this.portfolio.descriptions[i].description=text;
-    }
-    if(i==1){
-      this.portfolio.descriptions[i].language='ru'
-      this.portfolio.descriptions[i].description=text;
-    }
-    if(i==2){
-      this.portfolio.descriptions[i].language='uk'
-      this.portfolio.descriptions[i].description=text;
-    }
+
+  addPortfolio(form:HTMLFormElement){
+    this._portfolioService.save(this.portfolio,form).subscribe(next=>{
+      console.log(next);
+    },error=>{
+      console.log(error);
+    })
+
   }
 
 }

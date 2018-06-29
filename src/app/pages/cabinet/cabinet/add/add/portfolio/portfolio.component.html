@@ -1,15 +1,30 @@
-<form [formGroup]="portfolioForm" action="" (submit)="addTech(form)" #form >
+<form [formGroup]="portfolioForm" action="" (submit)="addPortfolio(form)" #form
+      class="d-flex flex-column align-items-center">
+  <h2>Name</h2>
   <input type="text" formControlName="name" placeholder="name">
+  <h2>Link</h2>
   <input type="text" formControlName="link" placeholder="link">
-  <button (click)="addIncumbency()">add incumbency</button>
-  <input (change)="readUrl($event)"  id="file" type="file" class="d-none" name="multipartfile">
-  <textarea (change)="addLang(0, text.value)" #text></textarea>
-  <textarea (change)="addLang(1, text1.value)" #text1></textarea>
-  <textarea (change)="addLang(2, text2.value)" #text2></textarea>
-  <img [src]="img" alt="">
+  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  <div class="d-flex mt-3 mb-3 row">
+    <div class="col">
+      <h2>en</h2>
+      <textarea (change)="addDescr(val.value,0)" #val></textarea>
+    </div>
+    <div class="col">
+      <h2>ru</h2>
+      <textarea (change)="addDescr(val1.value,1)" #val1></textarea>
+    </div>
+    <div class="col">
+      <h2>uk</h2>
+      <textarea (change)="addDescr(val2.value,2)" #val2></textarea>
+    </div>
+  </div>
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
   <label for="file">AddImage</label>
-
-  <button [disabled]="portfolioForm.invalid"  type="submit">asdsadas</button>
+  <button [disabled]="form.invalid" class="button" type="submit">Add tech</button>
 </form>
+
 
 
