@@ -9,7 +9,7 @@ import {url} from '../config/url';
 @Injectable()
 export class TechnologiesSerivce {
 
-  controller = "/technologies";
+  controller = "/technology";
 
   constructor(private _httpClient: HttpClient) {
   }
@@ -34,7 +34,7 @@ export class TechnologiesSerivce {
   save(tech: Technology,form:HTMLFormElement): Observable<Technology> {
     let f = new FormData(form);
     f.append('technologyJson',JSON.stringify(tech));
-    return this._httpClient.post<Technology>(url+this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'form-data/multipart')}).catch(err => Observable.throw(err))
+    return this._httpClient.post<Technology>(url+this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<any> {

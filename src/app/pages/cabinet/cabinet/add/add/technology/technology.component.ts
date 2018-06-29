@@ -22,11 +22,9 @@ export class TechnologyComponent implements OnInit {
 
 
   constructor(private _techonolgyService:TechnologiesSerivce) {
-    this._techonolgyService.findAll().subscribe(next=>{
-      console.log(next)
-    },error=>{
-      console.log(error)
-    })
+    this.technologyDescription=new Array(3);
+    this.technologyDescription=[new TechnologyDescription(),new TechnologyDescription(),new TechnologyDescription()]
+    this.technology.descriptions=this.technologyDescription;
   }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -47,12 +45,32 @@ export class TechnologyComponent implements OnInit {
       this.technology.descriptions= this.technologyDescription;
     });
   }
+  addDesc(text:string,index:number){
+    switch (index){
+      case 0:{
+        this.technology.descriptions[index].language='en';
+        this.technology.descriptions[index].description=text;
+        break;
+      }
+      case 1:{
+        this.technology.descriptions[index].language='ru';
+        this.technology.descriptions[index].description=text;
+        break;
+      }
+      case 2:{
+        this.technology.descriptions[index].language='uk';
+        this.technology.descriptions[index].description=text;
+        break;
+      }
+    }
+  }
+
   addTech(form:HTMLFormElement){
-      // this._techonolgyService.save(this.technology,form).subscribe(next=>{
-      //     console.log(next);
-      // },error=>{
-      //   console.log(error);
-      // })
+      this._techonolgyService.save(this.technology,form).subscribe(next=>{
+          console.log(next);
+      },error=>{
+        console.log(error);
+      })
 
   }
 
