@@ -1,0 +1,15 @@
+.image{
+  background-color: grey;
+  min-height: 200px;
+  min-width: 250px;
+  max-width: 400px;
+
+}
+.button.ng-disabled{
+  background: grey;
+  color: grey;
+}
+form.ng-valid .button{
+  background-color: green;
+  color: #ffffff;
+}

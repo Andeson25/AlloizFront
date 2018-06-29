@@ -1,0 +1,13 @@
+<form [formGroup]="technologyForm" action="" (submit)="addTech(form)" #form  class="d-flex flex-column align-items-center">
+  <h2>Name</h2>
+  <input type="text" formControlName="name" placeholder="name">
+  <input (change)="readUrl($event)"  id="file" type="file" class="d-none" name="multipartfile">
+  <div class="image">
+  <img [src]="img" alt="">
+  </div>
+  <label for="file">AddImage</label>
+  <button [disabled]="form.invalid" class="button"  type="submit">Add tech</button>
+</form>
+
+
+
