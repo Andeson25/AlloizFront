@@ -1,27 +1,35 @@
 <form [formGroup]="technologyForm" action="" (submit)="addTech(form)" #form
       class="d-flex flex-column align-items-center">
-  <h2>Name</h2>
-  <input type="text" formControlName="name" placeholder="name">
-  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
-  <div class="d-flex mt-3 mb-3 row">
-    <div class="col">
-      <h2>en</h2>
-      <textarea (change)="addDesc(val.value,0)" #val></textarea>
+  <div class="twoBlocks d-flex flex-row justify-content-around">
+    <div class="left-block">
+      <h2>Name</h2>
+      <input type="text" formControlName="name" placeholder="name">
+      <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
     </div>
-    <div class="col">
-      <h2>ru</h2>
-      <textarea (change)="addDesc(val1.value,1)" #val1></textarea>
-    </div>
-    <div class="col">
-      <h2>uk</h2>
-      <textarea (change)="addDesc(val2.value,2)" #val2></textarea>
+    <div class="right-block d-flex flex-column">
+      <div>
+        <div>
+          <h2>en</h2>
+          <textarea (change)="addDesc(val.value,0)" #val></textarea>
+        </div>
+        <div>
+          <h2>ru</h2>
+          <textarea (change)="addDesc(val1.value,1)" #val1></textarea>
+        </div>
+        <div>
+          <h2>uk</h2>
+          <textarea (change)="addDesc(val2.value,2)" #val2></textarea>
+        </div>
+      </div>
     </div>
   </div>
   <div class="image">
     <img [src]="img" alt="">
   </div>
-  <label for="file">AddImage</label>
-  <button [disabled]="form.invalid" class="button" type="submit">Add tech</button>
+  <div class="d-flex flex-column">
+    <label for="file">AddImage</label>
+    <button [disabled]="form.invalid" class="button" type="submit">Add tech</button>
+  </div>
 </form>
 
 
