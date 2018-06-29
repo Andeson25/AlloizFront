@@ -1,13 +1,14 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
+import {Worker} from "../models/worker";
 
 @Injectable()
 export class WorkerService {
 
-  controller = "/technologies";
+  controller = "/worker";
 
   constructor(private _httpClient: HttpClient) {
   }
@@ -28,8 +29,10 @@ export class WorkerService {
     return this._httpClient.get<Worker>(this.controller + '/find-one-available/' + id).catch(err => Observable.throw(err))
   }
 
-  save(worker: Worker): Observable<Worker> {
-    return this._httpClient.post<Worker>(this.controller + '/save', JSON.stringify(worker)).catch(err => Observable.throw(err))
+  save(worker: Worker, form:HTMLFormElement): Observable<Worker> {
+    let f=new FormData(form);
+    f.append("workerJson",JSON.stringify(worker))
+    return this._httpClient.post<Worker>(this.controller + '/save', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<Worker> {

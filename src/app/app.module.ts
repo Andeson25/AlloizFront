@@ -5,6 +5,8 @@ import {PagesModule} from "./pages/pages.module";
 import {MenuService} from './source/menu-service';
 import {CabinetModule} from './pages/cabinet/cabinet.module';
 import {PipeModule} from './shared/pipe/pipe.module';
+import {Interceptor} from './shared/config/interceptor';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +19,12 @@ import {PipeModule} from './shared/pipe/pipe.module';
     CabinetModule
   ],
   providers: [
-    MenuService
+    MenuService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

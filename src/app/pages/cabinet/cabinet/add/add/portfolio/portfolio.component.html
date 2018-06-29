@@ -1,15 +1,37 @@
-<form [formGroup]="portfolioForm" action="" (submit)="addTech(form)" #form >
-  <input type="text" formControlName="name" placeholder="name">
-  <input type="text" formControlName="link" placeholder="link">
-  <button (click)="addIncumbency()">add incumbency</button>
-  <input (change)="readUrl($event)"  id="file" type="file" class="d-none" name="multipartfile">
-  <textarea (change)="addLang(0, text.value)" #text></textarea>
-  <textarea (change)="addLang(1, text1.value)" #text1></textarea>
-  <textarea (change)="addLang(2, text2.value)" #text2></textarea>
-  <img [src]="img" alt="">
-  <label for="file">AddImage</label>
+<form [formGroup]="portfolioForm" action="" (submit)="addPortfolio(form)" #form
+      class="d-flex flex-column align-items-center">
+<div class="twoBlocks d-flex flex-row justify-content-around">
+  <div class="left-block">
+    <h2>Name</h2>
+    <input type="text" formControlName="name" placeholder="name">
+    <h2>Link</h2>
+    <input type="text" formControlName="link" placeholder="link">
+    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  </div>
 
-  <button [disabled]="portfolioForm.invalid"  type="submit">asdsadas</button>
+  <div class=" right-block d-flex flex-column">
+    <div>
+      <h2>en</h2>
+      <textarea (change)="addDescr(val.value,0)" #val></textarea>
+    </div>
+    <div>
+      <h2>ru</h2>
+      <textarea (change)="addDescr(val1.value,1)" #val1></textarea>
+    </div>
+    <div>
+      <h2>uk</h2>
+      <textarea (change)="addDescr(val2.value,2)" #val2></textarea>
+    </div>
+  </div>
+  </div>
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
+  <div class="d-flex flex-column">
+    <label for="file">AddImage</label>
+    <button [disabled]="form.invalid" class="button" type="submit">Add portfolio</button>
+  </div>
 </form>
+
 
 

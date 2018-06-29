@@ -1,9 +1,11 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import {Portfolio} from "../models/portfolio";
+import {Technology} from '../models/technology';
+import {url} from '../config/url';
 
 @Injectable()
 export class PortfolioService {
@@ -29,8 +31,11 @@ export class PortfolioService {
     return this._httpClient.get<Portfolio>(this.controller + '/find-one-available' + id).catch(err => Observable.throw(err))
   }
 
-  save(port: Portfolio): Observable<Portfolio> {
-    return this._httpClient.post<Portfolio>(this.controller + '/save', JSON.stringify(port)).catch(err => Observable.throw(err))
+  save(port: Portfolio, form:HTMLFormElement): Observable<Portfolio> {
+    let f = new FormData(form);
+    f.append('portfolioJson',JSON.stringify(port));
+    return this._httpClient.post<Portfolio>(this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
+
   }
 
   delete(id: number): Observable<any> {

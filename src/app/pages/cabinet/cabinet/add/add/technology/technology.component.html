@@ -7,21 +7,32 @@
     <div class="col">
       <h2>en</h2>
       <textarea (change)="addDesc(val.value,0)" #val></textarea>
+
     </div>
-    <div class="col">
-      <h2>ru</h2>
-      <textarea (change)="addDesc(val1.value,1)" #val1></textarea>
-    </div>
-    <div class="col">
-      <h2>uk</h2>
-      <textarea (change)="addDesc(val2.value,2)" #val2></textarea>
+    <div class="right-block d-flex flex-column">
+      <div>
+        <div>
+          <h2>en</h2>
+          <textarea (change)="addDesc(val.value,0)" #val></textarea>
+        </div>
+        <div>
+          <h2>ru</h2>
+          <textarea (change)="addDesc(val1.value,1)" #val1></textarea>
+        </div>
+        <div>
+          <h2>uk</h2>
+          <textarea (change)="addDesc(val2.value,2)" #val2></textarea>
+        </div>
+      </div>
     </div>
   </div>
   <div class="image">
     <img [src]="img" alt="">
   </div>
-  <label for="file">AddImage</label>
-  <button [disabled]="form.invalid" class="button" type="submit">Add tech</button>
+  <div class="d-flex flex-column">
+    <label for="file">AddImage</label>
+    <button [disabled]="form.invalid" class="button" type="submit">Add tech</button>
+  </div>
 </form>
 
 
