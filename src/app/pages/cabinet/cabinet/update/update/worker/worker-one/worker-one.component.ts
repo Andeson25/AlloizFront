@@ -38,8 +38,8 @@ export class WorkerOneComponent implements OnInit {
   update(form:HTMLFormElement){
     console.log(this.worker)
     this._workerService.update(this.worker,form).subscribe(next=>{
-      console.log(next);
-
+      this.worker=next;
+      this.img=this._imagePipe.transform(next.image);
     },error=>{
       console.log(error);
     })
