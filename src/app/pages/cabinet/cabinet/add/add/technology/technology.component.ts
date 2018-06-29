@@ -22,6 +22,11 @@ export class TechnologyComponent implements OnInit {
 
 
   constructor(private _techonolgyService:TechnologiesSerivce) {
+    this._techonolgyService.findAll().subscribe(next=>{
+      console.log(next)
+    },error=>{
+      console.log(error)
+    })
   }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -42,7 +47,12 @@ export class TechnologyComponent implements OnInit {
       this.technology.descriptions= this.technologyDescription;
     });
   }
-  addTech(form:HTMLFontElement){
+  addTech(form:HTMLFormElement){
+      // this._techonolgyService.save(this.technology,form).subscribe(next=>{
+      //     console.log(next);
+      // },error=>{
+      //   console.log(error);
+      // })
 
   }
 
