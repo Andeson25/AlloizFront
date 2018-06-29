@@ -4,6 +4,7 @@ import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import {Technology} from "../models/technology";
+import {url} from '../config/url';
 
 @Injectable()
 export class TechnologiesSerivce {
@@ -14,7 +15,7 @@ export class TechnologiesSerivce {
   }
 
   findAll(): Observable<Technology[]> {
-    return this._httpClient.get<Technology[]>(this.controller + '/find-all').catch(err => Observable.throw(err))
+    return this._httpClient.get<Technology[]>(url+this.controller + '/find-all').catch(err => Observable.throw(err))
   }
 
   findAllAvailable(): Observable<Technology[]> {
@@ -33,7 +34,7 @@ export class TechnologiesSerivce {
   save(tech: Technology,form:HTMLFormElement): Observable<Technology> {
     let f = new FormData(form);
     f.append('technologyJson',JSON.stringify(tech));
-    return this._httpClient.post<Technology>(this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'form-data/multipart')}).catch(err => Observable.throw(err))
+    return this._httpClient.post<Technology>(url+this.controller + '/save', f , {headers: new HttpHeaders().append('enctype', 'form-data/multipart')}).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<any> {
