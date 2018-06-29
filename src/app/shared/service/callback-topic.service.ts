@@ -37,5 +37,9 @@ export class CallbackTopicService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(callback: CallbackTopic): Observable<CallbackTopic> {
+    return this._httpClient.post<CallbackTopic>(this.controller + '/update', JSON.stringify(callback)).catch(err => Observable.throw(err))
+  }
+
 
 }

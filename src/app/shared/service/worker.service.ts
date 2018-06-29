@@ -36,5 +36,10 @@ export class WorkerService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(worker: Worker): Observable<Worker> {
+    return this._httpClient.post<Worker>(this.controller + '/update', JSON.stringify(worker)).catch(err => Observable.throw(err))
+  }
+
+
 
 }

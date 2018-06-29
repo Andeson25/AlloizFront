@@ -1,17 +1,15 @@
 <form [formGroup]="portfolioForm" action="" (submit)="addTech(form)" #form >
   <input type="text" formControlName="name" placeholder="name">
-  <input type="text" formControlName="surname" placeholder="surname">
+  <input type="text" formControlName="link" placeholder="link">
   <button (click)="addIncumbency()">add incumbency</button>
   <input (change)="readUrl($event)"  id="file" type="file" class="d-none" name="multipartfile">
+  <textarea (change)="addLang(0, text.value)" #text></textarea>
+  <textarea (change)="addLang(1, text1.value)" #text1></textarea>
+  <textarea (change)="addLang(2, text2.value)" #text2></textarea>
   <img [src]="img" alt="">
   <label for="file">AddImage</label>
-  <div >
-    <div *ngFor="let one of incumbencies;let i = index" class="d-flex">
-      <input  (change)="incumbencies[i].name=value.value" #value type="text">
-      <button (click)="deleteIncumbency(i)">delete</button>
-    </div>
-  </div>
+
   <button [disabled]="portfolioForm.invalid"  type="submit">asdsadas</button>
 </form>
 
-<h1>{{date|datePipe}}</h1>
+

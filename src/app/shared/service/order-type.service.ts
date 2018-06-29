@@ -37,5 +37,9 @@ export class OrderTypeService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(orderType: OrderType): Observable<OrderType> {
+    return this._httpClient.post<OrderType>(this.controller + '/update', JSON.stringify(orderType)).catch(err => Observable.throw(err))
+  }
+
 
 }

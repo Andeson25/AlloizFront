@@ -30,12 +30,16 @@ export class IncumbencyService {
     return this._httpClient.get<Incumbency>(this.controller + '/find-one-available/' + id).catch(err => Observable.throw(err))
   }
 
-  save(callback: Incumbency): Observable<Incumbency> {
-    return this._httpClient.post<Incumbency>(this.controller + '/save', JSON.stringify(callback)).catch(err => Observable.throw(err))
+  save(inc: Incumbency): Observable<Incumbency> {
+    return this._httpClient.post<Incumbency>(this.controller + '/save', JSON.stringify(inc)).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<any> {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
+  }
+
+  update(inc:Incumbency): Observable<Incumbency>{
+    return this._httpClient.post<Incumbency>(this.controller+"/update",JSON.stringify(inc)).catch(err => Observable.throw(err))
   }
 
 }

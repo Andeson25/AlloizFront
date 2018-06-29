@@ -37,5 +37,8 @@ export class PortfolioService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
+  update(port: Portfolio): Observable<Portfolio> {
+    return this._httpClient.post<Portfolio>(this.controller + '/update', JSON.stringify(port)).catch(err => Observable.throw(err))
+  }
 
 }
