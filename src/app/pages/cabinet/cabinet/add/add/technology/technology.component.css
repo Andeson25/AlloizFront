@@ -1,0 +1,30 @@
+.image{
+  background-color: grey;
+  min-height: 200px;
+  margin: 30px 0;
+  min-width: 200px;
+
+
+}
+label{
+  background-color: #98AD38;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  border: 2px solid #637427;
+}
+label:hover{
+  background-color: #617027;
+}
+img{
+
+  max-width: 500px;
+}
+.button.ng-disabled{
+  background: grey;
+  color: grey;
+}
+form.ng-valid .button{
+  background-color: green;
+  color: #ffffff;
+}

@@ -1,7 +1,7 @@
 import {Routes} from '@angular/router';
 import {CabinetComponent} from '../../cabinet.component';
 import {PortfolioComponent} from './add/portfolio/portfolio.component';
-import {PortfolioDescriptionComponent} from "./add/portfolio-description/portfolio-description.component";
+import {TechnologyComponent} from './add/technology/technology.component';
 
 export const addRoutes :Routes =[
   {
@@ -10,7 +10,7 @@ export const addRoutes :Routes =[
         path:'portfolio',component:PortfolioComponent
       },
       {
-        path:'portfolio-description',component:PortfolioDescriptionComponent
+        path:'technology', component: TechnologyComponent
       }
     ]
   }
