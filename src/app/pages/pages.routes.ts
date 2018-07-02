@@ -5,6 +5,7 @@ import {PortfolioComponent} from "./pages/portfolio/portfolio.component";
 import {AboutUsComponent} from './pages/about-us/about-us.component';
 import {ServicesComponent} from './pages/services/services.component';
 import {ContactsComponent} from './pages/contacts/contacts.component';
+import {cabinetRoutes} from "./cabinet/cabinet.routes";
 
 export const pagesRoutes: Routes = [
   {
@@ -25,8 +26,7 @@ export const pagesRoutes: Routes = [
       {
         path: 'contacts', component: ContactsComponent
       }
-
-
     ]
-  }
+  },
+  ...cabinetRoutes
 ];

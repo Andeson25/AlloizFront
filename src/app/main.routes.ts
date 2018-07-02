@@ -6,8 +6,7 @@ import {cabinetRoutes} from './pages/cabinet/cabinet.routes';
 export const routes: Routes = [
   {
     path: '', component: AppComponent, children: [
-      ...pagesRoutes,
-      ...cabinetRoutes
+      ...pagesRoutes
     ]
   }
 ];

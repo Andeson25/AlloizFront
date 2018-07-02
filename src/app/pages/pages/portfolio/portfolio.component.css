@@ -180,14 +180,16 @@ h4{
   opacity: .6;
 }
 
-.carousel-item div h3.text {
-  z-index: 1;
+.carousel-inner h3.text {
+  z-index: 2;
   color: white;
   font-size: 18px;
   line-height: 24px;
   font-family: RobotRegularCustom;
   padding: 0 10px 70px;
   margin: 0;
+  position: absolute;
+  bottom: 0;
 }
 .current{
   transform: scale(1.2);
