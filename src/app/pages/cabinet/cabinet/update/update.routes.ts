@@ -10,7 +10,6 @@ import {PortfolioOneComponent} from './update/portfolio/portfolio-one/portfolio-
 import {OrderTypeComponent} from './update/order-type/order-type.component';
 
 
-
 export const updateRoutes :Routes =[
   {
     path:'update',component:UpdateComponent ,children :[

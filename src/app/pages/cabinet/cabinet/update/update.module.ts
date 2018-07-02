@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { UpdateComponent } from './update.component';
 import {WorkerComponent} from './update/worker/worker.component';
 import {GlobalImportsModule} from '../../../../shared/config/global-imports.module';
