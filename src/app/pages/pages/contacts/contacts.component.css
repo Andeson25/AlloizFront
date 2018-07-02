@@ -112,4 +112,18 @@ button:hover{
 button:focus{
   color:#98AD38 ;
 }
+option, select{
+  width: 270px;
+  height: 15%;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  /*font-weight: bold;*/
+  line-height: 35px;
+  font-size: 19px;
+  padding-left: 4%;
+  color: #98AD38;
+}
+
 
