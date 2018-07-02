@@ -10,9 +10,9 @@ import { IncumbencyComponent } from './update/incumbency/incumbency.component';
 import { CallbackTypeComponent } from './update/callback-type/callback-type.component';
 import { OrderTypeComponent } from './update/order-type/order-type.component';
 import { IncumbencyOneComponent } from './update/incumbency/incumbency-one/incumbency-one.component';
+import { TechnologyOneComponent } from './update/technology/technology-one/technology-one.component';
 import { PortfolioOneComponent } from './update/portfolio/portfolio-one/portfolio-one.component';
 import { OrderTypeOneComponent } from './update/order-type/order-type-one/order-type-one.component';
-
 
 @NgModule({
   imports: [
