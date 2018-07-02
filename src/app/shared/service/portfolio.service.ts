@@ -43,8 +43,11 @@ export class PortfolioService {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
-  update(port: Portfolio): Observable<Portfolio> {
-    return this._httpClient.post<Portfolio>(this.controller + '/update', JSON.stringify(port)).catch(err => Observable.throw(err))
+  update(port: Portfolio, form:HTMLFormElement): Observable<Portfolio> {
+    let f = new FormData(form);
+    f.append('portfolio',JSON.stringify(port));
+    return this._httpClient.post<Portfolio>(this.controller + '/update', f , {headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
+
   }
 
 }

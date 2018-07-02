@@ -41,8 +41,10 @@ export class TechnologiesSerivce {
     return this._httpClient.delete(this.controller + '/delete/' + id).catch(err => Observable.throw(err))
   }
 
-  update(tech: Technology): Observable<Technology> {
-    return this._httpClient.post<Technology>(this.controller + '/update', JSON.stringify(tech)).catch(err => Observable.throw(err))
+  update(tech: Technology,form:HTMLFormElement): Observable<Technology> {
+    let f=new FormData(form);
+    f.append("technology",JSON.stringify(tech))
+    return this._httpClient.post<Technology>(this.controller + '/update', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 
 

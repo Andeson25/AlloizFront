@@ -1,0 +1,38 @@
+<div class=" d-flex flex-column align-items-center ">
+  <div class="d-flex flex-column align-items-center">
+    <h2>Name</h2>
+    <input type="text" [(ngModel)]="portfolio.name"  placeholder="name">
+    <input type="text"  [(ngModel)]="portfolio.link"  placeholder="link">
+    <input class="mt-3" type="checkbox" [(ngModel)]="portfolio.available"  >
+    <br>
+    Available
+    <br>
+
+    <div class="right-block d-flex flex-column">
+      <div>
+        <div>
+          <h2>en</h2>
+          <textarea [(ngModel)]="portfolio.descriptions[0].description"></textarea>
+        </div>
+        <div>
+          <h2>ru</h2>
+          <textarea [(ngModel)]="portfolio.descriptions[1].description"></textarea>
+        </div>
+        <div>
+          <h2>uk</h2>
+          <textarea [(ngModel)]="portfolio.descriptions[2].description"></textarea>
+        </div>
+      </div>
+  </div>
+
+  <form action="" #form>
+    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  </form>
+  <br>
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
+  <label for="file">AddImage</label>
+  <button   (click)="update(form)">update portfolio</button>
+</div>
+</div>

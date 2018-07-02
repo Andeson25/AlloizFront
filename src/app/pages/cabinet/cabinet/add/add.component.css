@@ -1,15 +1,15 @@
 button{
-  width: 100%;
   box-sizing: border-box;
   font-size: 28px;
   width: 100%;
   border: 3px solid black;
-
-  background: white;
+  background: black;
+  color: whitesmoke;
+  opacity: .8;
 }
 button:hover{
-  opacity: .5;
+  opacity: 1;
 }
 .active{
-  text-decoration: underline;
+  opacity: 1;
 }

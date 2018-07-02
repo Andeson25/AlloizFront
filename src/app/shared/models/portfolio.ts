@@ -6,7 +6,7 @@ export class Portfolio {
   id: number;
   name: string;
   link: string;
-  images: Image [] = [];
+  images: string [] = [];
   descriptions: PortfolioDescription [] = [];
   available: boolean;
 

@@ -1,9 +1,12 @@
 import {UpdateComponent} from './update.component';
 import {WorkerComponent} from './update/worker/worker.component';
 import {Routes} from '@angular/router';
-import {worker} from 'cluster';
 import {WorkerOneComponent} from './update/worker/worker-one/worker-one.component';
 import {IncumbencyComponent} from './update/incumbency/incumbency.component';
+import {TechnologyOneComponent} from "./update/technology/technology-one/technology-one.component";
+import {TechnologyComponent} from "./update/technology/technology.component";
+import {PortfolioComponent} from './update/portfolio/portfolio.component';
+import {PortfolioOneComponent} from './update/portfolio/portfolio-one/portfolio-one.component';
 import {OrderTypeComponent} from './update/order-type/order-type.component';
 
 
@@ -18,6 +21,18 @@ export const updateRoutes :Routes =[
       },
       {
         path: 'incumbency', component: IncumbencyComponent
+      },
+      {
+        path: 'technology', component: TechnologyComponent
+      },
+      {
+        path: 'technology/:id', component: TechnologyOneComponent
+      },
+      {
+        path:'portfolio',component: PortfolioComponent
+      },
+      {
+        path:'portfolio/:id',component: PortfolioOneComponent
       },
       {
         path: 'order-type', component: OrderTypeComponent

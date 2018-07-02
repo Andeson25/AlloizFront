@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
       if (!next)
         setTimeout(() => {
           this.show = next;
-        }, 300);
+        }, 500);
     });
   }
 
