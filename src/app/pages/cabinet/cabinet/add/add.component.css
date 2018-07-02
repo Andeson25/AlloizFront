@@ -1,11 +1,12 @@
 button{
   box-sizing: border-box;
-  font-size: 28px;
+  font-size: 2.5vh;
   width: 100%;
   border: 3px solid black;
   background: black;
   color: whitesmoke;
   opacity: .8;
+  height: 5vh;
 }
 button:hover{
   opacity: 1;

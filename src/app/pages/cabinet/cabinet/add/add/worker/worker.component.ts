@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Worker} from "../../../../../../shared/models/worker";
 import {WorkerService} from "../../../../../../shared/service/worker.service";
 import {Incumbency} from "../../../../../../shared/models/incumbency";
+import {worker} from "cluster";
 
 @Component({
   selector: 'app-worker',
@@ -46,7 +47,7 @@ export class WorkerComponent implements OnInit {
   addWorker(form:HTMLFormElement) {
     console.log(this.worker);
     if(this.workerForm.valid){
-    this._workerService.save(this.worker, form).subscribe(next => {
+    this._workerService.save(this.worker,form).subscribe(next => {
       console.log(next);
     }, error => {
       console.log(error);

@@ -13,6 +13,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private _portfolioService:PortfolioService) {
     _portfolioService.findAll().subscribe(next=>{
         this.portfolio=next;
+        console.log(JSON.stringify(next));
       }
     )
   }

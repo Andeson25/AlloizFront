@@ -4,8 +4,10 @@
   <div class="left-block">
     <h2>Name</h2>
     <input type="text" formControlName="name" placeholder="name">
+
     <h2>Link</h2>
     <input type="text" formControlName="link" placeholder="link">
+    <br>
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
   </div>
 

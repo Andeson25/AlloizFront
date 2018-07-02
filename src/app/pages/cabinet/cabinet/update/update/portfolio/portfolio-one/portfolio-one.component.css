@@ -1,13 +1,8 @@
-.twoBlocks{
-  width: 50%;
-  padding-top: 30px;
+.back{
+  background: #98AD38;
+
 }
-.right-block{
-  width: 30%;
-}
-.left-block{
-  width: 30%;
-}
+
 h2{
   text-transform: uppercase;
   font-family:  RobotRegularCustom;
@@ -27,7 +22,7 @@ img{
   height: 5%;
   margin-top: 15%;
 }
-input {
+input[type=text] {
   height: 15%;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
@@ -44,19 +39,19 @@ textarea {
   padding-left: 4%;
   height: 50%;
   margin: 10px;
-  width: 400px;
+  width: 100%;
   box-sizing: border-box;
   font-style: normal;
   line-height: 35px;
   font-size: 19px;
 }
-input::placeholder{
+input[type=text]::placeholder{
   color:#98AD38 ;
 }
 textarea::placeholder{
   color:#98AD38 ;
 }
-input:focus::placeholder{
+input[type=text]:focus::placeholder{
   color: grey;
   opacity: .8;
 }
@@ -81,7 +76,7 @@ button, label{
   margin-bottom: 10px;
 }
 button:hover, label:hover{
-  border: 0.5px solid #E0E0E0;
+  border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
 button:focus, label:focus{
