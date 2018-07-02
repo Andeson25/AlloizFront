@@ -47,7 +47,7 @@ export class WorkerComponent implements OnInit {
   addWorker(form:HTMLFormElement) {
     console.log(this.worker);
     if(this.workerForm.valid){
-    this._workerService.save(this.worker, form).subscribe(next => {
+    this._workerService.save(this.worker,form).subscribe(next => {
       console.log(next);
     }, error => {
       console.log(error);

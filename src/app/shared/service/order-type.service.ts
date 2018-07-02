@@ -30,7 +30,7 @@ export class OrderTypeService {
   }
 
   save(orderType: OrderType): Observable<OrderType> {
-    return this._httpClient.post<OrderType>(this.controller + '/update', JSON.stringify(orderType)).catch(err => Observable.throw(err))
+    return this._httpClient.post<OrderType>(this.controller + '/save', JSON.stringify(orderType)).catch(err => Observable.throw(err))
   }
 
   delete(id: number): Observable<any> {
