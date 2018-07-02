@@ -1,0 +1,102 @@
+.back{
+  background: #98AD38;
+}
+.back{
+  background: #98AD38;
+
+}
+
+h2{
+  text-transform: uppercase;
+  font-family:  RobotRegularCustom;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 35px;
+  color: #8A6284;
+}
+
+form{
+  width: 100%;
+  background: #98AD38;
+}
+
+img{
+  height: 5%;
+  margin-top: 15%;
+}
+input[type=text] {
+  height: 15%;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  line-height: 35px;
+  font-size: 19px;
+  padding-left: 4%;
+}
+textarea {
+  font-family: RobotoBoldCustom;
+  resize: none;
+  border: 1px solid #E0E0E0;
+  padding-left: 4%;
+  height: 50%;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-style: normal;
+  line-height: 35px;
+  font-size: 19px;
+}
+input[type=text]::placeholder{
+  color:#98AD38 ;
+}
+textarea::placeholder{
+  color:#98AD38 ;
+}
+input[type=text]:focus::placeholder{
+  color: grey;
+  opacity: .8;
+}
+
+textarea:focus::placeholder{
+  color: grey;
+  opacity: .8;
+}
+
+button, label{
+  margin-top: 10px;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 35px;
+  font-size: 20px;
+  text-align: center;
+  color: #4E5D7A;
+  background: white;
+  border: 1px solid #4E5D7A;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+button:hover, label:hover{
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+}
+button:focus, label:focus{
+  color:#98AD38 ;
+}
+
+.image{
+  background-color: grey;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 500px;
+  max-height: 500px;
+}
+img{
+  height: 300px;
+  width: 400px  ;
+  margin: 0;
+}
+
+

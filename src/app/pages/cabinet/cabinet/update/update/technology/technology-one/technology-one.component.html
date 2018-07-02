@@ -1,3 +1,5 @@
+<div class="back d-flex flex-column align-items-center ">
+  <div class="d-flex flex-column align-items-center">
   <h2>Name</h2>
   <input type="text" [(ngModel)]="technology.name" placeholder="name">
   <div class="d-flex mt-3 mb-3 row">
@@ -6,15 +8,15 @@
         <div>
           <div>
             <h2>en</h2>
-            <textarea [(ngModel)]="technology.descriptions[0].description"></textarea>
+            <textarea *ngIf="start" [(ngModel)]="technology.descriptions[0].description"></textarea>
           </div>
           <div>
             <h2>ru</h2>
-            <textarea [(ngModel)]="technology.descriptions[1].description"></textarea>
+            <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
           </div>
           <div>
             <h2>uk</h2>
-            <textarea [(ngModel)]="technology.descriptions[2].description"></textarea>
+            <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
           </div>
         </div>
       </div>
@@ -27,10 +29,8 @@
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
   </form>
   <br>
-  <div class="image">
-    <img [src]="img" alt="">
-  </div>
   <label for="file">AddImage</label>
   <button   (click)="update(form)">update worker</button>
-
+  </div>
+</div>
 

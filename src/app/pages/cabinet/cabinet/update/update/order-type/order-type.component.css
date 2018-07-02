@@ -1,8 +1,9 @@
-.col-3{
-  cursor: pointer;
-  height: 300px;
-}
-img{
+.order{
+  background: #98AD38;
+  height: 90vh;
   width: 100%;
-  margin-bottom: 20px;
+  padding-top: 2%;
+}
+app-order-type-one{
+  width: 25%;
 }
