@@ -1,0 +1,15 @@
+button{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28px;
+  width: 100%;
+  border: 3px solid black;
+
+  background: white;
+}
+button:hover{
+  opacity: .5;
+}
+.active{
+  text-decoration: underline;
+}
