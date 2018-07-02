@@ -18,9 +18,10 @@ export class TechnologyOneComponent implements OnInit {
     _router.params.subscribe(next=>{
       _technologyService.findOne(next['id']).subscribe(next=>{
         this.technology=next;
-        console.log(this.technology);
+        console.log(next);
         this.img=_imagePipe.transform(next.image);
-      })
+      }, error=> console.log(error)
+        )
     })
   }
 
