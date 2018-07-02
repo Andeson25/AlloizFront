@@ -23,10 +23,10 @@ export const updateRoutes :Routes =[
         path: 'incumbency', component: IncumbencyComponent
       },
       {
-        path: 'tecnology', component: TechnologyComponent
+        path: 'technology', component: TechnologyComponent
       },
       {
-        path: 'tecnology/:id', component: TechnologyOneComponent
+        path: 'technology/:id', component: TechnologyOneComponent
       },
       {
         path:'portfolio',component: PortfolioComponent

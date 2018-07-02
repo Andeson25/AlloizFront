@@ -58,7 +58,7 @@ export class TechnologyComponent implements OnInit {
         break;
       }
       case 2:{
-        this.technology.descriptions[index].language='RU';
+        this.technology.descriptions[index].language='UK';
         this.technology.descriptions[index].description=text;
         break;
       }
