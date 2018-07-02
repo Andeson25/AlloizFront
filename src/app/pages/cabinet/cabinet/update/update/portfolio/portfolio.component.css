@@ -1,8 +1,29 @@
-.col-3{
-  cursor: pointer;
-  height: 300px;
+.back{
+  box-sizing: border-box;
+  background: #98AD38;
+  height: 90vh;
+  padding: 0!important;
+  margin: 0;
 }
 img{
+  width: 70%;
+  height: 70%;
+  cursor: pointer;
+}
+.back{
+  background: #98AD38;
+  height: 90vh;
   width: 100%;
-  margin-bottom: 20px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+h2{
+  cursor: pointer;
+  padding: 15px 5px;
+}
+.hundred{
+  padding: 2% 0;
+  width: 25%;
 }

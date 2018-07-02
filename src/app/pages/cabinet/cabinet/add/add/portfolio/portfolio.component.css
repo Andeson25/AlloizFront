@@ -1,5 +1,5 @@
 .twoBlocks{
-  width: 50%;
+  width: 80%;
   padding-top: 30px;
 }
 .right-block{
@@ -15,12 +15,13 @@ h2{
   font-weight: bold;
   line-height: normal;
   font-size: 35px;
-  color: #8A6284;
+  color: #cbcbca;
 }
 
 form{
   width: 100%;
-  background: #98AD38;
+  background: #415156;
+  height: 90vh;
 }
 
 img{
@@ -51,18 +52,18 @@ textarea {
   font-size: 19px;
 }
 input::placeholder{
-  color:#98AD38 ;
+  color:darkgrey ;
 }
 textarea::placeholder{
-  color:#98AD38 ;
+  color:darkgrey ;
 }
 input:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
 textarea:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
@@ -85,7 +86,7 @@ button:hover, label:hover{
   box-sizing: border-box;
 }
 button:focus, label:focus{
-  color:#98AD38 ;
+  color:darkgrey ;
 }
 
 .image{

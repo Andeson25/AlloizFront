@@ -1,9 +1,12 @@
 <form [formGroup]="technologyForm" action="" (submit)="addTech(form)" #form
       class="d-flex flex-column align-items-center">
+  <br>
   <h2>Name</h2>
+  <br>
   <input type="text" formControlName="name" placeholder="name">
+  <br>
   <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
-  <div class="d-flex mt-3 mb-3 row">
+  <div class="allIn d-flex">
     <div class="right-block d-flex flex-column">
       <div>
         <div>

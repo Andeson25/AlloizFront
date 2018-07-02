@@ -1,37 +1,40 @@
 h2{
+  padding-top: 20px;
   text-transform: uppercase;
   font-family:  RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  font-size: 35px;
-  color: #8A6284;
+  font-size: 28px;
+  color: #cbcbca;
+}
+.back{
+  height: 90vh;
+  background: #415156;
 }
 
 form{
   width: 100%;
-  background: #98AD38;
 }
 
-input {
-  height: 15%;
+input[type=text]{
+  height: 5vh;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   font-family: RobotoBoldCustom;
   font-style: normal;
   line-height: 35px;
   font-size: 19px;
-  padding-left: 4%;
+  padding-left: 1%;
 }
 
 input::placeholder{
-  color:#98AD38 ;
+  color:darkgrey;
 }
 input:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
-
 
 button{
   margin-top: 10px;
@@ -39,19 +42,19 @@ button{
   font-style: normal;
   font-weight: normal;
   line-height: 35px;
-  font-size: 20px;
   text-align: center;
   color: #4E5D7A;
   background: white;
   border: 1px solid #4E5D7A;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 10px;
+  font-size: 28px;
 }
 button:hover{
-  border: 0.5px solid #E0E0E0;
+  border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
 button:focus{
-  color:#98AD38 ;
+  color:black;
 }
 

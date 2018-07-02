@@ -1,0 +1,22 @@
+img{
+  width: 70%;
+  height: 70%;
+  cursor: pointer;
+}
+.back{
+  background: #98AD38;
+  height: 90vh;
+  width: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+h2{
+  cursor: pointer;
+  padding: 15px 5px;
+}
+.hundred{
+  padding: 2% 0;
+  width: 25%;
+}
