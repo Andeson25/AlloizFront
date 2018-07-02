@@ -18,6 +18,6 @@ import { OrderTypeOneComponent } from './update/order-type/order-type-one/order-
   imports: [
     GlobalImportsModule
   ],
-  declarations: [UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, OrderTypeOneComponent,PortfolioOneComponent]
+  declarations: [TechnologyOneComponent, UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, OrderTypeOneComponent,PortfolioOneComponent]
 })
 export class UpdateModule { }
