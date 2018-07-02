@@ -21,7 +21,8 @@ export class TechnologyOneComponent implements OnInit {
         this.start=true;
         console.log(this.technology);
         this.img=_imagePipe.transform(next.image);
-      })
+      }, error=> console.log(error)
+        )
     })
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CallbackTopicService} from "../../../shared/service/callback-topic.service";
 
 @Component({
   selector: 'app-contacts',
