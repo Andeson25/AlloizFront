@@ -5,6 +5,8 @@ import {WorkerOneComponent} from './update/worker/worker-one/worker-one.componen
 import {IncumbencyComponent} from './update/incumbency/incumbency.component';
 import {PortfolioComponent} from './update/portfolio/portfolio.component';
 import {PortfolioOneComponent} from './update/portfolio/portfolio-one/portfolio-one.component';
+import {OrderTypeComponent} from './update/order-type/order-type.component';
+
 
 
 export const updateRoutes :Routes =[
@@ -24,6 +26,9 @@ export const updateRoutes :Routes =[
       },
       {
         path:'portfolio/:id',component: PortfolioOneComponent
+      },
+      {
+        path: 'order-type', component: OrderTypeComponent
       }
     ]
   }
