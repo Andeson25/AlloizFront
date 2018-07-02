@@ -11,7 +11,7 @@ import {OrderTypeService} from '../../../../../../../shared/service/order-type.s
 })
 export class OrderTypeOneComponent implements OnInit {
 
-  @Input('orderType') orderType : OrderType;
+  @Input('orderType') orderType : OrderType; OrderType
 
   constructor(private _OrderTypeService: OrderTypeService) { }
 
