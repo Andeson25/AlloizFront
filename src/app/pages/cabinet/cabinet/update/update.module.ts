@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { UpdateComponent } from './update.component';
 import {WorkerComponent} from './update/worker/worker.component';
 import {GlobalImportsModule} from '../../../../shared/config/global-imports.module';
@@ -13,10 +13,11 @@ import { IncumbencyOneComponent } from './update/incumbency/incumbency-one/incum
 import { PortfolioOneComponent } from './update/portfolio/portfolio-one/portfolio-one.component';
 import { OrderTypeOneComponent } from './update/order-type/order-type-one/order-type-one.component';
 
+
 @NgModule({
   imports: [
     GlobalImportsModule
   ],
-  declarations: [UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, PortfolioOneComponent]
+  declarations: [UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, OrderTypeOneComponent,PortfolioOneComponent]
 })
 export class UpdateModule { }
