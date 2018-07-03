@@ -71,3 +71,10 @@ button:focus{
   padding-top: 7%;
 }
 
+.leftBlock{
+  width: 50%;
+}
+
+.rightBlock{
+  width: 50%;
+}

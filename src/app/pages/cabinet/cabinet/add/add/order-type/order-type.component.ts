@@ -15,15 +15,17 @@ export class OrderTypeComponent implements OnInit {
   orderType: OrderType = new OrderType();
 
 
-
   constructor( private _orderTypeService:OrderTypeService) {
   }
 
   ngOnInit() {
     this.orderTypeForm = new FormGroup({
+
+
         name: new FormControl('', [Validators.required])
       }
     );
+
     this.orderTypeForm.valueChanges.subscribe(next => {
       this.orderType= next;
     });
