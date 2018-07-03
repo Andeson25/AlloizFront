@@ -43,7 +43,7 @@ export class TechnologiesSerivce {
 
   update(tech: Technology,form:HTMLFormElement): Observable<Technology> {
     let f=new FormData(form);
-    f.append("technology",JSON.stringify(tech))
+    f.append("technologyJson",JSON.stringify(tech))
     return this._httpClient.post<Technology>(this.controller + '/update', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 

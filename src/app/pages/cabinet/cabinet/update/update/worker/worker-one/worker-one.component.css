@@ -1,5 +1,5 @@
 .bock{
-  height: 90vh;
+  height: 100%;
 }
 h2{
   text-transform: uppercase;
@@ -77,20 +77,35 @@ button:hover, label:hover{
 button:focus, label:focus{
   color: #415156 ;
 }
+label{
+  margin-top: 15px;
+}
 .image{
   background-color: grey;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 500px;
-  max-height: 500px;
-  margin-bottom: 15px;
+  max-height: 17vw;
+  min-height: 17vw;
+  max-width:17vw;
+  min-width: 17vw;
+
+
+}
+input[type=checkbox]{
+  padding: 2px;
+  height: 1.5vh;
+  margin: 10px 5px 0 0;
+}
+h3{
+  font-size: 2vh;
+  margin: 10px 5px 0 0;
+  color: lightyellow;
 }
 img{
-  height: 400px;
-  width: 400px  ;
   margin: 0;
+  max-height: 17vw;
+  min-height: 17vw;
+  max-width:17vw;
+  min-width: 17vw;
 }
-
 .bomba{
   margin:20px;
   display: flex;

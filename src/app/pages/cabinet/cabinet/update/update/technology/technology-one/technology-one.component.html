@@ -3,25 +3,22 @@
     <h2>Name</h2>
     <input type="text" [(ngModel)]="technology.name" placeholder="name">
     <div class="d-flex mt-3 mb-3 row">
-      <div class="col">
-        <div class="right-block d-flex flex-column">
-          <div>
-            <div>
-              <h2>en</h2>
-              <textarea *ngIf="start" [(ngModel)]="technology.descriptions[0].description"></textarea>
-            </div>
-            <div>
-              <h2>ru</h2>
-              <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
-            </div>
-            <div>
-              <h2>uk</h2>
-              <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
-            </div>
-          </div>
+      <div class="right-block d-flex flex-row">
+        <div>
+          <h2>en</h2>
+          <textarea *ngIf="start" [(ngModel)]="technology.descriptions[0].description"></textarea>
+        </div>
+        <div>
+          <h2>ru</h2>
+          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
+        </div>
+        <div>
+          <h2>uk</h2>
+          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
         </div>
       </div>
     </div>
+
     <div class="image">
       <img [src]="img" alt="">
     </div>
@@ -30,6 +27,6 @@
     </form>
     <br>
     <label for="file">AddImage</label>
-    <button   (click)="update(form)">update worker</button>
+    <button   (click)="update(form)">update techonology</button>
   </div>
 </div>

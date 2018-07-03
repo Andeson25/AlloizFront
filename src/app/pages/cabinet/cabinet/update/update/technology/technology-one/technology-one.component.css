@@ -37,9 +37,9 @@ textarea {
   resize: none;
   border: 1px solid #E0E0E0;
   padding-left: 4%;
-  height: 50%;
+  height: 30vh;
   margin: 10px;
-  width: 100%;
+  width: 30vw;
   box-sizing: border-box;
   font-style: normal;
   line-height: 35px;
@@ -82,17 +82,13 @@ button:focus, label:focus{
   color:#415156 ;
 }
 
-.image{
-  background-color: grey;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 500px;
-  max-height: 500px;
-}
 img{
-  height: 300px;
-  width: 400px  ;
   margin: 0;
+  background-color: grey;
+  max-height: 17vw;
+  min-height: 17vw;
+  /*max-width:17vw;*/
+  /*min-width: 17vw;*/
 }
 
 

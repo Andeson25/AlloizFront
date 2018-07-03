@@ -45,7 +45,7 @@ export class PortfolioService {
 
   update(port: Portfolio, form:HTMLFormElement): Observable<Portfolio> {
     let f = new FormData(form);
-    f.append('portfolio',JSON.stringify(port));
+    f.append('portfolioJson',JSON.stringify(port));
     return this._httpClient.post<Portfolio>(this.controller + '/update', f , {headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
 
   }
