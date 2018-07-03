@@ -1,6 +1,5 @@
 .back{
-  background: #98AD38;
-
+  background: #415156;
 }
 
 h2{
@@ -10,12 +9,22 @@ h2{
   font-weight: bold;
   line-height: normal;
   font-size: 35px;
-  color: #8A6284;
+  color: grey;
 }
 
+input[type=checkbox]{
+  padding: 2px;
+  height: 1.5vh;
+  margin: 10px 5px 0 0;
+}
+h3{
+  font-size: 2vh;
+  margin: 10px 5px 0 0;
+  color: lightyellow;
+}
 form{
   width: 100%;
-  background: #98AD38;
+  background: #415156;
 }
 
 img{
@@ -46,18 +55,18 @@ textarea {
   font-size: 19px;
 }
 input[type=text]::placeholder{
-  color:#98AD38 ;
+  color:#415156 ;
 }
 textarea::placeholder{
-  color:#98AD38 ;
+  color:#415156 ;
 }
 input[type=text]:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
 textarea:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
@@ -80,7 +89,7 @@ button:hover, label:hover{
   box-sizing: border-box;
 }
 button:focus, label:focus{
-  color:#98AD38 ;
+  color:#415156 ;
 }
 
 .image{
