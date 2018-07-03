@@ -19,14 +19,15 @@
       </div>
     </div>
 
-    <div class="image">
-      <img [src]="img" alt="">
-    </div>
-    <form action="" #form>
-      <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
-    </form>
-    <br>
-    <label for="file">AddImage</label>
-    <button   (click)="update(form)">update techonology</button>
+  <div class="image">
+    <img [src]="img" alt="">
+  </div>
+  <form action="" #form>
+    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
+  </form>
+  <br>
+  <label for="file">AddImage</label>
+  <button   (click)="update(form)">update techonology</button>
+
   </div>
 </div>
