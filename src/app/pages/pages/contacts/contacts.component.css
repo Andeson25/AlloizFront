@@ -125,5 +125,8 @@ option, select{
   padding-left: 4%;
   color: #98AD38;
 }
+.invallid{
+  border: 1px solid red!important;
+}
 
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Technology} from "../../../shared/models/technology";
 import {TechnologiesSerivce} from "../../../shared/service/technologies.serivce";
-import index from "@angular/cli/lib/cli";
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,7 @@ export class HomeComponent implements OnInit {
   selectedTechnology: Technology= new Technology();
   show=false;
 
-  constructor( private  _servicesTechnology: TechnologiesSerivce ) {
+  constructor( private  _servicesTechnology: TechnologiesSerivce) {
   this._servicesTechnology.findAllAvailable().subscribe(next=>{
       this.technologies=next;
       this.selectedTechnology=next[2];
