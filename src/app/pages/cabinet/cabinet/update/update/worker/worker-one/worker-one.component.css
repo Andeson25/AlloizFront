@@ -8,13 +8,13 @@ h2{
   font-weight: bold;
   line-height: normal;
   font-size: 35px;
-  color: #8A6284;
+  color: grey;
   padding-top: 10px;
 }
 
 div:first-child{
   width: 100%;
-  background: #98AD38;
+  background: #415156;
 }
 
 img{
@@ -22,7 +22,7 @@ img{
   margin-top: 15%;
 }
 input:not([type='checkbox']) {
-  height: 15%;
+  height: 5vh;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   font-family: RobotoBoldCustom;
@@ -44,19 +44,17 @@ textarea {
   line-height: 35px;
   font-size: 19px;
 }
-input::placeholder{
-  color:#98AD38 ;
+input::placeholder,textarea::placeholder{
+  color:#415156 ;
 }
-textarea::placeholder{
-  color:#98AD38 ;
-}
+
 input:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
 textarea:focus::placeholder{
-  color: grey;
+  color: black;
   opacity: .8;
 }
 
@@ -77,7 +75,7 @@ button:hover, label:hover{
   box-sizing: border-box;
 }
 button:focus, label:focus{
-  color:#98AD38 ;
+  color: #415156 ;
 }
 .image{
   background-color: grey;
