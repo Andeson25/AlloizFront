@@ -4,8 +4,10 @@
     <input type="text" [(ngModel)]="portfolio.name"  placeholder="name">
     <br>
     <input type="text"  [(ngModel)]="portfolio.link"  placeholder="link">
-    <input class="mt-3" type="checkbox" [(ngModel)]="portfolio.available"  >
-    Available
+    <div class="d-flex justify-content-start">
+      <input class="mt-3" type="checkbox" [(ngModel)]="portfolio.available"  >
+      <h3>Available</h3>
+    </div>
     <br>
 
     <div class="right-block d-flex flex-column">

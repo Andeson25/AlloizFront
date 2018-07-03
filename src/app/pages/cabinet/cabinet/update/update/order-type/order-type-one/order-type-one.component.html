@@ -1,6 +1,9 @@
-<div class=" d-flex flex-column" >
+<div class="d-flex flex-column" >
   <h2>Name</h2>
   <input type="text" [(ngModel)]="orderType.name">
-  <input type="checkbox" [(ngModel)]="orderType.available">
+  <div class="d-flex justify-content-start">
+    <input type="checkbox" [(ngModel)]="orderType.available">
+    <h3>Available</h3>
+  </div>
   <button (click)="update()">Update</button>
 </div>
