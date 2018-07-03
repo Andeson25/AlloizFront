@@ -19,7 +19,6 @@ export class TechnologyOneComponent implements OnInit {
       _technologyService.findOne(next['id']).subscribe(next=>{
         this.technology=next;
         this.start=true;
-        console.log(this.technology);
         this.img=_imagePipe.transform(next.image);
       }, error=> console.log(error)
         )
@@ -33,7 +32,7 @@ export class TechnologyOneComponent implements OnInit {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = (event: any) => {
-        this.img = event.target.result;
+        this.img= event.target.result;
       };
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -41,8 +40,8 @@ export class TechnologyOneComponent implements OnInit {
 
 
   update(form:HTMLFormElement){
-    console.log(this.technology)
     this._technologyService.update(this.technology,form).subscribe(next=>{
+      console.log(next)
       this.technology=next;
       this.img=this._imagePipe.transform(next.image);
     },error=>{
