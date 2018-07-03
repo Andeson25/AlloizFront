@@ -1,5 +1,5 @@
 .bock{
-  height: 90vh;
+  height: 100%;
 }
 h2{
   text-transform: uppercase;
@@ -76,6 +76,9 @@ button:hover, label:hover{
 }
 button:focus, label:focus{
   color: #415156 ;
+}
+label{
+  margin-top: 15px;
 }
 .image{
   background-color: grey;
