@@ -1,0 +1,12 @@
+<div>
+  Update topic
+  <div *ngFor="let topic of topics; let i = index">
+    <input  type="text" [(ngModel)]="topics[i].name" #nameTopic>
+    <p>Available</p>
+    <select name="" id="" #selectOptions>
+      <option value="true">Available</option>
+      <option value="false">Not Available</option>
+    </select>
+    <input type="button" value="Update" (click)="updateTopic(i, nameTopic.value, selectOptions.value)">
+  </div>
+</div>

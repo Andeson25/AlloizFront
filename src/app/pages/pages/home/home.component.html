@@ -5,10 +5,10 @@
       <div class="top"></div>
     </div>
     <div class="middle d-flex ">
-      <div class="leftBlock">
+      <div class="leftBlock" [style.background]="'url(' + (selectedTechnology.image|imagePipe) + ')'">
         <div class="justify-content-center leftBlockContent">
           <div class="line"></div>
-          <p>0{{index}}</p>
+          <p>0{{index+1}}</p>
         </div>
       </div>
       <div class="rightBlock d-flex flex-column justify-content-between">
@@ -16,11 +16,8 @@
           <img src="../../../../assets/svg/arrowUp.svg" alt="arrow">
         </div>
         <div>
-          <div class="dot" [ngClass]="{'dotActive':index==1}"></div>
-          <div class="dot" [ngClass]="{'dotActive':index==2}"></div>
-          <div class="dot" [ngClass]="{'dotActive':index==3}"></div>
-          <div class="dot" [ngClass]="{'dotActive':index==4}"></div>
-          <div class="dot" [ngClass]="{'dotActive':index==5}"></div>
+          <div class="dot" [ngClass]="{'dotActive':index==i}"
+               *ngFor="let techology of technologies; let i = index"></div>
         </div>
         <div class="arrowDown d-flex justify-content-center" (click)="scroll(false)">
           <img src="../../../../assets/svg/arrowDown.svg" alt="arrow">
@@ -35,11 +32,10 @@
   <div class="bigRight">
     <div class="content d-flex flex-column justify-content-center ">
       <div class="linetext">
-        <h2>ui/ux trends</h2>
+        <h2>{{selectedTechnology.name}}</h2>
         <div class="line"></div>
       </div>
-
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab </p>
+      <p *ngIf="show">{{this.selectedTechnology.descriptions[0].description}} </p>
       <input type="button" value="more">
     </div>
   </div>

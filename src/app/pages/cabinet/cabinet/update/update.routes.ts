@@ -8,6 +8,7 @@ import {TechnologyComponent} from "./update/technology/technology.component";
 import {PortfolioComponent} from './update/portfolio/portfolio.component';
 import {PortfolioOneComponent} from './update/portfolio/portfolio-one/portfolio-one.component';
 import {OrderTypeComponent} from './update/order-type/order-type.component';
+import {CallBackTopicComponent} from "./update/topic/call-back-topic.component";
 
 
 export const updateRoutes :Routes =[
@@ -36,6 +37,8 @@ export const updateRoutes :Routes =[
       },
       {
         path: 'order-type', component: OrderTypeComponent
+      },{
+        path: 'callback-topic', component: CallBackTopicComponent
       }
     ]
   }

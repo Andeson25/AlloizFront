@@ -204,3 +204,6 @@ h4{
   color: white;
   opacity: .6;
 }
+.image{
+  background-repeat: no-repeat;
+}

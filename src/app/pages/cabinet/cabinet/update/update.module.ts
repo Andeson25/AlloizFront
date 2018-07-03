@@ -13,11 +13,12 @@ import { IncumbencyOneComponent } from './update/incumbency/incumbency-one/incum
 import { TechnologyOneComponent } from './update/technology/technology-one/technology-one.component';
 import { PortfolioOneComponent } from './update/portfolio/portfolio-one/portfolio-one.component';
 import { OrderTypeOneComponent } from './update/order-type/order-type-one/order-type-one.component';
+import { CallBackTopicComponent } from './update/topic/call-back-topic.component';
 
 @NgModule({
   imports: [
     GlobalImportsModule
   ],
-  declarations: [TechnologyOneComponent, UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, OrderTypeOneComponent,PortfolioOneComponent]
+  declarations: [TechnologyOneComponent, UpdateComponent,WorkerComponent, WorkerOneComponent, PortfolioComponent, TechnologyComponent, IncumbencyComponent, CallbackTypeComponent, OrderTypeComponent, IncumbencyOneComponent, OrderTypeOneComponent,PortfolioOneComponent, CallBackTopicComponent]
 })
 export class UpdateModule { }

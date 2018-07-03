@@ -4,6 +4,7 @@ import {TechnologyComponent} from './add/technology/technology.component';
 import {OrderTypeComponent} from './add/order-type/order-type.component';
 import {WorkerComponent} from "./add/worker/worker.component";
 import {AddComponent} from "./add.component";
+import {CallBackTopicComponent} from "./add/topic/call-back-topic.component";
 
 
 export const addRoutes :Routes =[
@@ -20,6 +21,9 @@ export const addRoutes :Routes =[
       },
       {
         path:'worker', component: WorkerComponent
+      },
+      {
+        path:'callback-topic', component: CallBackTopicComponent
       }
     ]
   }

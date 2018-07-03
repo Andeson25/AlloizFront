@@ -31,7 +31,7 @@ export class WorkerService {
 
   save(worker: Worker, form:HTMLFormElement): Observable<Worker> {
     let f=new FormData(form);
-    f.append("workerJson",JSON.stringify(worker))
+    f.append("workerJson",JSON.stringify(worker));
     return this._httpClient.post<Worker>(this.controller + '/save', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
 
@@ -41,7 +41,7 @@ export class WorkerService {
 
   update(worker: Worker,form:HTMLFormElement): Observable<Worker> {
     let f=new FormData(form);
-    f.append("workerJson",JSON.stringify(worker))
+    f.append("workerJson",JSON.stringify(worker));
     console.log(f.get('multipartFile'));
     return this._httpClient.post<Worker>(this.controller + '/update', f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err))
   }
