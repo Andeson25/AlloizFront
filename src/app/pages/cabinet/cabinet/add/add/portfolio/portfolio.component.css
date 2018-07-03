@@ -21,7 +21,7 @@ h2{
 form{
   width: 100%;
   background: #415156;
-  height: 90vh;
+  /*height: 100%;*/
 }
 
 img{
@@ -82,22 +82,27 @@ button, label{
   margin-bottom: 10px;
 }
 button:hover, label:hover{
-  border: 0.5px solid #E0E0E0;
+  border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
 button:focus, label:focus{
   color:darkgrey ;
 }
 
-.image{
-  background-color: grey;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 500px;
-  max-height: 500px;
-}
+/*.image{*/
+  /*margin-top: 20px;*/
+  /*background-color: grey;*/
+  /*max-height: 17vw;*/
+  /*min-height: 17vw;*/
+  /*!*max-width:17vw;*!*/
+  /*!*min-width: 17vw;*!*/
+
+/*}*/
 img{
-  height: 100%;
-  width: 100%;
   margin: 0;
+  background-color: grey;
+  max-height: 17vw;
+  min-height: 17vw;
+  /*max-width:17vw;*/
+  /*min-width: 17vw;*/
 }
