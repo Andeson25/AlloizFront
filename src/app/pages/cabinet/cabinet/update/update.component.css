@@ -14,3 +14,11 @@ button:hover{
 .active{
   opacity: 1;
 }
+.kaka{
+   width: 100%;
+   height: 100%;
+   top: 10vh;
+   position: absolute;
+   background: #415156;
+   z-index: 0;
+ }

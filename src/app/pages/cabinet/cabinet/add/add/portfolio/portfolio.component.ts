@@ -17,6 +17,10 @@ export class PortfolioComponent implements OnInit {
 
   img:string='';
 
+  appear: boolean = true;
+  toggle(){
+    this.appear = !this.appear;
+  }
 
   constructor( private _portfolioService:PortfolioService) {
     this.portfolioDescription=new Array(3);
