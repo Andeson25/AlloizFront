@@ -22,8 +22,12 @@ export class PortfolioOneComponent implements OnInit {
         this.start=true;
         console.log(this.portfolio);
         this.img=_imagePipe.transform(next.images);
-      })
+      },error=> console.log(error)
+        )
     })
+  }
+
+  ngOnInit() {
   }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -35,13 +39,12 @@ export class PortfolioOneComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
+
   update(form:HTMLFormElement){
     console.log(this.portfolio)
     this._portfolioService.update(this.portfolio,form).subscribe(next=>{
       this.portfolio=next;
-      this.img=this._imagePipe.transform(next.images);
+      this.img=this._imagePipe.transform(next.images );
     },error=>{
       console.log(error);
     })
