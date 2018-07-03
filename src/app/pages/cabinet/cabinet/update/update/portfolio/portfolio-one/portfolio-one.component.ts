@@ -20,7 +20,6 @@ export class PortfolioOneComponent implements OnInit {
       _portfolioService.findOne(next['id']).subscribe(next=>{
         this.portfolio=next;
         this.start=true;
-        console.log(this.portfolio);
         this.img=_imagePipe.transform(next.images);
       },error=> console.log(error)
         )
@@ -41,10 +40,12 @@ export class PortfolioOneComponent implements OnInit {
 
 
   update(form:HTMLFormElement){
-    console.log(this.portfolio)
     this._portfolioService.update(this.portfolio,form).subscribe(next=>{
-      this.portfolio=next;
-      this.img=this._imagePipe.transform(next.images );
+
+      // console.log(this._imagePipe.transform(next.images));
+      this.portfolio=next;;
+      this.img=this._imagePipe.transform(next.images);
+
     },error=>{
       console.log(error);
     })
