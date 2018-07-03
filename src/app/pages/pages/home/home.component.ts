@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
       console.log(error)
     }, ()=>{
     this.show=true;
+    console.log(this.technologies);
     })
   }
 
