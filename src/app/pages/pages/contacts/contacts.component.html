@@ -12,15 +12,14 @@
       <div class="fiveLeft d-flex flex-column justify-content-between">
           <input type="text" placeholder="* Name">
           <input type="text" placeholder="* Email">
-        <select name="" id="">
-          <option value="">1</option>
-          <option value="">2</option>
+        <select name="">
+          <option value="callbackTopic.name" *ngFor="let callbackTopic of calbackTopics">{{callbackTopic.name}}</option>
         </select>
           <input type="text" placeholder="  Phone">
           <input type="text" placeholder="  Company">
       </div>
       <div class="oneRight">
-          <textarea name="" id="" cols="30" rows="10" placeholder="* Message"></textarea>
+          <textarea name=""  cols="30" rows="10" placeholder="* Message"></textarea>
       </div>
     </div>
       <button>SEND</button>
