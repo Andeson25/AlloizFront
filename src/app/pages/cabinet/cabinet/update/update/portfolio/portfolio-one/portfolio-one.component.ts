@@ -13,10 +13,13 @@ import {PortfolioService} from '../../../../../../../shared/service/portfolio.se
 export class PortfolioOneComponent implements OnInit {
   portfolio: Portfolio = new Portfolio();
   img:string='';
+  start:boolean=false;
+
   constructor(private _router: ActivatedRoute,private _portfolioService:PortfolioService,private _imagePipe: ImagePipePipe) {
     _router.params.subscribe(next=>{
       _portfolioService.findOne(next['id']).subscribe(next=>{
         this.portfolio=next;
+        this.start=true;
         console.log(this.portfolio);
         this.img=_imagePipe.transform(next.images);
       })

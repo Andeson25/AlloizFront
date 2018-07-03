@@ -13,14 +13,16 @@ import {ActivatedRoute} from "@angular/router";
 export class TechnologyOneComponent implements OnInit {
   technology: Technology= new Technology();
   img:string='';
-
+  start:boolean=false;
   constructor(private _technologyService: TechnologiesSerivce, private _imagePipe: ImagePipePipe, private _router: ActivatedRoute) {
     _router.params.subscribe(next=>{
       _technologyService.findOne(next['id']).subscribe(next=>{
         this.technology=next;
+        this.start=true;
         console.log(this.technology);
         this.img=_imagePipe.transform(next.image);
-      })
+      }, error=> console.log(error)
+        )
     })
   }
 

@@ -40,6 +40,8 @@
   z-index: 100;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   position: relative;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
 }
 .leftBlock .leftBlockContent{
   position: absolute;
@@ -47,6 +49,7 @@
   top: 5%;
   right: 50px;
   width: 100px;
+
 }
 .leftBlock p {
   font-size: 72px;

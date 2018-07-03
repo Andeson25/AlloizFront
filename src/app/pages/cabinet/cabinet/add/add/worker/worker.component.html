@@ -1,8 +1,11 @@
 <form [formGroup]="workerForm" action="" (submit)="addWorker(form)" #form
       class="d-flex flex-column align-items-center">
   <div class="d-flex flex-column">
+    <br>
   <h2>Name</h2>
+    <br>
   <input type="text" formControlName="name" placeholder="name">
+    <br>
   <input type="text" formControlName="surname" placeholder="surname">
   <br>
   </div>
@@ -14,7 +17,7 @@
   </div>
 
   <button (click)="addIncumbency()">add incumbency</button>
-  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
+  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
   <br>
   <div class="image">
     <img [src]="img" alt="">

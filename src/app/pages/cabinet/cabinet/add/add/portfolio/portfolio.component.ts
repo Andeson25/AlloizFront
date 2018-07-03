@@ -47,17 +47,17 @@ export class PortfolioComponent implements OnInit {
   addDescr(text:string,index:number){
     switch (index){
       case 0:{
-        this.portfolio.descriptions[index].language='en';
+        this.portfolio.descriptions[index].language='EN';
         this.portfolio.descriptions[index].description=text;
         break;
       }
       case 1:{
-        this.portfolio.descriptions[index].language='ru';
+        this.portfolio.descriptions[index].language='RU';
         this.portfolio.descriptions[index].description=text;
         break;
       }
       case 2:{
-        this.portfolio.descriptions[index].language='uk';
+        this.portfolio.descriptions[index].language='UK';
         this.portfolio.descriptions[index].description=text;
         break;
       }
