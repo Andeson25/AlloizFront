@@ -18,7 +18,10 @@ export class TechnologyComponent implements OnInit {
 
   img:string='';
 
-
+  appear: boolean = true;
+  toggle(){
+    this.appear = !this.appear;
+  }
 
 
   constructor(private _techonolgyService:TechnologiesSerivce) {
