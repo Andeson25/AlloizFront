@@ -1,21 +1,21 @@
 <div class="back d-flex flex-column align-items-center ">
   <div class="d-flex flex-column align-items-center">
-  <h2>Name</h2>
-  <input type="text" [(ngModel)]="technology.name" placeholder="name">
-  <div class="d-flex mt-3 mb-3 row">
+    <h2>Name</h2>
+    <input type="text" [(ngModel)]="technology.name" placeholder="name">
+    <div class="d-flex mt-3 mb-3 row">
       <div class="right-block d-flex flex-row">
-          <div>
-            <h2>en</h2>
-            <textarea *ngIf="start" [(ngModel)]="technology.descriptions[0].description"></textarea>
-          </div>
-          <div>
-            <h2>ru</h2>
-            <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
-          </div>
-          <div>
-            <h2>uk</h2>
-            <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
-          </div>
+        <div>
+          <h2>en</h2>
+          <textarea *ngIf="start" [(ngModel)]="technology.descriptions[0].description"></textarea>
+        </div>
+        <div>
+          <h2>ru</h2>
+          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
+        </div>
+        <div>
+          <h2>uk</h2>
+          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
+        </div>
       </div>
     </div>
 
@@ -28,7 +28,6 @@
   <br>
   <label for="file">AddImage</label>
   <button   (click)="update(form)">update techonology</button>
+
   </div>
 </div>
-
-
