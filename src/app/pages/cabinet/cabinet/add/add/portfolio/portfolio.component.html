@@ -11,15 +11,15 @@
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartfile">
   </div>
   <div class=" right-block d-flex flex-column">
-    <div>
+    <div class="d-flex flex-row">
       <h2>en</h2>
       <textarea (change)="addDescr(val.value,0)" #val></textarea>
     </div>
-    <div>
+    <div class="d-flex flex-row">
       <h2>ru</h2>
       <textarea (change)="addDescr(val1.value,1)" #val1></textarea>
     </div>
-    <div>
+    <div class="d-flex flex-row">
       <h2>uk</h2>
       <textarea (change)="addDescr(val2.value,2)" #val2></textarea>
     </div>
