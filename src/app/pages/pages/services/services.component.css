@@ -1,3 +1,6 @@
+*{
+  text-align: center!important;
+}
 .main{
   padding-left:5%;
   padding-right:5%;
@@ -44,6 +47,7 @@ margin-top: 6%;
   font-family: RobotRegularCustom;
   font-size: 15px;
   margin-left: 8%;
+  text-align: left!important;
 
 }
 button{
@@ -71,3 +75,11 @@ button:focus{
   padding-top: 7%;
 }
 
+.leftBlock{
+  width: 20%;
+}
+
+.rightBlock{
+  width: 20%;
+
+}

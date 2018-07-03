@@ -10,7 +10,7 @@ import {PortfolioService} from "../../../shared/service/portfolio.service";
   providers:[PortfolioService]
 })
 export class PortfolioComponent implements OnInit {
-  // items: string[] = ['kek1', 'kek2', 'kek3', 'kek4', 'kek5', 'kek6', 'kek7', 'kek8'];
+  async: boolean=false;
   portfolios: Portfolio[]=[];
   startIndex: number = 0;
   currentIndex: number = 2;
@@ -24,6 +24,8 @@ export class PortfolioComponent implements OnInit {
       console.log(error)
     }, ()=>{
       this.selectedPortfolio=this.portfolios[2];
+      console.log(this.selectedPortfolio);
+      this.async=true;
     })
   }
 
