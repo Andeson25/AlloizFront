@@ -1,0 +1,75 @@
+
+h2{
+
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-family:  RobotRegularCustom;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 28px;
+  color: #cbcbca;
+}
+
+.inputs{
+  padding: 20px;
+  margin: 20px!important;
+
+  border: 3px solid white;
+}
+
+.fiveLeft input {
+  width: 50%!important;
+
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: RobotoBoldCustom;
+  font-style: normal;/
+line-height: 35px;
+  font-size: 2.5vh;
+  background: transparent;
+}
+textarea {
+  /*width: 30vw;*/
+  font-family: RobotoBoldCustom;
+  resize: none;
+  border: 1px solid #E0E0E0;
+  padding-left: 4%;
+  /*height: 21vh;*/
+}
+
+input:focus::placeholder, textarea:focus::placeholder{
+  color: grey;
+  opacity: .8;
+}
+
+
+button{
+  margin-top: 20px;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  color: #4E5D7A;
+  background: white;
+  border: 1px solid #4E5D7A;
+  width: 9%;
+  font-weight: normal;
+  margin-top: 4%;
+}
+
+button:hover{
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+}
+
+
+
+/*.hundred{*/
+/*padding: 2% 0;*/
+/*width: 25%;*/
+/*}*/
+
+
