@@ -11,15 +11,15 @@
       <div>
         <div>
           <h2>en</h2>
-          <textarea (change)="addDesc(val.value,0)" #val></textarea>
+          <textarea formControlName="textareaEN"  (change)="addDesc(val.value,0)" #val></textarea>
         </div>
         <div>
           <h2>ru</h2>
-          <textarea (change)="addDesc(val1.value,1)" #val1></textarea>
+          <textarea formControlName="textareaRU" (change)="addDesc(val1.value,1)" #val1></textarea>
         </div>
         <div>
           <h2>uk</h2>
-          <textarea (change)="addDesc(val2.value,2)" #val2></textarea>
+          <textarea formControlName="textareaUK" (change)="addDesc(val2.value,2)" #val2></textarea>
         </div>
       </div>
     </div>

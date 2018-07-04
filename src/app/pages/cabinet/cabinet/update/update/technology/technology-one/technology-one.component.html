@@ -10,24 +10,24 @@
         </div>
         <div>
           <h2>ru</h2>
-          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[1].description"></textarea>
+          <textarea *ngIf="start" [(ngModel)]="technology.descriptions[1].description"></textarea>
         </div>
         <div>
           <h2>uk</h2>
-          <textarea *ngIf="start"  [(ngModel)]="technology.descriptions[2].description"></textarea>
+          <textarea *ngIf="start" [(ngModel)]="technology.descriptions[2].description"></textarea>
         </div>
       </div>
     </div>
 
-  <div class="image">
-    <img [src]="img" alt="">
-  </div>
-  <form action="" #form>
-    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
-  </form>
-  <br>
-  <label for="file">AddImage</label>
-  <button   (click)="update(form)">update techonology</button>
+    <div class="image">
+      <img [src]="img" alt="">
+    </div>
+    <form action="" #form>
+      <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
+    </form>
+    <br>
+    <label for="file">AddImage</label>
+    <button (click)="update(form)">update techonology</button>
 
   </div>
 </div>
