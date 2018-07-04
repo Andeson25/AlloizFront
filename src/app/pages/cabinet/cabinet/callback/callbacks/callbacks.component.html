@@ -1,0 +1,31 @@
+<div *ngFor="let callback of callbacks; let i = index" class="inputs row  ">
+      <div class="col-6 fiveLeft d-flex flex-column justify-content-between align-items-start">
+        <div class="row m-0 d-flex w-100">
+          <h2 class="col-6">Name:</h2>
+          <input type="text" placeholder="* Name"  class="col-6" [(ngModel)]="callbacks[i].name" #nameTopic>
+        </div>
+        <div  class="row m-0 w-100">
+          <h2  class="col-6">mail:</h2>
+          <input type="text" placeholder="* Email" class="col-6" [(ngModel)]="callbacks[i].email" #emailTopic>
+        </div>
+        <div class="row m-0 w-100">
+          <h2  class="col-6">phone:</h2>
+          <input type="text" placeholder="  Phone" class="col-6" [(ngModel)]="callbacks[i].phone" #phoneTopic>
+        </div>
+        <div  class="row m-0 w-100">
+          <h2  class="col-6">Company:</h2>
+          <input type="text" placeholder="   Company" class="col-6" [(ngModel)]="callbacks[i].company" #companyTopic>
+        </div>
+        <!--<div  class="row m-0 w-100">-->
+          <!--<h2  class="col-6">Topic:</h2>-->
+          <!--<input type="text" placeholder="   Topic" class="col-6" [(ngModel)]="callbacks[i].callbackTopic.name" #companyTopic>-->
+        <!--</div>-->
+      </div>
+      <div class="oneRight col-6">
+        <div class="d-flex flex-column ">
+          <h2>Message:</h2>
+          <textarea name="" cols="30" rows="10" placeholder="* Message" [(ngModel)]="callbacks[i].message"></textarea>
+        </div>
+      </div>
+</div>
+
