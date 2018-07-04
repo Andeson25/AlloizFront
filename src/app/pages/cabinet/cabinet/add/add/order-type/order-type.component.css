@@ -57,7 +57,7 @@ button:hover{
 button:focus{
   color:black;
 }
-.invallid{
-  border: 1px solid red!important;
-}
 
+.ng-invalid:not(name){
+  border:1px solid red;
+}
