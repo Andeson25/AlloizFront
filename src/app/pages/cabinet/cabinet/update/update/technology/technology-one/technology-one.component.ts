@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Technology} from "../../../../../../../shared/models/technology";
-import {TechnologiesSerivce} from "../../../../../../../shared/service/technologies.serivce";
+import {TechnologyService} from "../../../../../../../shared/service/technology.service";
 import {ImagePipePipe} from "../../../../../../../shared/pipe/pipe/image-pipe.pipe";
 import {ActivatedRoute} from "@angular/router";
 
@@ -8,13 +8,13 @@ import {ActivatedRoute} from "@angular/router";
   selector: 'app-technology-one',
   templateUrl: './technology-one.component.html',
   styleUrls: ['./technology-one.component.css'],
-  providers: [TechnologiesSerivce, ImagePipePipe]
+  providers: [TechnologyService, ImagePipePipe]
 })
 export class TechnologyOneComponent implements OnInit {
   technology: Technology= new Technology();
   img:string='';
   start:boolean=false;
-  constructor(private _technologyService: TechnologiesSerivce, private _imagePipe: ImagePipePipe, private _router: ActivatedRoute) {
+  constructor(private _technologyService: TechnologyService, private _imagePipe: ImagePipePipe, private _router: ActivatedRoute) {
     _router.params.subscribe(next=>{
       _technologyService.findOne(next['id']).subscribe(next=>{
         this.technology=next;

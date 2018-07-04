@@ -2,13 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {TechnologyDescription} from '../../../../../../shared/models/technology-description';
 import {Technology} from '../../../../../../shared/models/technology';
-import {TechnologiesSerivce} from '../../../../../../shared/service/technologies.serivce';
+import {TechnologyService} from '../../../../../../shared/service/technology.service';
 
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
   styleUrls: ['./technology.component.css'],
-  providers:[TechnologiesSerivce]
+  providers:[TechnologyService]
 })
 export class TechnologyComponent implements OnInit {
   technologyForm: FormGroup;
@@ -24,7 +24,7 @@ export class TechnologyComponent implements OnInit {
   }
 
 
-  constructor(private _techonolgyService:TechnologiesSerivce) {
+  constructor(private _techonolgyService:TechnologyService) {
     this.technologyDescription=new Array(3);
     this.technologyDescription=[new TechnologyDescription(),new TechnologyDescription(),new TechnologyDescription()];
     this.technology.descriptions=this.technologyDescription;

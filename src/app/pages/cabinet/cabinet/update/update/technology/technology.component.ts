@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {Technology} from "../../../../../../shared/models/technology";
-import {TechnologiesSerivce} from "../../../../../../shared/service/technologies.serivce";
+import {TechnologyService} from "../../../../../../shared/service/technology.service";
 
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
   styleUrls: ['./technology.component.css'],
-  providers: [TechnologiesSerivce]
+  providers: [TechnologyService]
 })
 export class TechnologyComponent implements OnInit {
   technology: Technology[]=[];
-  constructor(private _technology: TechnologiesSerivce) {
+  constructor(private _technology: TechnologyService) {
     _technology.findAll().subscribe(next=>{
         this.technology=next;
       }

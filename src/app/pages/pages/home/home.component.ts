@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Technology} from "../../../shared/models/technology";
-import {TechnologiesSerivce} from "../../../shared/service/technologies.serivce";
+import {TechnologyService} from "../../../shared/service/technology.service";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [TechnologiesSerivce]
+  providers: [TechnologyService]
 })
 export class HomeComponent implements OnInit {
 
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   selectedTechnology: Technology= new Technology();
   show=false;
 
-  constructor( private  _servicesTechnology: TechnologiesSerivce) {
+  constructor( private  _servicesTechnology: TechnologyService) {
   this._servicesTechnology.findAllAvailable().subscribe(next=>{
       this.technologies=next;
       this.selectedTechnology=next[2];
