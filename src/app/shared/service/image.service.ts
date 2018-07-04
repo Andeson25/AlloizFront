@@ -15,8 +15,7 @@ export class ImageService{
     let f  = new  FormData(form);
     return this._httpClient.post<Image>(this.controller+'/save/'+id,f,{headers: new HttpHeaders().append('enctype', 'multipart/form-data')}).catch(err => Observable.throw(err));
   }
-  delete(id:number):Observable<Image>{
-    return this._httpClient.delete<Image>(this.controller+'/delete/'+id).catch(err => Observable.throw(err));
+  delete(id:number):Observable<Image> {
+    return this._httpClient.delete<Image>(this.controller + '/delete/' + id).catch(err => Observable.throw(err));
   }
-
 }
