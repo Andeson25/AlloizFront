@@ -26,6 +26,7 @@ input[type=text]{
   line-height: 35px;
   font-size: 19px;
   padding-left: 1%;
+  border-radius: 5px;
 }
 
 input::placeholder{
@@ -49,6 +50,9 @@ input[type=button]{
   padding: 5px 10px;
   margin-bottom: 10px;
   font-size: 28px;
+  border-radius: 5px;
+  width: 133px;
+
 }
 input[type=button]:hover{
   border: 1px solid #E0E0E0;
@@ -57,4 +61,12 @@ input[type=button]:hover{
 input[type=button]:focus{
   color:black;
 }
+input.ng-invalid{
+  border-left:5px solid red;
+}
+
+input.ng-valid{
+  border-left:5px solid green;
+}
+
 
