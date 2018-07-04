@@ -99,7 +99,6 @@ button:focus, label:focus{
 
 /*}*/
 img{
-  margin: 0;
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
