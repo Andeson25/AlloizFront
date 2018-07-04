@@ -1,10 +1,11 @@
 <div class="oneBlockBatko">
   <div class="matka">
-    <div class="d-flex justify-content-between align-content-center">
+    <div class="d-flex flex-column justify-content-between align-content-center">
       <button [routerLinkActive]="['active']"
               routerLink="add">Add</button>
       <button [routerLinkActive]="['active']"
               routerLink="update">Update</button>
+      <button>callbacks</button>
     </div>
       <router-outlet></router-outlet>
   </div>
