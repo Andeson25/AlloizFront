@@ -1,15 +1,12 @@
-.back{
-  box-sizing: border-box;
-  background: #415156;
-  height: 100%;
-  padding: 0!important;
-  margin: 0;
-  width: 100%;
-}
 img{
   width: 70%;
   height: 70%;
   cursor: pointer;
+}
+.back{
+  background: #415156;
+  height: 100%;
+  width: 100%;
 }
 *{
   margin: 0;

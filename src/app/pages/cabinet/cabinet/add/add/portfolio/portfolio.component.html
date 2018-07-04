@@ -9,10 +9,6 @@
     <input type="text" formControlName="link" placeholder="link">
     <br>
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFiles">
-
-    <div [ngClass]="{'kaka' :appear}" class="image">
-      <img [src]="img" alt="">
-    </div>
   </div>
   <div class=" right-block d-flex flex-column">
     <div class="d-flex flex-row">
@@ -28,6 +24,9 @@
       <textarea (change)="addDescr(val2.value,2)" #val2></textarea>
     </div>
   </div>
+  </div>
+  <div [ngClass]="{'kaka' :appear}" class="image">
+    <img [src]="img" alt="">
   </div>
   <div class="d-flex flex-column">
     <label (click)="toggle()" for="file">AddImage</label>
