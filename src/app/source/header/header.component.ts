@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Injectable, Input, OnInit, Output} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {MenuService} from '../menu-service';
 
 @Component({
@@ -8,8 +8,7 @@ import {MenuService} from '../menu-service';
 })
 @Injectable()
 export class HeaderComponent implements OnInit {
-  // @Output() boolMenu: EventEmitter<boolean>= new EventEmitter<boolean>();
-  // @Input() show=false;
+  workButton = true;
   show = false;
 
   constructor(private menu: MenuService) {
@@ -17,15 +16,18 @@ export class HeaderComponent implements OnInit {
 
 
   showMenu() {
+    this.workButton = false;
     this.show = true;
     this.menu.showMenu(this.show);
-    // this.boolMenu.emit(this.show);
   }
 
   ngOnInit() {
-    this.menu.show$.subscribe(next=>{
-      this.show=next;
-    })
+    if (this.workButton)
+      this.menu.show$.subscribe(next => {
+        this.show = next;
+        if (!next)
+          this.workButton = true;
+      });
   }
 
 }

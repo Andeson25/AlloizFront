@@ -1,6 +1,5 @@
-import {Component, ElementRef, OnInit, ViewChild,} from '@angular/core';
+import {Component, OnInit,} from '@angular/core';
 import {MenuService} from '../menu-service';
-import {isNullOrUndefined} from 'util';
 
 
 @Component({
@@ -10,22 +9,27 @@ import {isNullOrUndefined} from 'util';
 })
 export class MenuComponent implements OnInit {
   show: boolean = false;
-
+  workButton=true;
 
 
   constructor(private menu: MenuService) {
     this.menu.show$.subscribe(next => {
-      if (next)
+      if (next){
         this.show = next;
-      if (!next)
+      }
+      if (!next){
+        this.workButton=false;
         setTimeout(() => {
           this.show = next;
-        }, 500);
+          this.workButton=true;
+        }, 200);
+      }
     });
   }
 
   closeMenu() {
-    this.menu.showMenu(false);
+    if(this.workButton)
+      this.menu.showMenu(false);
   }
 
   ngOnInit(): void {
