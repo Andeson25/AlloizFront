@@ -8,7 +8,7 @@ import {TechnologyService} from '../../../../../../shared/service/technology.ser
   selector: 'app-technology',
   templateUrl: './technology.component.html',
   styleUrls: ['./technology.component.css'],
-  providers:[TechnologyService]
+  providers: [TechnologyService]
 })
 export class TechnologyComponent implements OnInit {
   technologyForm: FormGroup;
@@ -16,65 +16,72 @@ export class TechnologyComponent implements OnInit {
   technology: Technology = new Technology();
   technologyDescription: TechnologyDescription[] = [];
 
-  img:string='';
+  img: string = '';
 
   appear: boolean = true;
-  toggle(){
+
+  toggle() {
     this.appear = !this.appear;
   }
 
 
-  constructor(private _techonolgyService:TechnologyService) {
-    this.technologyDescription=new Array(3);
-    this.technologyDescription=[new TechnologyDescription(),new TechnologyDescription(),new TechnologyDescription()];
-    this.technology.descriptions=this.technologyDescription;
+  constructor(private _techonolgyService: TechnologyService) {
+    this.technologyDescription = new Array(3);
+    this.technologyDescription = [new TechnologyDescription(), new TechnologyDescription(), new TechnologyDescription()];
+    this.technology.descriptions = this.technologyDescription;
   }
+
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = (event: any) => {
-        this.img= event.target.result;
+        this.img = event.target.result;
       };
       reader.readAsDataURL(event.target.files[0]);
     }
   }
+
   ngOnInit() {
     this.technologyForm = new FormGroup({
-        name: new FormControl('', [Validators.required])
+        name: new FormControl('', [Validators.required]),
+        textareaRU: new FormControl('', [Validators.required]),
+        textareaUK: new FormControl('', [Validators.required]),
+        textareaEN: new FormControl('', [Validators.required])
       }
     );
     this.technologyForm.valueChanges.subscribe(next => {
       this.technology = next;
-      this.technology.descriptions= this.technologyDescription;
+      this.technology.descriptions = this.technologyDescription;
     });
   }
-  addDesc(text:string,index:number){
-    switch (index){
-      case 0:{
-        this.technology.descriptions[index].language='EN';
-        this.technology.descriptions[index].description=text;
+
+  addDesc(text: string, index: number) {
+    switch (index) {
+      case 0: {
+        this.technology.descriptions[index].language = 'EN';
+        this.technology.descriptions[index].description = text;
         break;
       }
-      case 1:{
-        this.technology.descriptions[index].language='RU';
-        this.technology.descriptions[index].description=text;
+      case 1: {
+        this.technology.descriptions[index].language = 'RU';
+        this.technology.descriptions[index].description = text;
         break;
       }
-      case 2:{
-        this.technology.descriptions[index].language='UK';
-        this.technology.descriptions[index].description=text;
+      case 2: {
+        this.technology.descriptions[index].language = 'UK';
+        this.technology.descriptions[index].description = text;
         break;
       }
     }
   }
 
-  addTech(form:HTMLFormElement){
+  addTech(form: HTMLFormElement) {
     console.log(this.technology);
-      this._techonolgyService.save(this.technology,form).subscribe(next=>{
-          console.log(next);
-      },error=>{
-        console.log(error);
-      })
+    this._techonolgyService.save(this.technology, form).subscribe(next => {
+      console.log(next);
+    }, error => {
+      console.log(error);
+    })
 
   }
 

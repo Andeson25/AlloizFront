@@ -1,16 +1,19 @@
-.twoBlocks{
+.twoBlocks {
   width: 80%;
   padding-top: 30px;
 }
-.right-block{
+
+.right-block {
   width: 70%;
 }
-.left-block{
+
+.left-block {
   width: 30%;
 }
-h2{
+
+h2 {
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -18,16 +21,17 @@ h2{
   color: #cbcbca;
 }
 
-form{
+form {
   width: 100%;
   background: #415156;
   /*height: 100%;*/
 }
 
-img{
+img {
   height: 5%;
   margin-top: 15%;
 }
+
 input {
   height: 5vh;
   border: 1px solid #E0E0E0;
@@ -37,11 +41,13 @@ input {
   line-height: 35px;
   font-size: 19px;
   padding-left: 4%;
+  border-radius: 5px;
 }
+
 textarea {
   font-family: RobotoBoldCustom;
   resize: none;
-  border: 1px solid #E0E0E0;
+  /*border: 1px solid #E0E0E0;*/
   padding-left: 4%;
   height: 20vh;
   margin: 10px;
@@ -50,24 +56,28 @@ textarea {
   font-style: normal;
   line-height: 35px;
   font-size: 19px;
+  border-radius: 5px;
 }
-input::placeholder{
-  color:darkgrey ;
+
+input::placeholder {
+  color: darkgrey;
 }
-textarea::placeholder{
-  color:darkgrey ;
+
+textarea::placeholder {
+  color: darkgrey;
 }
-input:focus::placeholder{
+
+input:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-textarea:focus::placeholder{
+textarea:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-button, label{
+button, label {
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -80,31 +90,35 @@ button, label{
   border: 1px solid #4E5D7A;
   padding: 5px;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
-button:hover, label:hover{
+
+button:hover, label:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
-  color:darkgrey ;
+
+button:focus, label:focus {
+  color: darkgrey;
 }
 
-/*.image{*/
-  /*margin-top: 20px;*/
-  /*background-color: grey;*/
-  /*max-height: 17vw;*/
-  /*min-height: 17vw;*/
-  /*!*max-width:17vw;*!*/
-  /*!*min-width: 17vw;*!*/
-
-/*}*/
-img{
+img {
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
   /*max-width:17vw;*/
   /*min-width: 17vw;*/
 }
-.kaka{
+
+.kaka {
   display: none;
 }
+
+input.ng-invalid,textarea.ng-invalid {
+  border-left: 5px solid red;
+}
+
+input.ng-valid,textarea.ng-valid  {
+  border-left: 5px solid green;
+}
+

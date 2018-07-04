@@ -37,6 +37,8 @@ input[type=text] {
   font-size: 2.5vh;
   padding-left: 1%;
   height: 5vh;
+  border-radius: 5px;
+
 }
 textarea {
   font-family: RobotoBoldCustom;
@@ -50,6 +52,7 @@ textarea {
   line-height: 35px;
   font-size: 2.5vh;;
   width: 314%;
+  border-radius: 5px;
 }
 input::placeholder{
   color:darkgrey ;
@@ -65,9 +68,10 @@ input:focus::placeholder{
 textarea:focus::placeholder{
   color: black;
   opacity: .8;
+  border-radius: 5px;
 }
 
-button, label{
+button,label{
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -80,6 +84,7 @@ button, label{
   padding: 10px;
   margin-bottom: 10px;
   height: 5vh;
+  border-radius: 5px;
 }
 button:hover, label:hover{
   border: 1px solid #E0E0E0;
@@ -113,3 +118,12 @@ img{
 .kaka{
   display: none;
 }
+
+input.ng-invalid,textarea.ng-invalid {
+  border-left: 5px solid red;
+}
+
+input.ng-valid,textarea.ng-valid  {
+  border-left: 5px solid green;
+}
+
