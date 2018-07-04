@@ -20,12 +20,14 @@ button:hover{
 }
 .kaka{
   width: 80%;
-  height: 85%;
+  height: 100vh;
   top: 15vh;
   left: 20%;
   position: absolute;
   background: #415156;
   z-index: 0;
+  margin-top: -15vh;
+  overflow: auto;
 }
 
 .kaka2{
@@ -35,4 +37,9 @@ button:hover{
   position: absolute;
   background: #415156;
   z-index: 0;
+}
+
+.backgroundCool{
+  height: 60vh;
+  background: #415156;
 }
