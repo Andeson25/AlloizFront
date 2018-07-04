@@ -26,13 +26,15 @@
       </div>
   </div>
 </div>
-  <form action="" #form>
-    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFiles">
-  </form>
-  <br>
-  <div class="image">
-    <img [src]="img" alt="">
-    </div>
+  <div class="image-wrapper flex-column d-flex">
+  <div *ngFor="let one of portfolio.images" class="image-one d-flex align-items-end justify-content-center" [style.background]="'url(' + (one.path|imagePipe) + ')'">
+      <button (click)="delete(one.id)">delete</button>
+  </div>
+  <form action="" #form class="d-flex justify-content-center">
+    <input (change)="addImage(form)" id="file" type="file" class="d-none" name="multipartFile">
     <label for="file">AddImage</label>
+  </form>
+  </div>
+
     <button   (click)="update(form)">update portfolio</button>
 </div>

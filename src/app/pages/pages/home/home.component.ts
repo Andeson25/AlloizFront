@@ -37,6 +37,10 @@ export class HomeComponent implements OnInit {
       this.index += 1;
     } else if ( this.index == this.technologies.length-1 && event==true){
       this.index -= 1;
+    }else if(this.index==this.technologies.length-1&&event==false){
+      this.index=0;
+    }else if(this.index==0&&event==true){
+      this.index=this.technologies.length-1;
     }
     this.selectedTechnology = this.technologies[this.index];
   }

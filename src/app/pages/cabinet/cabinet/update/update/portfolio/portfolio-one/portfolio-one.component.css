@@ -91,7 +91,12 @@ button:hover, label:hover{
 button:focus, label:focus{
   color:#415156 ;
 }
-
+.image-one{
+  -webkit-background-size: cover!important;
+  background-size: cover!important;
+  background-position: center !important;
+  height: 30vh;
+}
 img{
   margin: 0;
   background-color: grey;
@@ -99,4 +104,10 @@ img{
   min-height: 17vw;
   /*max-width:17vw;*/
   /*min-width: 17vw;*/
+}
+.image-wrapper{
+  width: 40%;
+}
+form{
+
 }
