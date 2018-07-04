@@ -1,7 +1,9 @@
 img{
   width: 70%;
-  height: 70%;
+  height: 15vh;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .back{
   background: #415156;

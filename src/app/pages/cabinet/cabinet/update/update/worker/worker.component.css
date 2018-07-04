@@ -1,26 +1,25 @@
-.col-3{
-  cursor: pointer;
-  height: 300px;
-}
 img{
   width: 70%;
-  height: 70%;
+  height: 15vh;
   cursor: pointer;
-}
-.row{
-  background: #415156;
-}
-.hundred{
-  padding: 2% 0;
-  width: 25%;
-  margin: 0;
-  height: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .back{
   background: #415156;
   height: 100%;
-  box-sizing: border-box;
+  width: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 h2{
+  cursor: pointer;
+  padding: 15px 5px;
   color: #BDBDBD;
+}
+.hundred{
+  padding: 2% 0;
+  width: 25%;
 }
