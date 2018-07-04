@@ -13,7 +13,7 @@ h2{
 }
 
 div:first-child{
-  width: 100%;
+  /*width: 100%;*/
   background: #415156;
 }
 
