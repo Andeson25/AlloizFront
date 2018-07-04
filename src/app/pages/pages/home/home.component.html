@@ -5,21 +5,21 @@
       <div class="top"></div>
     </div>
     <div class="middle d-flex ">
-      <div class="leftBlock" [style.background]="'url(' + (selectedTechnology.image|imagePipe) + ')'">
+      <div class="leftBlock" [style.background]="'url(' + (selectedTechnology.image|imagePipe) + ')'" #image>
         <div class="justify-content-center leftBlockContent">
           <div class="line"></div>
           <p>0{{index+1}}</p>
         </div>
       </div>
       <div class="rightBlock d-flex flex-column justify-content-between">
-        <div class="arrowUp d-flex justify-content-center" (click)="scroll(true)">
+        <div class="arrowUp d-flex justify-content-center" (click)="scroll(true, image)">
           <img src="../../../../assets/svg/arrowUp.svg" alt="arrow">
         </div>
         <div>
           <div class="dot" [ngClass]="{'dotActive':index==i}"
                *ngFor="let techology of technologies; let i = index"></div>
         </div>
-        <div class="arrowDown d-flex justify-content-center" (click)="scroll(false)">
+        <div class="arrowDown d-flex justify-content-center" (click)="scroll(false,image)">
           <img src="../../../../assets/svg/arrowDown.svg" alt="arrow">
         </div>
       </div>
