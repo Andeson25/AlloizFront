@@ -25,8 +25,9 @@
           <textarea *ngIf="start" [(ngModel)]="portfolio.descriptions[2].description"></textarea>
         </div>
       </div>
+  </div>
     </div>
-    
+
   <form action="" #form>
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFiles">
   </form>
@@ -37,4 +38,7 @@
     <label for="file">AddImage</label>
     <button   (click)="update(form)">update portfolio</button>
   </div>
+  <label for="file">AddImage</label>
+  <button   (click)="update(form)">update portfolio</button>
+</div>
 </div>

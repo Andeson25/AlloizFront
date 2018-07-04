@@ -1,8 +1,9 @@
 <div class="back d-flex">
   <form [formGroup]="orderTypeForm" action="" (submit)="addOrderType()"  #form   class="d-flex flex-column align-items-center">
     <h2>Name</h2>
-    <input type="text" formControlName="name" placeholder="name">
-    <button [disabled]="form.invalid" class="button" type="submit">Add order</button>
+    <input type="text" formControlName="name" placeholder="name"
+           [ngClass]="{'invallid':orderTypeForm.get('name').invalid && orderTypeForm.get('name').dirty}">
+    <button [disabled]="orderTypeForm.invalid" class="button" type="submit">Add order</button>
   </form>
 </div>
 

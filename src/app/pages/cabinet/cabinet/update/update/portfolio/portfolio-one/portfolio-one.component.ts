@@ -20,9 +20,8 @@ export class PortfolioOneComponent implements OnInit {
       _portfolioService.findOne(next['id']).subscribe(next=>{
         this.portfolio=next;
         this.start=true;
-        this.img=_imagePipe.transform(next.images);
-      },error=> console.log(error)
-        )
+        this.img=_imagePipe.transform(next.images[0].path);
+      })
     })
   }
 
@@ -40,17 +39,15 @@ export class PortfolioOneComponent implements OnInit {
 
 
   update(form:HTMLFormElement){
+  console.log(this.portfolio)
     this._portfolioService.update(this.portfolio,form).subscribe(next=>{
-
-      // console.log(this._imagePipe.transform(next.images));
-      this.portfolio=next;;
+      this.portfolio=next;
       this.img=this._imagePipe.transform(next.images);
-
     },error=>{
       console.log(error);
     })
 
-  }
+    }
 
 
 }
