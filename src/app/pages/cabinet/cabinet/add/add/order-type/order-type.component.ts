@@ -21,11 +21,13 @@ export class OrderTypeComponent implements OnInit {
 
   ngOnInit() {
     this.orderTypeForm = new FormGroup({
-        name: new FormControl('', [Validators.required])
+        name: new FormControl('', [Validators.required, Validators.minLength(2)])
       }
     );
     this.orderTypeForm.valueChanges.subscribe(next => {
       this.orderType= next;
+    }, error => {
+      console.log(error);
     });
   }
 
