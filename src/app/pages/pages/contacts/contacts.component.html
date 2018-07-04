@@ -12,8 +12,13 @@
       <div class="fiveLeft d-flex flex-column justify-content-between">
           <input type="text" placeholder="* Name" formControlName="name">
           <input type="text" placeholder="* Email" formControlName="email" [ngClass]="{'invallid':callbackForm.get('email').invalid && callbackForm.get('email').dirty}" >
-        <select name="callbackTopic" formControlName="callbackTopic">
+        <select (change)="checkOrder(sel) " #sel name="callbackTopic" formControlName="callbackTopic">
+          <option value="" disabled selected >*Topic</option>
           <option [ngValue]="one" *ngFor="let one of calbackTopics">{{one.name}}</option>
+        </select>
+        <select *ngIf="showOrder" (change)="addType(ord)" #ord name="orderType" >
+          <option value="" disabled selected >*Order type</option>
+          <option [ngValue]="one" *ngFor="let one of orderTypes">{{one.name}}</option>
         </select>
           <input type="text" placeholder="  Phone" formControlName="phone" [ngClass]="{'invallid':callbackForm.get('phone').invalid && callbackForm.get('phone').dirty}">
           <input type="text" placeholder="  Company" formControlName="company">
