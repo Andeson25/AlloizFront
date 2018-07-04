@@ -11,10 +11,11 @@
     <br>
   </div>
   <h2>Incumbency</h2>
-  <div class=" bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
-    <input type="text"  placeholder="incumbency name" [(ngModel)]="worker.incumbencies[i].name"
-             >
-    <button (click)="deleteIncumbency(i)">delete</button>
+  <div class="allIncumb">
+    <div class="bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
+      <input type="text"  placeholder="incumbency name" [(ngModel)]="worker.incumbencies[i].name">
+      <button (click)="deleteIncumbency(i)">delete</button>
+    </div>
   </div>
 
   <button (click)="addIncumbency()">add incumbency</button>
@@ -26,5 +27,5 @@
     <img [src]="img" alt="">
   </div>
   <label for="file">AddImage</label>
-  <button   (click)="update(form)">update worker</button>
+  <button (click)="update(form)">update worker</button>
 </div>

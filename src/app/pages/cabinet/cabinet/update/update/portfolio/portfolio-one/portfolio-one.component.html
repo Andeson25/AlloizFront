@@ -26,6 +26,7 @@
         </div>
       </div>
   </div>
+    </div>
 
   <form action="" #form>
     <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFiles">
@@ -33,6 +34,9 @@
   <br>
   <div class="image">
     <img [src]="img" alt="">
+    </div>
+    <label for="file">AddImage</label>
+    <button   (click)="update(form)">update portfolio</button>
   </div>
   <label for="file">AddImage</label>
   <button   (click)="update(form)">update portfolio</button>

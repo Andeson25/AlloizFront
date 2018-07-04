@@ -13,7 +13,7 @@ height: 5vh ;
 }
 
 form{
-  height: 90vh;
+  /*height: 100%;*/
   width: 100%;
   background: #415156;
 }
@@ -99,7 +99,18 @@ img{
   /*max-width:17vw;*/
   /*min-width: 17vw;*/
 }
+.bomba{
+  margin:5px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  align-content: center;
+}
 
 .bomba input{
+  width: 65%;
   height: 50px;
+}
+.kaka{
+  display: none;
 }

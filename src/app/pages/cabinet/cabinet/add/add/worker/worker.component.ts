@@ -14,6 +14,11 @@ export class WorkerComponent implements OnInit {
   workerForm: FormGroup;
   worker: Worker = new Worker();
 
+  appear: boolean = true;
+  toggle(){
+    this.appear = !this.appear;
+  }
+
   img:string='';
 
   constructor(private _workerService: WorkerService) {

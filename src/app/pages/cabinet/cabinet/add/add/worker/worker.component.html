@@ -10,17 +10,17 @@
   <br>
   </div>
   <h2>Incumbency</h2>
-  <div class=" bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
+  <div class="bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
     <input type="text"  placeholder="incumbency name"
            (change)="newIncombency(inc.value, i)" #inc>
     <button (click)="deleteIncumbency(i)">delete</button>
   </div>
 
   <button (click)="addIncumbency()">add incumbency</button>
-  <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
+  <input (click)="toggle()" (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFile">
   <br>
-  <div class="image">
-    <img [src]="img" alt="">
+  <div [ngClass]="{'kaka' :appear}" class="image">
+    <img  [src]="img" alt="">
   </div>
   <label for="file">AddImage</label>
   <button [disabled]="form.invalid"  type="submit">Add worker</button>

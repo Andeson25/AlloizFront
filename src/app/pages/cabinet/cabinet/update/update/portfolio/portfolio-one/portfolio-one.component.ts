@@ -24,6 +24,9 @@ export class PortfolioOneComponent implements OnInit {
       })
     })
   }
+
+  ngOnInit() {
+  }
   readUrl(event: any) {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
@@ -34,8 +37,7 @@ export class PortfolioOneComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
+
   update(form:HTMLFormElement){
   console.log(this.portfolio)
     this._portfolioService.update(this.portfolio,form).subscribe(next=>{

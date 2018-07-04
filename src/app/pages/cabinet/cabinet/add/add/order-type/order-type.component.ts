@@ -15,7 +15,6 @@ export class OrderTypeComponent implements OnInit {
   orderType: OrderType = new OrderType();
 
 
-
   constructor( private _orderTypeService:OrderTypeService) {
   }
 
@@ -24,6 +23,7 @@ export class OrderTypeComponent implements OnInit {
         name: new FormControl('', [Validators.required, Validators.minLength(2)])
       }
     );
+
     this.orderTypeForm.valueChanges.subscribe(next => {
       this.orderType= next;
     }, error => {

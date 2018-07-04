@@ -1,8 +1,10 @@
 <div class="buttons d-flex justify-content-between">
-  <button routerLink="order-type">order-type</button>
-  <button routerLink="callback-topic">topic</button>
-  <button routerLink="portfolio">portfolio</button>
-  <button routerLink="technology">technology</button>
-  <button routerLink="worker">worker</button>
+  <button [routerLinkActive]="['active']" routerLink="order-type">order-type</button>
+  <button  [routerLinkActive]="['active']" routerLink="callback-topic">topic</button>
+  <button [routerLinkActive]="['active']" routerLink="portfolio">portfolio</button>
+  <button [routerLinkActive]="['active']" routerLink="technology">technology</button>
+  <button [routerLinkActive]="['active']" routerLink="worker">worker</button>
 </div>
-<router-outlet></router-outlet>
+<div class="kaka">
+  <router-outlet></router-outlet>
+</div>
