@@ -1,16 +1,11 @@
-.twoBlocks{
-  width: 50%;
-  padding-top: 30px;
-}
-.right-block{
+
+.right-block {
   width: 30%;
 }
-.left-block{
-  width: 30%;
-}
-h2{
+
+h2 {
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -18,16 +13,15 @@ h2{
   color: #cbcbca;
 }
 
-form{
+form {
   width: 100%;
   background: #415156;
-  /*height: 90vh;*/
 }
 
-img{
-  /*height: 5%;*/
+img {
   margin: 15% 0;
 }
+
 input[type=text] {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
@@ -38,8 +32,8 @@ input[type=text] {
   padding-left: 1%;
   height: 5vh;
   border-radius: 5px;
-
 }
+
 textarea {
   font-family: RobotoBoldCustom;
   resize: none;
@@ -54,24 +48,23 @@ textarea {
   width: 314%;
   border-radius: 5px;
 }
-input::placeholder{
-  color:darkgrey ;
+
+input::placeholder, textarea::placeholder {
+  color: darkgrey;
 }
-textarea::placeholder{
-  color:darkgrey ;
-}
-input:focus::placeholder{
+
+input:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-textarea:focus::placeholder{
+textarea:focus::placeholder {
   color: black;
   opacity: .8;
   border-radius: 5px;
 }
 
-button,label{
+button, label {
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -86,47 +79,39 @@ button,label{
   height: 5vh;
   border-radius: 5px;
 }
-button:hover, label:hover{
+
+button:hover, label:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
-  color:black ;
+
+button:focus, label:focus {
+  color: black;
 }
 
-/*.image{*/
-  /*margin-top: 20px;*/
-  /*background-color: grey;*/
-  /*max-height: 17vw;*/
-  /*min-height: 17vw;*/
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
-/*}*/
-img{
+img {
   margin: 0;
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 }
 
-.allIn{
-  /*height: 10%;*/
-  padding-bottom: 20px  ;
+.allIn {
+  padding-bottom: 20px;
 }
-.kaka{
+
+.kaka {
   display: none;
 }
 
-input.ng-invalid,textarea.ng-invalid {
+input.ng-invalid, textarea.ng-invalid {
   border-left: 5px solid red;
 }
 
-input.ng-valid,textarea.ng-valid  {
+input.ng-valid, textarea.ng-valid {
   border-left: 5px solid green;
 }
 
-button:disabled{
+button:disabled {
   border-bottom: 3px solid red;
 }

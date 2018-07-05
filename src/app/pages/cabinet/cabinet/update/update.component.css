@@ -1,4 +1,4 @@
-button{
+button {
   box-sizing: border-box;
   font-size: 2.5vh;
   width: 100%;
@@ -8,17 +8,21 @@ button{
   opacity: .8;
   height: 5vh;
 }
-button:hover{
+
+button:hover {
   opacity: 1;
 }
-.active{
+
+.active {
   opacity: 1;
 }
-.buttons{
+
+.buttons {
   height: 35%;
   width: 100%;
 }
-.kaka{
+
+.kaka {
   width: 80%;
   height: 100vh;
   top: 15vh;
@@ -30,16 +34,7 @@ button:hover{
   overflow: auto;
 }
 
-.kaka2{
-  width: 100%;
-  height: 60%;
-  top: 40vh;
-  position: absolute;
-  background: #415156;
-  z-index: 0;
-}
-
-.backgroundCool{
+.backgroundCool {
   height: 60vh;
   background: #415156;
 }

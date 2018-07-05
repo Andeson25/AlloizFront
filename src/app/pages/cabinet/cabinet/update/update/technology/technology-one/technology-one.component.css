@@ -51,12 +51,7 @@ input[type=text]::placeholder{
 textarea::placeholder{
   color:#415156 ;
 }
-input[type=text]:focus::placeholder{
-  color: black;
-  opacity: .8;
-}
-
-textarea:focus::placeholder{
+input[type=text]:focus::placeholder, textarea:focus::placeholder{
   color: black;
   opacity: .8;
 }
@@ -87,8 +82,6 @@ img{
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 }
 
 
