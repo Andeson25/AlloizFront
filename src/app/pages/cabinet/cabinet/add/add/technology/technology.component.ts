@@ -81,6 +81,8 @@ export class TechnologyComponent implements OnInit {
       console.log(next);
     }, error => {
       console.log(error);
+    },()=>{
+      this.technologyForm.reset();
     })
 
   }

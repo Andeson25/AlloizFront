@@ -63,7 +63,10 @@ export class ContactsComponent implements OnInit {
       },
       error => {
         console.log(error);
-      });
+      },()=>{
+        this.callbackForm.reset();
+      }
+      );
   }
 
   checkOrder(sel: HTMLSelectElement) {

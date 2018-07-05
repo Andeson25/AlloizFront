@@ -80,7 +80,9 @@ export class PortfolioComponent implements OnInit {
       console.log(next);
     }, error => {
       console.log(error);
-    })
+    },()=>{
+      this.portfolioForm.reset();
+      })
 
   }
 
