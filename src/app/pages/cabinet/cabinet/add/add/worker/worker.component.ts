@@ -16,7 +16,7 @@ export class WorkerComponent implements OnInit {
 
   appear: boolean = true;
   toggle(){
-    this.appear = !this.appear;
+    this.appear = false;
   }
 
   img:string='';

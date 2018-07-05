@@ -21,7 +21,7 @@ export class TechnologyComponent implements OnInit {
   appear: boolean = true;
 
   toggle() {
-    this.appear = !this.appear;
+    this.appear = false;
   }
 
 
