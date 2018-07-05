@@ -23,5 +23,5 @@
     <img  [src]="img" alt="">
   </div>
   <label for="file">AddImage</label>
-  <button [disabled]="form.invalid"  type="submit">Add worker</button>
+  <button [disabled]="!workerForm.valid"  type="submit">Add worker</button>
 </form>

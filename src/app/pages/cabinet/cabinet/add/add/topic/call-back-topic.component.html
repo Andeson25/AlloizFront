@@ -2,6 +2,6 @@
   <form  [formGroup]="callBackTopicForm" action="" (submit)="addTopic()"  #form   class="d-flex flex-column align-items-center">
   <h2>Add topic</h2>
     <input type="text" class="name" placeholder="new topic" formControlName="name" >
-    <button class="button" type="submit">Add topic</button>
+    <button  [disabled]="!callBackTopicForm.valid" class="button" type="submit">Add topic</button>
   </form>
 </div>

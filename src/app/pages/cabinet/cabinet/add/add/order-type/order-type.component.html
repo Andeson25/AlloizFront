@@ -2,7 +2,7 @@
   <form  [formGroup]="orderTypeForm" action="" (submit)="addOrderType()"  #form   class="d-flex flex-column align-items-center">
     <h2>Name</h2>
     <input type="text" class="name" formControlName="name" placeholder="name">
-    <button  class="button"  type="submit">Add order</button>
+    <button  class="button" [disabled]="!orderTypeForm.valid"  type="submit">Add order</button>
   </form>
 </div>
 
