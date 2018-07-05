@@ -1,7 +1,7 @@
-<div class="back d-flex">
-  <div class="form d-flex flex-column align-items-center">
-    <h2>Add topic</h2>
-    <input type="text" required placeholder="new topic" [(ngModel)]="topic.name">
-    <input type="button" value="Add" (click)="addTopic()">
-  </div>
+<div class="back d-flex justify-content-start">
+  <form  [formGroup]="callBackTopicForm" action="" (submit)="addTopic()"  #form   class="d-flex flex-column align-items-center">
+  <h2>Add topic</h2>
+    <input type="text" class="name" placeholder="new topic" formControlName="name" >
+    <button class="button" type="submit">Add topic</button>
+  </form>
 </div>

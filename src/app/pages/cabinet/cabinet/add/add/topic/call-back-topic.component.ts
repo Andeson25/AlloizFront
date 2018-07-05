@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CallbackTopic} from "../../../../../../shared/models/callback-topic";
 import {CallbackTopicService} from "../../../../../../shared/service/callback-topic.service";
 
@@ -10,17 +11,33 @@ import {CallbackTopicService} from "../../../../../../shared/service/callback-to
 })
 export class CallBackTopicComponent implements OnInit {
 
-  topic: CallbackTopic = new CallbackTopic();
-  constructor(private  _callBackTopic: CallbackTopicService) { }
+  callBackTopicForm: FormGroup;
+  callBackTopic: CallbackTopic = new CallbackTopic();
 
-  ngOnInit() {
+  constructor(private  _callBackTopicService: CallbackTopicService) {
   }
 
-addTopic(){
-    this._callBackTopic.save(this.topic).subscribe(next=>{
+  ngOnInit() {
+    this.callBackTopicForm = new FormGroup({
+        name: new FormControl('', [Validators.required])
+      }
+    );
+
+    this.callBackTopicForm.valueChanges.subscribe(next => {
+      this.callBackTopic = next;
+    }, error => {
+      console.log(error)
+    })
+
+  }
+
+  addTopic() {
+    this._callBackTopicService.save(this.callBackTopic).subscribe(next => {
       console.log(next);
-    },error=>{
+    }, error => {
       console.log(error);
+    }, () => {
+      this.callBackTopicForm.reset();
     })
   }
 }
