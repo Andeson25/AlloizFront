@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
   appear: boolean = true;
 
   toggle() {
-    this.appear = !this.appear;
+    this.appear = false;
   }
 
   constructor(private _portfolioService: PortfolioService) {
