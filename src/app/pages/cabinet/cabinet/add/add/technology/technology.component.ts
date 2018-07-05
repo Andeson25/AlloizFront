@@ -16,7 +16,7 @@ export class TechnologyComponent implements OnInit {
   technology: Technology = new Technology();
   technologyDescription: TechnologyDescription[] = [];
 
-  img: string = '';
+  img: string[] = [];
 
   appear: boolean = true;
 
@@ -83,6 +83,7 @@ export class TechnologyComponent implements OnInit {
       console.log(error);
     },()=>{
       this.technologyForm.reset();
+      this.img=[];
     })
 
   }

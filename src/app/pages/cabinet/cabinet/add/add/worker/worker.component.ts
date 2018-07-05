@@ -19,7 +19,7 @@ export class WorkerComponent implements OnInit {
     this.appear = false;
   }
 
-  img:string='';
+  img:string [] = [];
 
   constructor(private _workerService: WorkerService) {
     this.worker.incumbencies = [];
@@ -59,6 +59,7 @@ export class WorkerComponent implements OnInit {
       this.workerForm.reset();
       this.worker=new Worker();
       this.worker.incumbencies = [];
+      this.img = [];
     })
     }
   }

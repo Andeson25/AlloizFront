@@ -8,7 +8,7 @@
     <h2>Link</h2>
     <input type="text" formControlName="link" placeholder="link">
     <br>
-    <input (change)="readUrl($event)" id="file" type="file" class="d-none" name="multipartFiles">
+    <input (change)="readUrl($event)" multiple id="file" type="file" class="d-none" name="multipartFiles">
   </div>
   <div class=" right-block d-flex flex-column">
     <div class="d-flex flex-row">
@@ -25,8 +25,8 @@
     </div>
   </div>
   </div>
-  <div [ngClass]="{'kaka' :appear}" class="image">
-    <img [src]="img" alt="">
+  <div [ngClass]="{'kaka' :appear}" *ngFor="let one of img" class="image">
+    <img [src]="one" alt="">
   </div>
   <div class="d-flex flex-column">
     <label (click)="toggle()" for="file">AddImage</label>
