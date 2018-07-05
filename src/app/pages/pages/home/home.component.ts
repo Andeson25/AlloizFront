@@ -1,19 +1,35 @@
 import {Component, OnInit} from '@angular/core';
 import {Technology} from "../../../shared/models/technology";
 import {TechnologyService} from "../../../shared/service/technology.service";
+import { trigger, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [TechnologyService]
+  providers: [TechnologyService],
+  animations: [
+    trigger(
+      'enterAnimation', [
+        transition(':enter', [
+          style({opacity: 0}),
+          animate('500ms', style({opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({opacity: 1}),
+          animate('500ms', style({opacity: 0}))
+        ])
+      ]
+    )
+  ]
 })
 export class HomeComponent implements OnInit {
-
-  index: number = 2;
+  index: number;
   technologies: Technology[] = [];
   selectedTechnology: Technology = new Technology();
   show = false;
+  state: string = 'inactive';
 
   constructor(private  _servicesTechnology: TechnologyService) {
     this._servicesTechnology.findAllAvailable().subscribe(next => {
@@ -24,28 +40,21 @@ export class HomeComponent implements OnInit {
     }, () => {
       this.show = true;
       console.log(this.technologies);
+      this.index = Math.round(this.technologies.length/2);
     })
+
   }
 
   ngOnInit() {
-    console.log(this.technologies.length);
   }
 
-  scroll(event, image: HTMLDivElement) {
+  scroll(event) {
     if (this.index > 0 && this.index != this.technologies.length - 1) {
-      image.style.animation = "fadeOut .2s";
-      setTimeout(
-        ()=>{image.style.animation = "fadeIn .2s";
-          event ? this.index -= 1 : this.index += 1;},200)
+      event ? this.index -= 1 : this.index += 1;
     } else if (this.index == 0 && event == false) {
-      image.style.animation = "fadeOut .2s";
-      setTimeout(() => {
-        this.index += 1
-      }, 200)
-      image.style.animation = "fadeIn .2s";
+      this.index += 1
     } else if (this.index == this.technologies.length - 1 && event == true) {
-      image.style.animation = "fadeOut .2s";
-      setTimeout(this.index -= 1, 200)
+      this.index -= 1
     } else if (this.index == this.technologies.length - 1 && event == false) {
       this.index = 0;
     } else if (this.index == 0 && event == true) {

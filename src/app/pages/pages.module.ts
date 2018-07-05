@@ -10,11 +10,13 @@ import { ServicesComponent } from './pages/services/services.component';
 import { WorkerCardComponent } from './pages/about-us/worker-card/worker-card.component';
 import {ContactsComponent} from './pages/contacts/contacts.component';
 import {DirectiveModule} from '../shared/directive/directive.module';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
     GlobalImportsModule,
-    DirectiveModule
+    DirectiveModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     PagesComponent,
