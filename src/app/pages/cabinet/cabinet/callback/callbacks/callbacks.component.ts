@@ -14,7 +14,8 @@ export class CallbacksComponent implements OnInit {
   constructor(private _callbackService:CallbackService) {
     _callbackService.findAll().subscribe(next=>{
       console.log(next);
-      this.callbacks=next;}
+      this.callbacks=next;
+      }
     )
   }
 
