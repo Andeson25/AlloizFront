@@ -1,8 +1,8 @@
 <div class="back d-flex justify-content-start">
-  <form [formGroup]="orderTypeForm" action="" (submit)="addOrderType()"  #form   class="d-flex flex-column align-items-center">
+  <form onfocus="this.value=''" [formGroup]="orderTypeForm" action="" (submit)="addOrderType()"  #form   class="d-flex flex-column align-items-center">
     <h2>Name</h2>
-    <input type="text" formControlName="name" placeholder="name">
-    <button  class="button" type="submit">Add order</button>
+    <input type="text" class="name" formControlName="name" placeholder="name">
+    <button  class="button"  type="submit">Add order</button>
   </form>
 </div>
 
