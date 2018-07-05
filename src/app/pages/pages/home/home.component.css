@@ -1,4 +1,3 @@
-
 *{
   box-sizing: border-box;
   margin: 0;
@@ -33,17 +32,14 @@
   width: 75%;
   background: white;
 }
-
 .leftBlock{
   position: absolute;
   transition: opacity 2s linear;
   width: 94%;
   height: 100%;
-  background: transparent;
+  background: black;
   z-index: 100;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  background-repeat: no-repeat!important;
-  background-size: cover!important;
 }
 .leftBlock .leftBlockContent{
   position: absolute;
@@ -51,7 +47,6 @@
   top: 5%;
   right: 50px;
   width: 100px;
-
 }
 .leftBlock p {
   font-size: 72px;
@@ -65,7 +60,6 @@
   position: absolute!important;
 }
 .topImage{
-
   -webkit-background-size: cover!important;
   background-size: cover!important;
   background-position: center center!important;
@@ -100,15 +94,12 @@
   margin-top: -4%;
   position: relative;
 }
-
-
 .arrowUp,.arrowDown{
   width: 90%;
   height: 7%;
   cursor: pointer;
   background: #98AD38;
 }
-
 .arrowUp{
   margin-top: 45%;
 }
@@ -155,7 +146,6 @@
   width: 80%;
   margin-left: 10%;
 }
-
 .linetext{
   width: 80%;
   margin-left: 20%;

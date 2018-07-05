@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Technology} from "../../../shared/models/technology";
 import {TechnologyService} from "../../../shared/service/technology.service";
-import { trigger, style, animate, transition } from '@angular/animations';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 
 @Component({
@@ -20,16 +20,15 @@ import { trigger, style, animate, transition } from '@angular/animations';
           style({opacity: 1}),
           animate('500ms', style({opacity: 0}))
         ])
-      ]
-    )
+      ])
   ]
 })
+
 export class HomeComponent implements OnInit {
   index: number;
   technologies: Technology[] = [];
   selectedTechnology: Technology = new Technology();
   show = false;
-  state: string = 'inactive';
 
   constructor(private  _servicesTechnology: TechnologyService) {
     this._servicesTechnology.findAllAvailable().subscribe(next => {
@@ -40,9 +39,8 @@ export class HomeComponent implements OnInit {
     }, () => {
       this.show = true;
       console.log(this.technologies);
-      this.index = Math.round(this.technologies.length/2);
+      this.index = Math.round(this.technologies.length / 2);
     })
-
   }
 
   ngOnInit() {
