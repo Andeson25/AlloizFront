@@ -160,6 +160,9 @@ h4{
 }
 
 .carousel-item {
+  background-size: cover!important;
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
   height: 50vh;
 
 }
@@ -173,7 +176,7 @@ h4{
 .carousel-item div:before {
   height: 50vh;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   content: '';
   background-color: black;
