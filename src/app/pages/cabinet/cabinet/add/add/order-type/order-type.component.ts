@@ -14,9 +14,6 @@ export class OrderTypeComponent implements OnInit {
   orderTypeForm: FormGroup;
   orderType: OrderType = new OrderType();
 
-
-
-
   constructor( private _orderTypeService:OrderTypeService) {
 
   }
