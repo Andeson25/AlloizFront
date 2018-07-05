@@ -18,7 +18,8 @@
         </div>
         <div  class="row m-0 w-100">
           <h2  class="col-6">Data:</h2>
-          <input type="datetime-local" placeholder="   Data" class="col-6" [(ngModel)]="callback.datetime" #datetimeTopic>
+          <input type="datetime-local" placeholder="   Data" class="col-6" [ngModel]="callback.datetime | datePipe"
+                 (ngModelChange)="callback.datetime=$event">
         </div>
         <!--<div  class="row m-0 w-100">-->
           <!--<h2  class="col-6">Topic:</h2>-->
