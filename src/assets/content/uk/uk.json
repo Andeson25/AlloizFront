@@ -1,0 +1,60 @@
+{
+  "menu-nav-1":"ПРО НАС",
+  "menu-nav-2":"ПОСЛУГИ",
+  "menu-nav-3":"ГОЛОВНА",
+  "menu-nav-4":"ПОРТФОЛІО",
+  "menu-nav-5":"КОНТАКТИ",
+
+
+
+
+
+
+  "about-us-h2-1":"ПРО НАС",
+  "about-us-h2-2":"КОМАНДА",
+
+
+
+
+
+
+
+  "services-h2":"ПОСЛУГИ",
+  "services-button":"ПОЧАТИ",
+
+
+
+
+
+
+  "home-button":"БІЛЬШЕ",
+
+
+
+
+
+
+  "portfolio-h2":"ПОРТФОЛІО",
+
+
+
+
+
+
+
+  "contacts-h2":"ЗВ'ЯЖІТЬСЯ З НАМИ",
+  "contacts-input-name-placeholder":"* Ім'я",
+  "contacts-input-email-placeholder":"* Електронна пошта",
+  "contacts-input-phone-placeholder":"Телефон",
+  "contacts-select-topic-placeholder":"* Виберіть тему",
+  "contacts-select-topic-vacancy":"Вакансія",
+  "contacts-select-topic-appeal":"Звернення",
+  "contacts-select-topic-order":"Замовлення",
+  "contacts-select-order-placeholder":"Тип замовлення",
+  "contacts-select-order-website":"Веб сайт",
+  "contacts-select-order-design":"Дизайн",
+  "contacts-select-order-other":"Інше",
+  "contacts-input-company-placeholder":"Компанія",
+  "contacts-textarea-placeholder":"* Повідомлення...",
+  "contacts-button":"ВІДПРАВИТИ"
+}

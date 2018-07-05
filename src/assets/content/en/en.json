@@ -1,11 +1,58 @@
 {
-  "menu-nav-1":"About",
-  "menu-nav-2":""
+  "menu-nav-1":"ABOUT",
+  "menu-nav-2":"SERVICES",
+  "menu-nav-3":"HOME",
+  "menu-nav-4":"PORTFOLIO",
+  "menu-nav-5":"CONTACTS",
 
 
 
 
 
 
+  "about-us-h2-1":"ABOUT US",
+  "about-us-h2-2":"TEAM",
 
+
+
+
+
+
+  "services-h2":"SERVICES",
+  "services-button":"START",
+
+
+
+
+
+
+  "home-button":"MORE",
+
+
+
+
+
+
+  "portfolio-h2":"PORTFOLIO",
+
+
+
+
+
+
+  "contacts-h2":"TALK WITH US",
+  "contacts-input-name-placeholder":"* Name",
+  "contacts-input-email-placeholder":"* Email",
+  "contacts-input-phone-placeholder":"Phone",
+  "contacts-select-topic-placeholder":"* Topic",
+  "contacts-select-topic-vacancy":"Vacancy",
+  "contacts-select-topic-appeal":"Appeal",
+  "contacts-select-topic-order":"Order",
+  "contacts-select-order-placeholder":"Order type",
+  "contacts-select-order-website":"Web site",
+  "contacts-select-order-design":"Design",
+  "contacts-select-order-other":"Other",
+  "contacts-input-company-placeholder":"Company",
+  "contacts-textarea-placeholder":"Message...",
+  "contacts-button":"SEND"
 }
