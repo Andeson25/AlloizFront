@@ -1,36 +1,41 @@
 <div *ngFor="let callback of callbacks; let i = index" class="inputs row  ">
-      <div class="col-6 fiveLeft d-flex flex-column justify-content-between align-items-start">
-        <div class="row m-0 d-flex w-100">
-          <h2 class="col-6">Name:</h2>
-          <input type="text" placeholder="* Name"  class="col-6" [(ngModel)]="callback.name" #nameTopic>
-        </div>
-        <div  class="row m-0 w-100">
-          <h2  class="col-6">mail:</h2>
-          <input type="text" placeholder="* Email" class="col-6" [(ngModel)]="callback.email" #emailTopic>
-        </div>
-        <div class="row m-0 w-100">
-          <h2  class="col-6">phone:</h2>
-          <input type="text" placeholder="  Phone" class="col-6" [(ngModel)]="callback.phone" #phoneTopic>
-        </div>
-        <div  class="row m-0 w-100">
-          <h2  class="col-6">Company:</h2>
-          <input type="text" placeholder="   Company" class="col-6" [(ngModel)]="callback.company" #companyTopic>
-        </div>
-        <div  class="row m-0 w-100">
-          <h2  class="col-6">Data:</h2>
-          <input type="datetime-local" placeholder="   Data" class="col-6" [ngModel]="callback.datetime | datePipe"
-                 (ngModelChange)="callback.datetime=$event">
-        </div>
-        <!--<div  class="row m-0 w-100">-->
-          <!--<h2  class="col-6">Topic:</h2>-->
-          <!--<input type="text" placeholder="   Topic" class="col-6" [(ngModel)]="callbacks[i].callbackTopic.name" #companyTopic>-->
-        <!--</div>-->
-      </div>
-      <div class="oneRight col-6">
-        <div class="d-flex flex-column ">
-          <h2>Message:</h2>
-          <textarea name="" cols="30" rows="10" placeholder="* Message" [(ngModel)]="callback.message"></textarea>
-        </div>
-      </div>
+  <div class="col-6 fiveLeft d-flex flex-column justify-content-between align-items-start">
+    <div class="row m-0 d-flex w-100">
+      <h2 class="col-6">Name:</h2>
+      <input type="text" placeholder="* Name" disabled class="col-6  " [(ngModel)]="callback.name" #nameTopic>
+    </div>
+    <div class="row m-0 w-100">
+      <h2 class="col-6">mail:</h2>
+      <input type="text" placeholder="* Email" disabled class="col-6  " [(ngModel)]="callback.email" #emailTopic>
+    </div>
+    <div class="row m-0 w-100">
+      <h2 class="col-6">phone:</h2>
+      <input type="text" placeholder="  Phone" disabled class="col-6  " [(ngModel)]="callback.phone" #phoneTopic>
+    </div>
+    <div class="row m-0 w-100">
+      <h2 class="col-6">Company:</h2>
+      <input type="text" placeholder="   Company" disabled class="col-6  " [(ngModel)]="callback.company" #companyTopic>
+    </div>
+    <div class="row m-0 w-100">
+      <h2 class="col-6">Data:</h2>
+      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="callback.datetime"
+             (ngModelChange)="callback.datetime=$event">
+    </div>
+    <div class="row m-0 w-100">
+      <h2 class="col-6">Topic:</h2>
+      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="callbackTopic[callback.callbackTopic]">
+    </div>
+    <div class="row m-0 w-100" *ngIf="callback.callbackTopic=='ORDER'">
+      <h2 class="col-6">Order:</h2>
+      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="orderType[callback.orderType]">
+    </div>
+  </div>
+  <div class="oneRight col-6">
+    <div class="d-flex flex-column ">
+      <h2>Message:</h2>
+      <textarea name="" cols="30" rows="10" placeholder="* Message" disabled class="col-6  "
+                [(ngModel)]="callback.message"></textarea>
+    </div>
+  </div>
 </div>
 

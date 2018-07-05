@@ -7,18 +7,22 @@
     <img src="../../../../assets/svg/quotes.svg" alt="">
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab </p>
   </div>
-  <form [formGroup]="callbackForm" class="d-flex align-items-center flex-column" (submit)="addContacts(form)">
+  <form [formGroup]="callbackForm" class="d-flex align-items-center flex-column" (submit)="addContacts()">
     <div class="inputs d-flex justify-content-center">
       <div class="fiveLeft d-flex flex-column justify-content-between">
           <input type="text" placeholder="* Name" formControlName="name">
           <input type="text" placeholder="* Email" formControlName="email" [ngClass]="{'invallid':callbackForm.get('email').invalid && callbackForm.get('email').dirty}" >
         <select (change)="checkOrder(sel) " #sel name="callbackTopic" formControlName="callbackTopic">
           <option value="" disabled selected >*Topic</option>
-          <option [ngValue]="one" *ngFor="let one of calbackTopics">{{one.name}}</option>
+          <option [value]="'VACANCY'" >Vacancy</option>
+          <option [value]="'VACANCY'" >Appeal</option>
+          <option [value]="'ORDER'" >Order</option>
         </select>
-        <select *ngIf="showOrder" (change)="addType(ord)" #ord name="orderType" >
+        <select *ngIf="showOrder" formControlName="orderType" >
           <option value="" disabled selected >*Order type</option>
-          <option [ngValue]="one" *ngFor="let one of orderTypes">{{one.name}}</option>
+          <option [value]="'WEBSITE'" >Web site</option>
+          <option [value]="'DESIGN'" >Design</option>
+          <option [value]="'OTHER'" >Other</option>
         </select>
           <input type="text" placeholder="  Phone" formControlName="phone" [ngClass]="{'invallid':callbackForm.get('phone').invalid && callbackForm.get('phone').dirty}">
           <input type="text" placeholder="  Company" formControlName="company">

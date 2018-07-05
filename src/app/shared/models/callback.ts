@@ -10,6 +10,7 @@ export class Callback {
   datetime: string;
   available: boolean;
   message: string;
-  callbackTopic: CallbackTopic;
+  callbackTopic: string;
+  orderType: string;
 
 }

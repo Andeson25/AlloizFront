@@ -6,6 +6,8 @@ import {CallbackService} from '../../../shared/service/callback.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {OrderTypeService} from '../../../shared/service/order-type.service';
 import {OrderType} from '../../../shared/models/order-type';
+import {CallBackTopicEnum} from '../../../shared/enum/call-back-topic.enum';
+import {OrderTypeEnum} from '../../../shared/enum/order-type.enum';
 
 @Component({
   selector: 'app-contacts',
@@ -15,25 +17,12 @@ import {OrderType} from '../../../shared/models/order-type';
 })
 export class ContactsComponent implements OnInit {
   callbackForm: FormGroup;
-  calbackTopics: CallbackTopic[] = [];
-  orderTypes: OrderType[] = [];
+  callBackEnum=CallBackTopicEnum;
+  orderENum=OrderTypeEnum;
   callback: Callback = new Callback();
   showOrder: boolean = false;
-  orderTypeName:string='';
 
   constructor(private _callbackTopic: CallbackTopicService, private  _callback: CallbackService, private _orderTypeService: OrderTypeService) {
-    this._callbackTopic.findAllAvailable().subscribe(next => {
-      this.calbackTopics = next;
-    }, error => {
-      console.log(error);
-    }, () => {
-      console.log(this.calbackTopics);
-    });
-    this._orderTypeService.findAll().subscribe(next => {
-      this.orderTypes = next;
-    }, error => {
-      console.log(error);
-    });
   }
 
   ngOnInit() {
@@ -44,6 +33,7 @@ export class ContactsComponent implements OnInit {
       phone: new FormControl('', [Validators.pattern(/\d{6,12}/)]),
       company: new FormControl(''),
       callbackTopic: new FormControl(''),
+      orderType: new FormControl(''),
     });
     this.callbackForm.valueChanges.subscribe(value => {
       this.callback = value;
@@ -51,13 +41,7 @@ export class ContactsComponent implements OnInit {
 
     });
   }
-  addType(sel:HTMLSelectElement){
-    this.orderTypeName=sel.value;
-  }
   addContacts() {
-    if(this.showOrder){
-      this.callback.message=this.orderTypeName+":\n"+this.callback.message;
-    }
     this._callback.save(this.callback).subscribe(next => {
         console.log(next);
       },
@@ -70,7 +54,7 @@ export class ContactsComponent implements OnInit {
   }
 
   checkOrder(sel: HTMLSelectElement) {
-    if (this.callback.callbackTopic.name == 'Order') {
+    if (this.callback.callbackTopic == 'ORDER') {
       this.showOrder = true;
     } else
       this.showOrder = false;
