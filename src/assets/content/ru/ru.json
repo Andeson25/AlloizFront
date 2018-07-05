@@ -1,0 +1,58 @@
+{
+  "menu-nav-1": "О НАС",
+  "menu-nav-2": "УСЛУГИ",
+  "menu-nav-3": "КЛИЕНТЫ",
+  "menu-nav-4": "ПОТРФЛИО",
+  "menu-nav-5": "КОНТАКТЫ",
+
+
+
+
+
+
+  "about-us-h2-1":"О НАС",
+  "about-us-h2-2":"КОМАНДА",
+
+
+
+
+
+
+  "services-h2":"УСЛУГИ",
+  "services-button":"НАЧАТЬ",
+
+
+
+
+
+
+  "home-button":"БОЛЬШЕ",
+
+
+
+
+
+
+  "portfolio-h2":"ПОРТФОЛИО",
+
+
+
+
+
+
+  "contacts-h2":"СВЯЖИТЬСЯ С НАМИ",
+  "contacts-input-name-placeholder":"* Имя",
+  "contacts-input-email-placeholder":"* Електронная почта",
+  "contacts-input-phone-placeholder":"Телефон",
+  "contacts-select-topic-placeholder":"* Выберите тему",
+  "contacts-select-topic-vacancy":"Вакансия",
+  "contacts-select-topic-appeal":"Обращение",
+  "contacts-select-topic-order":"Заказ",
+  "contacts-select-order-placeholder":"Тип Заказа",
+  "contacts-select-order-website":"Веб сайт",
+  "contacts-select-order-design":"Дизайн",
+  "contacts-select-order-other":"Другое",
+  "contacts-input-company-placeholder":"Компания",
+  "contacts-textarea-placeholder":"* Сообщение...",
+  "contacts-button":"ОТПРАВИТЬ"
+}
