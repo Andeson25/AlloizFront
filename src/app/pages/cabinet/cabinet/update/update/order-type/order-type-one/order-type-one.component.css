@@ -1,23 +1,19 @@
-h2{
+h2 {
   padding: 10px 0;
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
   font-size: 28px;
   color: #cbcbca;
 }
-.back{
-  height: 100%;
-  background: #415156;
-}
 
-form{
+form {
   width: 100%;
 }
 
-input[type=text]{
+input[type=text] {
   height: 5vh;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
@@ -28,26 +24,28 @@ input[type=text]{
   padding-left: 1%;
 }
 
-
-input[type=text]::placeholder{
-  color:#415156 ;
+input[type=text]::placeholder {
+  color: #415156;
 }
-input[type=text]:focus::placeholder{
+
+input[type=text]:focus::placeholder {
   color: black;
   opacity: .8;
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
   padding: 2px;
   height: 2.5vh;
   margin: 10px 5px 0 0;
-  /*width: 20%;*/
 }
-h3{
+
+h3 {
   font-size: 2vh;
   margin: 10px 5px 0 0;
   color: lightyellow;
 }
-button{
+
+button {
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -61,11 +59,13 @@ button{
   margin-bottom: 10px;
   font-size: 28px;
 }
-button:hover{
+
+button:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus{
-  color:#415156 ;
+
+button:focus {
+  color: #415156;
 }
 

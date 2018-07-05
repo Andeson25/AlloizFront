@@ -1,10 +1,10 @@
-.back{
+.back {
   background: #415156;
 }
 
-h2{
+h2 {
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -12,25 +12,28 @@ h2{
   color: grey;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
   padding: 2px;
   height: 1.5vh;
   margin: 10px 5px 0 0;
 }
-h3{
+
+h3 {
   font-size: 2vh;
   margin: 10px 5px 0 0;
   color: lightyellow;
 }
-form{
+
+form {
   width: 100%;
   background: #415156;
 }
 
-img{
+img {
   height: 5%;
   margin-top: 15%;
 }
+
 input[type=text] {
   height: 5vh;
   border: 1px solid #E0E0E0;
@@ -41,6 +44,7 @@ input[type=text] {
   font-size: 19px;
   padding-left: 4%;
 }
+
 textarea {
   font-family: RobotoBoldCustom;
   resize: none;
@@ -54,23 +58,22 @@ textarea {
   line-height: 35px;
   font-size: 19px;
 }
-input[type=text]::placeholder{
-  color:#415156 ;
+
+input[type=text]::placeholder, textarea::placeholder  {
+  color: #415156;
 }
-textarea::placeholder{
-  color:#415156 ;
-}
-input[type=text]:focus::placeholder{
+
+input[type=text]:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-textarea:focus::placeholder{
+textarea:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-button, label{
+button, label {
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -84,30 +87,31 @@ button, label{
   padding: 5px;
   margin-bottom: 10px;
 }
-button:hover, label:hover{
+
+button:hover, label:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
-  color:#415156 ;
+
+button:focus, label:focus {
+  color: #415156;
 }
-.image-one{
-  -webkit-background-size: cover!important;
-  background-size: cover!important;
+
+.image-one {
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
   background-position: center !important;
   height: 30vh;
 }
-img{
+
+img {
   margin: 0;
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 }
-.image-wrapper{
+
+.image-wrapper {
   width: 40%;
 }
-form{
 
-}

@@ -24,7 +24,6 @@ h2 {
 form {
   width: 100%;
   background: #415156;
-  /*height: 100%;*/
 }
 
 img {
@@ -47,7 +46,6 @@ input {
 textarea {
   font-family: RobotoBoldCustom;
   resize: none;
-  /*border: 1px solid #E0E0E0;*/
   padding-left: 4%;
   height: 20vh;
   margin: 10px;
@@ -59,20 +57,11 @@ textarea {
   border-radius: 5px;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: darkgrey;
 }
 
-textarea::placeholder {
-  color: darkgrey;
-}
-
-input:focus::placeholder {
-  color: black;
-  opacity: .8;
-}
-
-textarea:focus::placeholder {
+input:focus::placeholder, textarea:focus::placeholder {
   color: black;
   opacity: .8;
 }
@@ -106,22 +95,20 @@ img {
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 }
 
 .kaka {
   display: none;
 }
 
-input.ng-invalid,textarea.ng-invalid {
+input.ng-invalid, textarea.ng-invalid {
   border-left: 5px solid red;
 }
 
-input.ng-valid,textarea.ng-valid  {
+input.ng-valid, textarea.ng-valid {
   border-left: 5px solid green;
 }
 
-button:disabled{
+button:disabled {
   border-bottom: 3px solid red;
 }

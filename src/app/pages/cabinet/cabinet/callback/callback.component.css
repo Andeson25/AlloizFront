@@ -1,26 +1,11 @@
-button{
-  box-sizing: border-box;
-  font-size: 2.5vh;
-  width: 100%;
-  border: 3px solid black;
-  background: black;
-  color: whitesmoke;
-  opacity: .8;
-  height: 5vh;
-}
-button:hover{
-  opacity: 1;
-}
-.active{
-  opacity: 1;
-}
-.buttons{
+.buttons {
   width: 100%;
   height: 85vh;
   background: #415156;
   overflow: auto;
 }
-.kaka{
+
+.kaka {
   width: 80%;
   height: 100vh;
   top: 15vh;
@@ -29,15 +14,6 @@ button:hover{
   background: #415156;
   z-index: 0;
   margin-top: -15vh;
-  overflow: auto;
-}
-.kaka2{
-  width: 100%;
-  height: 60%;
-  top: 40vh;
-  position: absolute;
-  background: #415156;
-  z-index: 0;
   overflow: auto;
 }
 

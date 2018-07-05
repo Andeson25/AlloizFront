@@ -1,27 +1,28 @@
 
-h2{
+h2 {
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
   font-size: 35px;
   color: #cbcbca;
 }
-input[type=text]{
-height: 5vh ;
+
+input[type=text] {
+  height: 5vh;
 }
 
-form{
-  /*height: 100%;*/
+form {
   width: 100%;
   background: #415156;
 }
 
-img{
+img {
   height: 5%;
   margin-top: 15%;
 }
+
 input {
   height: 15%;
   border: 1px solid #E0E0E0;
@@ -33,37 +34,18 @@ input {
   padding-left: 4%;
   border-radius: 5px;
 }
-textarea {
-  font-family: RobotoBoldCustom;
-  resize: none;
-  border: 1px solid #E0E0E0;
-  padding-left: 4%;
-  height: 50%;
-  margin: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-style: normal;
-  line-height: 35px;
-  font-size: 19px;
+
+input::placeholder {
+  color: darkgrey;
 }
-input::placeholder{
-  color:darkgrey ;
-}
-textarea::placeholder{
-  color:darkgrey ;
-}
-input:focus::placeholder{
+
+input:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-textarea:focus::placeholder{
-  color: black;
-  opacity: .8;
-}
-
-button, label{
-  height: 5vh ;
+button, label {
+  height: 5vh;
   margin-top: 10px;
   font-family: RobotoBoldCustom;
   font-style: normal;
@@ -79,44 +61,40 @@ button, label{
   border-radius: 5px;
 
 }
-button:hover, label:hover{
+
+button:hover, label:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
-  color:black ;
+
+button:focus, label:focus {
+  color: black;
 }
-/*.image{*/
-  /*background-color: grey;*/
-  /*max-height: 17vw;*/
-  /*min-height: 17vw;*/
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 
-
-img{
+img {
   margin: 0;
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  /*max-width:17vw;*/
-  /*min-width: 17vw;*/
 }
-.bomba{
-  margin:5px;
+
+.bomba {
+  margin: 5px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
 
-.bomba input{
+.bomba input {
   width: 65%;
   height: 50px;
 }
-.kaka{
+
+.kaka {
   display: none;
 }
+
 input.ng-invalid {
   border-left: 5px solid red;
 }
@@ -124,7 +102,8 @@ input.ng-invalid {
 input.ng-valid {
   border-left: 5px solid green;
 }
-button:disabled{
+
+button:disabled {
   border-bottom: 3px solid red;
 }
 

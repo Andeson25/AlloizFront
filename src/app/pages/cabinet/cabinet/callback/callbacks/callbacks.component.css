@@ -1,9 +1,8 @@
 
-h2{
-
+h2 {
   padding: 10px 0;
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -11,44 +10,38 @@ h2{
   color: #cbcbca;
 }
 
-.inputs{
+.inputs {
   padding: 20px;
-  margin: 20px!important;
-
+  margin: 20px !important;
   border: 3px solid white;
 }
 
 .fiveLeft input {
-  width: 50%!important;
-
+  width: 50% !important;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   font-family: RobotoBoldCustom;
-  font-style: normal;/
-line-height: 35px;
+  font-style: normal;
+  line-height: 35px;
   font-size: 2.5vh;
   background: transparent;
 }
+
 textarea {
-  /*width: 30vw;*/
   font-family: RobotoBoldCustom;
   resize: none;
   border: 1px solid #E0E0E0;
   padding-left: 4%;
-  /*height: 21vh;*/
 }
 
-input:focus::placeholder, textarea:focus::placeholder{
+input:focus::placeholder, textarea:focus::placeholder {
   color: grey;
   opacity: .8;
 }
 
-
-button{
-  margin-top: 20px;
+button {
   font-family: RobotoBoldCustom;
   font-style: normal;
-  font-weight: normal;
   line-height: 28px;
   font-size: 16px;
   text-align: center;
@@ -60,16 +53,11 @@ button{
   margin-top: 4%;
 }
 
-button:hover{
+button:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
 
 
-
-/*.hundred{*/
-/*padding: 2% 0;*/
-/*width: 25%;*/
-/*}*/
 
 

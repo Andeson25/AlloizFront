@@ -1,9 +1,7 @@
-.bock{
-  /*height: 100%;*/
-}
-h2{
+
+h2 {
   text-transform: uppercase;
-  font-family:  RobotRegularCustom;
+  font-family: RobotRegularCustom;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -12,15 +10,16 @@ h2{
   padding-top: 10px;
 }
 
-div:first-child{
+div:first-child {
   /*width: 100%;*/
   background: #415156;
 }
 
-img{
+img {
   height: 5%;
   margin-top: 15%;
 }
+
 input:not([type='checkbox']) {
   height: 5vh;
   border: 1px solid #E0E0E0;
@@ -31,34 +30,18 @@ input:not([type='checkbox']) {
   font-size: 19px;
   padding-left: 4%;
 }
-textarea {
-  font-family: RobotoBoldCustom;
-  resize: none;
-  border: 1px solid #E0E0E0;
-  padding-left: 4%;
-  height: 50%;
-  margin: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-style: normal;
-  line-height: 35px;
-  font-size: 19px;
-}
-input::placeholder,textarea::placeholder{
-  color:#415156 ;
+
+
+input::placeholder, textarea::placeholder {
+  color: #415156;
 }
 
-input:focus::placeholder{
+input:focus::placeholder {
   color: black;
   opacity: .8;
 }
 
-textarea:focus::placeholder{
-  color: black;
-  opacity: .8;
-}
-
-button, label{
+button, label {
   font-family: RobotoBoldCustom;
   font-style: normal;
   font-weight: normal;
@@ -70,58 +53,62 @@ button, label{
   border: 1px solid #4E5D7A;
   padding: 5px;
 }
-button:hover, label:hover{
+
+button:hover, label:hover {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
 }
-button:focus, label:focus{
-  color: #415156 ;
+
+button:focus, label:focus {
+  color: #415156;
 }
-label{
+
+label {
   margin-top: 15px;
 }
-.image{
+
+.image {
   background-color: grey;
   max-height: 17vw;
   min-height: 17vw;
-  max-width:17vw;
+  max-width: 17vw;
   min-width: 17vw;
 
-
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
   padding: 2px;
   height: 1.5vh;
   margin: 10px 5px 0 0;
 }
-h3{
+
+h3 {
   font-size: 2vh;
   margin: 10px 5px 0 0;
   color: lightyellow;
 }
-img{
+
+img {
   margin: 0;
   max-height: 17vw;
   min-height: 17vw;
-  max-width:17vw;
+  max-width: 17vw;
   min-width: 17vw;
 }
-.bomba{
-  margin:5px;
+
+.bomba {
+  margin: 5px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
 
-.bomba input{
+.bomba input {
   width: 65%;
   height: 50px;
 }
-button{
+
+button {
   margin: 10px 0;
 }
-
-/*.allIncumb{*/
-  /*margin: 30%;*/
-/*}*/
