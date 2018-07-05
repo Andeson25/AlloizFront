@@ -2,32 +2,32 @@
   <div class="col-6 fiveLeft d-flex flex-column justify-content-between align-items-start">
     <div class="row m-0 d-flex w-100">
       <h2 class="col-6">Name:</h2>
-      <input type="text" placeholder="* Name" disabled class="col-6  " [(ngModel)]="callback.name" #nameTopic>
+      <input type="text" disabled class="col-6  " [(ngModel)]="callback.name" #nameTopic>
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">mail:</h2>
-      <input type="text" placeholder="* Email" disabled class="col-6  " [(ngModel)]="callback.email" #emailTopic>
+      <input type="text"  disabled class="col-6  " [(ngModel)]="callback.email" #emailTopic>
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">phone:</h2>
-      <input type="text" placeholder="  Phone" disabled class="col-6  " [(ngModel)]="callback.phone" #phoneTopic>
+      <input type="text"disabled class="col-6  " [(ngModel)]="callback.phone" #phoneTopic>
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">Company:</h2>
-      <input type="text" placeholder="   Company" disabled class="col-6  " [(ngModel)]="callback.company" #companyTopic>
+      <input type="text"disabled class="col-6  " [(ngModel)]="callback.company" #companyTopic>
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">Data:</h2>
-      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="callback.datetime"
+      <input type="text"  disabled class="col-6  " [(ngModel)]="callback.datetime"
              (ngModelChange)="callback.datetime=$event">
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">Topic:</h2>
-      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="callbackTopic[callback.callbackTopic]">
+      <input type="text"  disabled class="col-6  "  [(ngModel)]="callbackTopic[callback.callbackTopic]">
     </div>
     <div class="row m-0 w-100" *ngIf="callback.callbackTopic=='ORDER'">
       <h2 class="col-6">Order:</h2>
-      <input type="text" placeholder="Data" disabled class="col-6  " [ngModel]="orderType[callback.orderType]">
+      <input type="text"  disabled class="col-6  "  [(ngModel)]="orderType[callback.orderType]">
     </div>
   </div>
   <div class="oneRight col-6">
