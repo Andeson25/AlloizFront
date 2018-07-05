@@ -8,26 +8,21 @@ import {MenuService} from '../menu-service';
 })
 @Injectable()
 export class HeaderComponent implements OnInit {
-  workButton = true;
   show = false;
 
   constructor(private menu: MenuService) {
+    this.menu.show$.subscribe(next => {
+      this.show = next;
+    });
   }
 
 
   showMenu() {
-    this.workButton = false;
     this.show = true;
     this.menu.showMenu(this.show);
   }
 
   ngOnInit() {
-    if (this.workButton)
-      this.menu.show$.subscribe(next => {
-        this.show = next;
-        if (!next)
-          this.workButton = true;
-      });
-  }
 
+  }
 }

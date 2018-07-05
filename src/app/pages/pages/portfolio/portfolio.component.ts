@@ -15,16 +15,17 @@ export class PortfolioComponent implements OnInit {
   startIndex: number = 0;
   currentIndex: number = 2;
   endIndex: number = 4;
-  length = this.portfolios.length;
+  length :number;
   selectedPortfolio: Portfolio = new Portfolio();
   constructor(private _portfolioService: PortfolioService) {
     this._portfolioService.findAllAvailable().subscribe(next=>{
       this.portfolios=next;
+      this.length=next.length;
+      this.selectedPortfolio=next[2];
+      console.log(this.selectedPortfolio);
     },error=>{
       console.log(error)
     }, ()=>{
-      this.selectedPortfolio=this.portfolios[2];
-      console.log(this.selectedPortfolio);
       this.async=true;
     })
   }

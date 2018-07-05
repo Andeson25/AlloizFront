@@ -33,13 +33,12 @@ export class HomeComponent implements OnInit {
   constructor(private  _servicesTechnology: TechnologyService) {
     this._servicesTechnology.findAllAvailable().subscribe(next => {
       this.technologies = next;
-      this.selectedTechnology = next[2];
+      this.index = Math.round(this.technologies.length / 2);
+      this.selectedTechnology = next[this.index];
     }, error => {
       console.log(error)
     }, () => {
       this.show = true;
-      console.log(this.technologies);
-      this.index = Math.round(this.technologies.length / 2);
     })
   }
 
