@@ -44,7 +44,7 @@ export class PortfolioComponent implements OnInit {
         name: new FormControl('', [Validators.required]),
         link: new FormControl('', [Validators.required]),
         textareaRU: new FormControl('', [Validators.required]),
-        textareaUA: new FormControl('', [Validators.required]),
+        textareaUK: new FormControl('', [Validators.required]),
         textareaEN: new FormControl('', [Validators.required])
 
       }
