@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Portfolio} from "../../../../../../shared/models/portfolio";
-import {PortfolioDescription} from "../../../../../../shared/models/portfolio-description";
+import {Portfolio} from '../../../../../../shared/models/portfolio';
+import {PortfolioDescription} from '../../../../../../shared/models/portfolio-description';
 import {PortfolioService} from '../../../../../../shared/service/portfolio.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class PortfolioComponent implements OnInit {
   portfolio: Portfolio = new Portfolio();
   portfolioDescription: PortfolioDescription[] = [];
 
-  img: string = '';
+  img: string[] = [];
 
   appear: boolean = true;
 
@@ -25,17 +25,19 @@ export class PortfolioComponent implements OnInit {
 
   constructor(private _portfolioService: PortfolioService) {
     this.portfolioDescription = new Array(3);
-    this.portfolioDescription = [new PortfolioDescription(), new PortfolioDescription(), new PortfolioDescription()]
+    this.portfolioDescription = [new PortfolioDescription(), new PortfolioDescription(), new PortfolioDescription()];
     this.portfolio.descriptions = this.portfolioDescription;
   }
 
   readUrl(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      let reader = new FileReader();
-      reader.onload = (event: any) => {
-        this.img = event.target.result;
-      };
-      reader.readAsDataURL(event.target.files[0]);
+    for (let i = 0; i < event.target.files.length; i++) {
+      if (event.target.files && event.target.files[i]) {
+        let reader = new FileReader();
+        reader.onload = (event: any) => {
+          this.img.push(event.target.result);
+        };
+        reader.readAsDataURL(event.target.files[i]);
+      }
     }
   }
 
@@ -80,10 +82,12 @@ export class PortfolioComponent implements OnInit {
       console.log(next);
     }, error => {
       console.log(error);
-    },()=>{
+    }, () => {
       this.portfolioForm.reset();
-      })
+      this.img=[];
+    });
 
   }
+
 
 }
