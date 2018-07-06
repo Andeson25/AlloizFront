@@ -5,8 +5,8 @@
       <div class="top"></div>
     </div>
     <div class="middle d-flex ">
-      <div class="leftBlock">
-        <div class="image-carousel w-100 h-100" *ngFor="let image of technologies; let i = index">
+      <div class="leftBlock" *ngIf="isNull(technologies)">
+        <div class="image-carousel w-100 h-100"  *ngFor="let image of technologies; let i = index">
           <div [style.background]="'url(' + (image.image|imagePipe) + ')'" class="w-100 h-100 topImage"
                [@enterAnimation] *ngIf="i==index"></div>
         </div>
@@ -34,13 +34,21 @@
     </div>
   </div>
   <div class="bigRight">
-    <div class="content d-flex flex-column justify-content-center ">
+    <div *ngIf="isNull(selectedTechnology)" class="content d-flex flex-column justify-content-center ">
       <div class="linetext">
         <h2>{{selectedTechnology.name}}</h2>
         <div class="line"></div>
       </div>
       <p *ngIf="show">{{this.selectedTechnology.descriptions[0].description}} </p>
       <input type="button" value="{{home-button|translate}}" >
+    </div>
+    <div *ngIf="!isNull(selectedTechnology)" class="content d-flex flex-column justify-content-center ">
+      <div class="linetext">
+        <h2>Це компанія АЛОІЗ!!!!</h2>
+        <div class="line"></div>
+      </div>
+      <p *ngIf="show">це ОПИС </p>
+      <input type="button" value="more" >
     </div>
   </div>
 </div>

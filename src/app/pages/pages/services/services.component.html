@@ -3,8 +3,8 @@
     <p>{{'services-h2'|translate}}</p>
   </div>
   <div class="line"></div>
-  <div class="content d-flex flex-column ">
-    <div class="underContent d-flex justify-content-center "  *ngFor="let one of technology; let i = index;" >
+  <div class="content d-flex flex-column" *ngIf = "isNull(technologies)">
+    <div class="underContent d-flex justify-content-center "  *ngFor="let one of technologies; let i = index;" >
       <div  class=" leftBlock">
         <div class="number" *ngIf="i<=8">{{"0"+(i+1)}}</div>
         <div class="number" *ngIf="i>=9">{{i+1}}</div>
