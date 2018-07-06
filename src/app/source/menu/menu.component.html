@@ -5,27 +5,27 @@
     <div [routerLink]="['/']" (click)="closeMenu()" [routerLinkActive]="['active']"
          [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
-      <h2>MAIN</h2>
+      <h2>{{'menu-nav-3'|translate}}</h2>
     </div>
     <div [routerLink]="['/about']" (click)="closeMenu()" [routerLinkActive]="['active']"
          [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
-      <h2>ABOUT</h2>
+      <h2>{{'menu-nav-1'|translate}}</h2>
     </div>
     <div [routerLink]="['/services']" (click)="closeMenu()" [routerLinkActive]="['active']"
          [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
-      <h2>SERVICES</h2>
+      <h2>{{'menu-nav-2'|translate}}</h2>
     </div>
     <div [routerLink]="['/portfolio']" (click)="closeMenu()" [routerLinkActive]="['active']"
          [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
-      <h2>PORTFOLIO</h2>
+      <h2>{{'menu-nav-4'|translate}}</h2>
     </div>
     <div [routerLink]="['/contacts']" (click)="closeMenu()" [routerLinkActive]="['active']"
          [routerLinkActiveOptions]="{exact: true}">
       <img src="../../../assets/svg/Ellipse%202.svg" alt="">
-      <h2>CONTACTS</h2>
+      <h2>{{'menu-nav-5'|translate}}</h2>
     </div>
     <div class="links">
 
@@ -36,9 +36,9 @@
     <h1>ALLOIZ</h1>
   </div>
   <div class="select-lang flex-column  d-flex align-items-center justify-content-center" >
-    <h2>EU</h2>
-    <h2>UA</h2>
-    <h2>RU</h2>
+    <h2 (click)="switchLang('en')">EU</h2>
+    <h2 (click)="switchLang('uk')">UA</h2>
+    <h2 (click)="switchLang('ru')">RU</h2>
   </div>
   </div>
   <img src="../../../assets/svg/cancel.svg" alt="close" class="cancel" (click)="closeMenu()">
