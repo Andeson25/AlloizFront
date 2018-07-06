@@ -20,7 +20,7 @@
         </select>
         <select *ngIf="showOrder" formControlName="orderType" >
           <option value="" disabled selected >*Order type</option>
-          <option [value]="'WEBSITE'" >Web site</option>
+          <option [value]="'WEBSITE'" [ngClass]="{'invallid':callbackForm.get('email').invalid && callbackForm.get('email').dirty}">Web site</option>
           <option [value]="'DESIGN'" >Design</option>
           <option [value]="'OTHER'" >Other</option>
         </select>
