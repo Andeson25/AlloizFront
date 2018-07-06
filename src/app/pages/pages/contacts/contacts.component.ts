@@ -33,20 +33,20 @@ export class ContactsComponent implements OnInit {
       phone: new FormControl('', [Validators.pattern(/\d{6,12}/)]),
       company: new FormControl(''),
       callbackTopic: new FormControl(''),
-      orderType: new FormControl(''),
+      orderType: new FormControl("NONE"),
     });
     this.callbackForm.valueChanges.subscribe(value => {
       this.callback = value;
-      console.log(this.callback);
-
     });
   }
   addContacts() {
     this._callback.save(this.callback).subscribe(next => {
         console.log(next);
+        console.log(this.callback);
       },
       error => {
         console.log(error);
+        console.log(this.callback);
       },()=>{
         this.callbackForm.reset();
       }
