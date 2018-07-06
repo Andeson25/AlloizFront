@@ -1,9 +1,9 @@
 <div class="bock d-flex flex-column align-items-center ">
   <div class="d-flex flex-column align-items-center">
     <h2>Name</h2>
-    <input type="text" [(ngModel)]="worker.name"  placeholder="name">
+    <input type="text" [(ngModel)]="worker.name"  placeholder="name" required>
     <br>
-    <input type="text"  [(ngModel)]="worker.surname"  placeholder="surname">
+    <input type="text"  [(ngModel)]="worker.surname"  placeholder="surname" required>
     <div class="d-flex justify-content-start">
       <input class="mt-3" type="checkbox" [(ngModel)]="worker.available"  >
       <h3>Available</h3>
@@ -13,7 +13,7 @@
   <h2>Incumbency</h2>
   <div class="allIncumb">
     <div class="bomba d-flex" *ngFor="let incumbency of worker.incumbencies; let i = index">
-      <input type="text"  placeholder="incumbency name" [(ngModel)]="worker.incumbencies[i].name">
+      <input type="text"  placeholder="incumbency name" [(ngModel)]="worker.incumbencies[i].name" required>
       <button (click)="deleteIncumbency(i)">delete</button>
     </div>
   </div>

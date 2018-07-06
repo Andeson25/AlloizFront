@@ -27,7 +27,8 @@
     <h2 class="heading-text position-relative">{{selectedPortfolio.name}} <div class="text-border"></div></h2>
     <div id="carouselExampleFade" class="carousel slide h-100 carousel-fade position-relative" data-ride="carousel">
       <div class="carousel-inner position-relative ">
-        <div class="carousel-item   " [ngClass]="{'active':i==0}"  *ngFor="let one of selectedPortfolio.images;let i = index;"   [style.background]="'url(' + (one.path|imagePipe) + ')'">
+        <div class="carousel-item   " [ngClass]="{'active':i==0}"  *ngFor="let one of selectedPortfolio.images;let i = index;"
+             [style.background]="'url(' + (one.path|imagePipe) + ')'">
         </div>
         <h3 class="text" *ngIf="async">{{selectedPortfolio.descriptions[0].description}}</h3>
       </div>
