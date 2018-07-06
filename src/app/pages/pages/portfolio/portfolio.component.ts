@@ -19,17 +19,19 @@ export class PortfolioComponent implements OnInit {
   selectedPortfolio: Portfolio = new Portfolio();
   constructor(private _portfolioService: PortfolioService) {
     this._portfolioService.findAllAvailable().subscribe(next=>{
-      this.portfolios=next;
-      this.length=next.length;
-      this.selectedPortfolio=next[2];
-      console.log(this.selectedPortfolio);
+      for(let i of next){
+        if (typeof(i) != "undefined" && i != null){
+          this.portfolios.push(i);
+        }
+      }
+      this.length=this.portfolios.length;
+      this.selectedPortfolio = this.portfolios[2];
     },error=>{
       console.log(error)
     }, ()=>{
       this.async=true;
     })
   }
-
   ngOnInit() {
   }
 
