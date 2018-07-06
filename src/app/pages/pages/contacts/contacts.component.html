@@ -15,7 +15,7 @@
         <select (change)="checkOrder(sel) " #sel name="callbackTopic" formControlName="callbackTopic">
           <option value="" disabled selected >*Topic</option>
           <option [value]="'VACANCY'" >Vacancy</option>
-          <option [value]="'VACANCY'" >Appeal</option>
+          <option [value]="'APPEAL'" >Appeal</option>
           <option [value]="'ORDER'" >Order</option>
         </select>
         <select *ngIf="showOrder" formControlName="orderType" >
