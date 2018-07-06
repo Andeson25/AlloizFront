@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Technology} from "../../../shared/models/technology";
 import {TechnologyService} from "../../../shared/service/technology.service";
 import {animate, style, transition, trigger} from '@angular/animations';
+import {isNullOrUndefined} from "util";
 
 
 @Component({
@@ -32,9 +33,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private  _servicesTechnology: TechnologyService) {
     this._servicesTechnology.findAllAvailable().subscribe(next => {
-      this.technologies = next;
+
+      for (let i of next) {
+        if (typeof(i) != "undefined" && i != null) {
+          this.technologies.push(i);
+        }
+      }
       this.index = Math.round(this.technologies.length / 2);
-      this.selectedTechnology = next[this.index];
+      this.selectedTechnology = this.technologies[this.index];
     }, error => {
       console.log(error)
     }, () => {
@@ -43,7 +49,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    setInterval(()=>{
+    setInterval(() => {
       this.scroll(false);
     }, 4000)
   }
@@ -62,4 +68,13 @@ export class HomeComponent implements OnInit {
     }
     this.selectedTechnology = this.technologies[this.index];
   }
+
+  isNull(object: any): Boolean {
+    if (Array.isArray(object)) {
+      return !isNullOrUndefined(object[0]);
+    } else {
+      return !isNullOrUndefined(object)
+    }
+  }
+
 }

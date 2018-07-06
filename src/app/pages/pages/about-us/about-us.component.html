@@ -29,7 +29,7 @@
         <h2>TEAM</h2>
       </div>
       <div class="line"></div>
-    <div class="team row m-0 flex-wrap align-items-start">
+    <div class="team row m-0 flex-wrap align-items-start" *ngIf="isNull(workers)">
         <app-worker-card *ngFor="let one of workers" [worker]="one" class="col-xl-2 col-lg-4 col-md-6 col-sm-12"></app-worker-card>
 
 
