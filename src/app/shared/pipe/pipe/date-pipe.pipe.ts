@@ -13,7 +13,7 @@ export class DatePipePipe implements PipeTransform {
     time=value.split('T')[1].substring(0,5);
 
 
-    return date+" в "+time;
+    return date+" о "+time;
   }
 
 }

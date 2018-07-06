@@ -62,6 +62,7 @@ app-worker-card:nth-child(6n){
   height: auto;
   width: 74%;
   margin: 0 auto;
+  margin-bottom: 40px;
   justify-content: center;
 
 

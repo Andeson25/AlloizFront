@@ -18,7 +18,7 @@
     </div>
     <div class="row m-0 w-100">
       <h2 class="col-6">Data:</h2>
-      <input type="text"  disabled class="col-6  " [(ngModel)]="callback.datetime"
+      <input type="text"  disabled class="col-6  " [ngModel]="callback.datetime | datePipe"
              (ngModelChange)="callback.datetime=$event">
     </div>
     <div class="row m-0 w-100">
