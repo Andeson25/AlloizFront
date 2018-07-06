@@ -1,5 +1,6 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {MenuService} from '../menu-service';
+import {TranslateService} from 'ng2-translate';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import {MenuService} from '../menu-service';
 @Injectable()
 export class HeaderComponent implements OnInit {
   show = false;
+
 
   constructor(private menu: MenuService) {
     this.menu.show$.subscribe(next => {
@@ -21,6 +23,10 @@ export class HeaderComponent implements OnInit {
     this.show = true;
     this.menu.showMenu(this.show);
   }
+
+
+
+
 
   ngOnInit() {
 
