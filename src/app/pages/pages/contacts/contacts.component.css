@@ -136,4 +136,6 @@ select {
   background-position: 100% 50%;
   background-repeat: no-repeat;
 }
-
+/*select.ng-invalid.ng-touched{*/
+  /*border: 1px solid red;*/
+/*}*/

@@ -12,15 +12,15 @@
       <div class="fiveLeft d-flex flex-column justify-content-between">
           <input type="text" placeholder="* Name" formControlName="name">
           <input type="text" placeholder="* Email" formControlName="email" [ngClass]="{'invallid':callbackForm.get('email').invalid && callbackForm.get('email').dirty}" >
-        <select (change)="checkOrder(sel) " #sel name="callbackTopic" formControlName="callbackTopic">
+        <select (change)="checkOrder(sel,sel2) " #sel name="callbackTopic"  required formControlName="callbackTopic">
           <option value="" disabled selected >*Topic</option>
           <option [value]="'VACANCY'" >Vacancy</option>
           <option [value]="'APPEAL'" >Appeal</option>
           <option [value]="'ORDER'" >Order</option>
         </select>
-        <select *ngIf="showOrder" formControlName="orderType" >
+        <select *ngIf="showOrder" [required]="showOrder" formControlName="orderType" #sel2>
           <option value="" disabled selected >*Order type</option>
-          <option [value]="'WEBSITE'" [ngClass]="{'invallid':callbackForm.get('email').invalid && callbackForm.get('email').dirty}">Web site</option>
+          <option [value]="'WEBSITE'">Web site</option>
           <option [value]="'DESIGN'" >Design</option>
           <option [value]="'OTHER'" >Other</option>
         </select>
