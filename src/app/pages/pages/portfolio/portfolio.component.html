@@ -24,7 +24,7 @@
   </div>
   <div class="arrow"></div>
   <div class="slider">
-    <h2 class="heading-text position-relative">{{selectedPortfolio.name}} <div class="text-border"></div></h2>
+    <h2 class="heading-text position-relative">{{'portfolio-h2'|translate}} <div class="text-border"></div></h2>
     <div id="carouselExampleFade" class="carousel slide h-100 carousel-fade position-relative" data-ride="carousel">
       <div class="carousel-inner position-relative ">
         <div class="carousel-item   " [ngClass]="{'active':i==0}"  *ngFor="let one of selectedPortfolio.images;let i = index;"
