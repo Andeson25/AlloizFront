@@ -6,7 +6,7 @@ button {
   background: black;
   color: whitesmoke;
   opacity: .8;
-  height: 5vh;
+  height: 7vh;
 }
 
 button:hover {
@@ -35,6 +35,6 @@ button:hover {
 }
 
 .backgroundCool {
-  height: 60vh;
+  height: 58vh;
   background: #415156;
 }
