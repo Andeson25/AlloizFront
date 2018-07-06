@@ -161,7 +161,7 @@ h4{
 
 .carousel-item {
   background-size: cover!important;
-  background-position: center center!important;
+  background-position: top center!important;
   background-repeat: no-repeat!important;
   height: 50vh;
 

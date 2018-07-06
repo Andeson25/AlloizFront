@@ -1,10 +1,9 @@
 <div class="worker-card d-flex align-content-center flex-column">
   <figure>
-  <img src="{{worker.image|imagePipe}}" alt="">
+    <img [style.background-image]="'url(' + (worker.image|imagePipe) + ')'">
   </figure>
   <div class="under-image-text">
     <div class="name">{{worker.name+" "+worker.surname}}</div>
     <div class="incompency" *ngFor="let one of worker.incumbencies">{{one.name}}</div>
   </div>
-
 </div>
