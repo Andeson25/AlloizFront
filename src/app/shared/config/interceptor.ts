@@ -1,4 +1,3 @@
-
 import {isNull} from 'util';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -7,11 +6,12 @@ import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {url} from './url';
+import {UserDetailsService} from "../service/user-details.service";
 
 @Injectable()
 export class Interceptor implements HttpInterceptor {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private _userService: UserDetailsService) {
   }
 
   intercept<T>(req: HttpRequest<T>, next: HttpHandler): Observable<HttpEvent<T>> {
@@ -35,19 +35,26 @@ export class Interceptor implements HttpInterceptor {
       // headers = headers.set('Content-type', 'application/x-www-form-urlencoded');
       headers = headers.set('enctype', 'form-data/multipart');
 
-    } else if (temp.headers.keys().indexOf('Content-Type') != -1) {
-      if (temp.headers.get('Content-Type').indexOf('application/json') == -1) {
-        headers = headers.set('Content-Type', temp.headers.get('Content-Type') + ';application/json');
+    } else {
+      if (temp.params.has('password')) {
+        headers = headers.set('content-type', 'application/x-www-form-urlencoded');
+        headers = headers.set('authorization', 'basic Y2xpZW50X2d1aWxkX29mX3RlYWNoZXJzLmNvbTpzZWNyZXRfMDEwc2VydmVyLmNvbQ==');
+      } else if (this._userService.checkAuth()) {
+        headers = headers.set('authorization', `bearer ${this._userService.getAccessToken()}`);
       }
-    }
-    else {
-      headers = headers.append('Content-Type', 'application/json');
+      if (temp.headers.keys().indexOf('Content-Type') != -1) {
+        if (temp.headers.get('Content-Type').indexOf('application/json') == -1) {
+          headers = headers.set('Content-Type', temp.headers.get('Content-Type') + ';application/json');
+        }
+      }
+      else {
+        headers = headers.append('Content-Type', 'application/json');
+      }
     }
 
     headers = headers.append('Accept', 'application/json');
     return headers;
   }
-
 
 
 }

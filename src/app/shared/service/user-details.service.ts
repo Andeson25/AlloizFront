@@ -1,24 +1,9 @@
 import {isNullOrUndefined} from 'util';
-import {Subject} from 'rxjs/Subject';
 import {Injectable} from '@angular/core';
+
 
 @Injectable()
 export class UserDetailsService {
-
-  user: User = new User();
-  private _user: Subject<User> = new Subject<User>();
-  user$ = this._user.asObservable();
-
-  login(user: User) {
-    this.user = user;
-    this._user.next(this.user);
-  }
-
-  logout() {
-    this.user = new User();
-    this.deleteToken();
-    this._user.next(this.user);
-  }
 
   checkAuth(): boolean {
     return !isNullOrUndefined(localStorage.getItem('access_token'));
