@@ -11,6 +11,7 @@ import { WorkerCardComponent } from './pages/about-us/worker-card/worker-card.co
 import {ContactsComponent} from './pages/contacts/contacts.component';
 import {DirectiveModule} from '../shared/directive/directive.module';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     ContactsComponent,
     AboutUsComponent,
     ServicesComponent,
-    WorkerCardComponent
+    WorkerCardComponent,
+    LoginComponent
   ]
 })
 export class PagesModule { }

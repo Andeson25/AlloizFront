@@ -37,10 +37,11 @@ export class Interceptor implements HttpInterceptor {
 
     } else {
       if (temp.params.has('password')) {
-        headers = headers.set('content-type', 'application/x-www-form-urlencoded');
-        headers = headers.set('authorization', 'basic Y2xpZW50X2d1aWxkX29mX3RlYWNoZXJzLmNvbTpzZWNyZXRfMDEwc2VydmVyLmNvbQ==');
+      // if (temp.headers.keys().indexOf('Authorization') != -1) {
+        headers = headers.append('content-type', 'application/x-www-form-urlencoded');
+        headers = headers.append('authorization', 'Basic Y2xpZW50X2d1aWxkX29mX3RlYWNoZXJzLmNvbTpzZWNyZXRfMDEwc2VydmVyLmNvbQ==');
       } else if (this._userService.checkAuth()) {
-        headers = headers.set('authorization', `bearer ${this._userService.getAccessToken()}`);
+        headers = headers.append('authorization', `Bearer ${this._userService.getAccessToken()}`);
       }
       if (temp.headers.keys().indexOf('Content-Type') != -1) {
         if (temp.headers.get('Content-Type').indexOf('application/json') == -1) {

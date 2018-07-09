@@ -1,0 +1,10 @@
+.login{
+  width: 20%;
+  margin: auto;
+  margin-top: 15vh;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+input{
+  margin: 2vh;
+}
