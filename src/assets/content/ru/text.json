@@ -2,7 +2,7 @@
   "menu-nav-1": "О НАС",
   "menu-nav-2": "УСЛУГИ",
   "menu-nav-3": "КЛИЕНТЫ",
-  "menu-nav-4": "ПОТРФОЛИО",
+  "menu-nav-4": "ПОРТФОЛИО",
   "menu-nav-5": "КОНТАКТЫ",
 
 
@@ -40,7 +40,7 @@
 
 
 
-  "contacts-h2":"СВЯЖИТЬСЯ С НАМИ",
+  "contacts-h2":"СВЯЖИТЕСЬ С НАМИ",
   "contacts-input-name-placeholder":"* Имя",
   "contacts-input-email-placeholder":"* Електронная почта",
   "contacts-input-phone-placeholder":"Телефон",
