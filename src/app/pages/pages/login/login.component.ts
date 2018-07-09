@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UserDetailsService} from '../../../shared/service/user-details.service';
 import {LoginService} from '../../../shared/service/login.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private _userService: UserDetailsService, private _loginService: LoginService) {
+  constructor(private _userService: UserDetailsService, private _loginService: LoginService, private _router: Router) {
   }
 
   ngOnInit() {
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this._loginService.login(this.loginForm.value.username, this.loginForm.value.password).subscribe(next => {
       this._userService.saveToken(next);
+      this._router.navigateByUrl('/cabinet');
       console.log(next);
     }, error => {
       console.error(error);
