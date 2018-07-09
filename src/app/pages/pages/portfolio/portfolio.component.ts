@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {isNumber} from 'util';
+import {isNullOrUndefined, isNumber} from 'util';
 import {Portfolio} from "../../../shared/models/portfolio";
 import {PortfolioService} from "../../../shared/service/portfolio.service";
 
@@ -64,6 +64,14 @@ export class PortfolioComponent implements OnInit {
         this.startIndex = this.currentIndex -2 ;
         this.endIndex = this.currentIndex+2;
       }
+    }
+  }
+
+  isNull(object: any): Boolean {
+    if (Array.isArray(object)) {
+      return !isNullOrUndefined(object[0]);
+    } else {
+      return !isNullOrUndefined(object)
     }
   }
 }

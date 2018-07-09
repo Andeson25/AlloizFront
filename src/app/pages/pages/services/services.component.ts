@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TechnologyService} from '../../../shared/service/technology.service';
 import {Technology} from '../../../shared/models/technology';
+import {isNullOrUndefined} from "util";
 
 @Component({
   selector: 'app-services',
@@ -9,22 +10,32 @@ import {Technology} from '../../../shared/models/technology';
   providers:[TechnologyService ]
 })
 export class ServicesComponent implements OnInit {
-  technology: Technology[]=[];
+  technologies: Technology[]=[];
 
 
 
   constructor(private _technologiesService: TechnologyService) {
     this._technologiesService.findAllAvailable().subscribe(next=>{
-      this.technology=next;
+      for(let i of next){
+        if (typeof(i) != "undefined" && i != null){
+          this.technologies.push(i);
+        }
+      }
     },error=>{
       console.log(error)
     }, ()=>{
-      console.log(this.technology)
 
     })
   }
 
   ngOnInit() {
+  }
+  isNull(object: any): Boolean {
+    if (Array.isArray(object)) {
+      return !isNullOrUndefined(object[0]);
+    } else {
+      return !isNullOrUndefined(object)
+    }
   }
 
 }
