@@ -31,28 +31,27 @@ export class Interceptor implements HttpInterceptor {
       temp = req.clone();
     }
     headers = temp.headers;
-    if (temp.headers.keys().indexOf('enctype') != -1) {
-      // headers = headers.set('Content-type', 'application/x-www-form-urlencoded');
-      headers = headers.set('enctype', 'form-data/multipart');
-
-    } else {
-      if (temp.params.has('password')) {
+    if (temp.params.has('password')) {
       // if (temp.headers.keys().indexOf('Authorization') != -1) {
-        headers = headers.append('content-type', 'application/x-www-form-urlencoded');
-        headers = headers.append('authorization', 'Basic Y2xpZW50X2d1aWxkX29mX3RlYWNoZXJzLmNvbTpzZWNyZXRfMDEwc2VydmVyLmNvbQ==');
-      } else if (this._userService.checkAuth()) {
+      headers = headers.append('content-type', 'application/x-www-form-urlencoded');
+      headers = headers.append('authorization', 'Basic Y2xpZW50X2d1aWxkX29mX3RlYWNoZXJzLmNvbTpzZWNyZXRfMDEwc2VydmVyLmNvbQ==');
+    } else {
+      if (this._userService.checkAuth()) {
         headers = headers.append('authorization', `Bearer ${this._userService.getAccessToken()}`);
-      }
-      if (temp.headers.keys().indexOf('Content-Type') != -1) {
-        if (temp.headers.get('Content-Type').indexOf('application/json') == -1) {
-          headers = headers.set('Content-Type', temp.headers.get('Content-Type') + ';application/json');
+        if (temp.headers.keys().indexOf('enctype') != -1) {
+          // headers = headers.set('Content-type', 'application/x-www-form-urlencoded');
+          headers = headers.set('enctype', 'form-data/multipart');
+        } else {
+          if (temp.headers.keys().indexOf('Content-Type') != -1) {
+            if (temp.headers.get('Content-Type').indexOf('application/json') == -1) {
+              headers = headers.set('Content-Type', temp.headers.get('Content-Type') + ';application/json');
+            }
+          } else {
+            headers = headers.append('Content-Type', 'application/json');
+          }
         }
       }
-      else {
-        headers = headers.append('Content-Type', 'application/json');
-      }
     }
-
     headers = headers.append('Accept', 'application/json');
     return headers;
   }
