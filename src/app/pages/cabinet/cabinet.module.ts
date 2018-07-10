@@ -6,7 +6,7 @@ import {AddModule} from './cabinet/add/add.module';
 import {UpdateModule} from './cabinet/update/update.module';
 import {CallbackModule} from './cabinet/callback/callback.module';
 import {AdminGuards} from "../../shared/guard/admin.guards";
-import {AminChildrenGuards} from "../../shared/guard/amin.children.guards";
+import {AdminChildrenGuards} from "../../shared/guard/admin-children-guards.service";
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import {AminChildrenGuards} from "../../shared/guard/amin.children.guards";
     CallbackModule
   ],
   declarations: [CabinetComponent],
-  providers: [AdminGuards, AminChildrenGuards]
+  providers: [AdminGuards, AdminChildrenGuards]
 })
 export class CabinetModule {
 }

@@ -55,6 +55,4 @@ export class Interceptor implements HttpInterceptor {
     headers = headers.append('Accept', 'application/json');
     return headers;
   }
-
-
 }
