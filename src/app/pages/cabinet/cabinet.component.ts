@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cabinet',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabinetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
+
+  logOut(){
+    localStorage.clear();
+    this._router.navigateByUrl('/login');
+  }
 
   ngOnInit() {
   }
