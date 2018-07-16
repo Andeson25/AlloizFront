@@ -49,9 +49,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    setInterval(() => {
-      this.scroll(false);
-    }, 4000)
+    // setInterval(() => {
+    //   this.scroll(false);
+    // }, 4000)
   }
 
   scroll(event) {

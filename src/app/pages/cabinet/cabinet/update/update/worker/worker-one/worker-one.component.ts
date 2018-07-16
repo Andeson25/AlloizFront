@@ -35,10 +35,12 @@ export class WorkerOneComponent implements OnInit {
 
   ngOnInit() {
   }
-  update(form:HTMLFormElement){
 
+  update(form:HTMLFormElement){
+    console.log(this.worker);
     this._workerService.update(this.worker,form).subscribe(next=>{
       this.worker=next;
+
       this.img=this._imagePipe.transform(next.image);
     },error=>{
       console.log(error);
