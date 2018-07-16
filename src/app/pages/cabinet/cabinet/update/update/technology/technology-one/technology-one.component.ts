@@ -17,6 +17,7 @@ export class TechnologyOneComponent implements OnInit {
   constructor(private _technologyService: TechnologyService, private _imagePipe: ImagePipePipe, private _router: ActivatedRoute) {
     _router.params.subscribe(next=>{
       _technologyService.findOne(next['id']).subscribe(next=>{
+        console.log(next);
         this.technology=next;
         this.start=true;
         this.img=_imagePipe.transform(next.image);
@@ -40,8 +41,9 @@ export class TechnologyOneComponent implements OnInit {
 
 
   update(form:HTMLFormElement){
+    console.log(this.technology);
     this._technologyService.update(this.technology,form).subscribe(next=>{
-      console.log(next)
+
       this.technology=next;
       this.img=this._imagePipe.transform(next.image);
     },error=>{
