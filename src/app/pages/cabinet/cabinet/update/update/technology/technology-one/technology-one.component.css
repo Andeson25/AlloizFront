@@ -85,3 +85,19 @@ img{
 }
 
 
+input:not([type='checkbox']) {
+  height: 5vh;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: RobotoBoldCustom;
+  font-style: normal;
+  line-height: 35px;
+  font-size: 19px;
+  padding-left: 4%;
+}
+
+input[type=checkbox] {
+  padding: 2px;
+  height: 1.5vh;
+  margin: 10px 5px 0 0;
+}
