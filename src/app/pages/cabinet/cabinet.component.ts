@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {WorkerService} from '../../shared/service/worker.service';
+import {UserDetailsService} from '../../shared/service/user-details.service';
 
 @Component({
   selector: 'app-cabinet',
@@ -8,10 +10,10 @@ import {Router} from '@angular/router';
 })
 export class CabinetComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _userDetailsService:UserDetailsService) { }
 
   logOut(){
-    localStorage.clear();
+    this._userDetailsService.deleteToken();
     this._router.navigateByUrl('/login');
   }
 
